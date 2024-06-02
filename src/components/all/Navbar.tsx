@@ -54,17 +54,18 @@ function Navbar() {
                                 </Link>
                             </div>
                         </Reveal>
+                        <span className='md:hidden block'>
+                            <button className='btn btn-selector-secondary' onClick={estadoMenu}>
+                                {menuOpened ? <ArrowUpIcon />: <Bars3Icon /> }
+                            </button>
+                        </span>
                         <span className='flex flex-grow '></span>
                         <Reveal initial={-32} final={0} delay={0.2}><Link href={"/projects"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden',{"active-link": pathname === "/projects"})}>{tc('projects')}</Link></Reveal>
                         <Reveal initial={-32} final={0} delay={0.4}><Link href={"/blog"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden',{"active-link": pathname === "/blog"})}>{tc('blog')}</Link></Reveal>
                         <Reveal initial={-32} final={0} delay={0.4}><Link href={"/arts"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden',{"active-link": pathname === "/arts"})}>{tc('arts')}</Link></Reveal>
                         <Reveal initial={-32} final={0} delay={0.6}><Link href={"/about"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden',{"active-link": pathname === "/about"})}>{tc('about')}</Link></Reveal>
                         
-                        <span className='md:hidden block'>
-                            <button className='btn btn-selector-secondary' onClick={estadoMenu}>
-                                {menuOpened ? <ArrowUpIcon />: <Bars3Icon /> }
-                            </button>
-                        </span>
+                        
                         
                         <ThemeSwitch />
                     </div>

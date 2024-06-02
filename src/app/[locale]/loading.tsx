@@ -14,7 +14,7 @@ export default function Loading(){
             <div className=' h-16'>
                 <DynamicLogo className=' text-secondary'/>
             </div>
-            <p className="font-dyslexia">{tc("loading")}</p>
+            <p className="font-dyslexia font-semibold">{tc("loading")}</p>
         </section>
     </main>
 
