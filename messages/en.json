@@ -7,6 +7,9 @@
         "about": "About Me",
         "loading": "Preparing UwU"
     },
+    "Errors": {
+        "404":"404 Error - This page doesn't exists, verify the URL and try again."
+    },
     "Meta": {
         "description": "Sam Mahonri's portfolio"
     },

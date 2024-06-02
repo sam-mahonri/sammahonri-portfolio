@@ -6,6 +6,9 @@
         "arts":"Artes",
         "loading": "Preparando UwU"
     },
+    "Errors": {
+        "404":"Erro 404 - Esta página não existe, verifique a URL e tente novamente."
+    },
     "Meta": {
         "description": "Portfólio de Sam Mahonri"
     },

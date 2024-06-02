@@ -30,6 +30,7 @@ const config: Config = {
         'sam-txt-content-color': "rgba(var(--sam-txt-content-color))",
         'sam-txt-pybtn-color': "rgba(var(--sam-txt-pybtn-color))",
         'sam-txt-sybtn-color': "rgba(var(--sam-txt-sybtn-color))",
+        'sam-error-color': "rgba(var(--sam-error-color))",
         'sam-primary-color': "rgba(var(--sam-primary-color))",
         'sam-bro-primary-color': "rgba(var(--sam-bro-primary-color))",
         'sam-secondary-color': "rgba(var(--sam-secondary-color))",

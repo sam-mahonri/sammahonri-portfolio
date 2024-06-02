@@ -24,7 +24,9 @@
   --SCSSsam-bro-primary-color: rgb(160, 90, 220);
   --SCSSsam-secondary-color: rgb(80, 240, 150);
   --SCSSsam-txt-color: rgb(240, 240, 240);
+  --SCSSsam-error-color: rgb(230, 33, 105);
 
+  --sam-error-color: 230, 33, 105;
   --sam-primary-color: 130, 100, 230;
   --sam-bro-primary-color: 7, 155, 171;
   --sam-secondary-color: 80, 240, 150;
@@ -37,23 +39,24 @@
 }
 
 :root.light {
-  --sam-bg-color: 240, 240, 245;
+  --sam-bg-color: 220, 220, 230;
   --sam-fg-color: 250, 250, 250;
 
-  --sam-txt-title-color: 70, 90, 110;
-  --sam-txt-content-color: 110, 130, 150;
+  --sam-txt-title-color: 60, 80, 100;
+  --sam-txt-content-color: 90, 100, 125;
   --sam-txt-pybtn-color: var(--sam-txt-title-color);
   --sam-txt-sybtn-color: var(--sam-txt-content-color);
 
-  --SCSSsam-bg-color: rgb(240, 240, 245);
+  --SCSSsam-bg-color: rgb(220, 220, 230);
   --SCSSsam-primary-color: rgb(130, 100, 230);
   --SCSSsam-bro-primary-color: rgb(7, 155, 171);
-  --SCSSsam-secondary-color: rgb(80, 170, 130);
-  --SCSSsam-txt-color: rgb(80, 100, 120);
+  --SCSSsam-secondary-color: rgb(70, 160, 120);
+  --SCSSsam-txt-color: rgb(60, 80, 100);
 
+  --sam-error-color: 230, 33, 105;
   --sam-primary-color: 130, 100, 230;
   --sam-bro-primary-color: 190, 100, 220;
-  --sam-secondary-color: 80, 170, 130;
+  --sam-secondary-color: 70, 160, 120;
 
   --sam-border-color: 255, 255, 255;
 
@@ -71,7 +74,7 @@ html {
 }
 
 .main-subsection{
-  @apply max-w-7xl w-full flex flex-col gap-4 min-h-screen p-6 border-x-2 md:border-sam-secondary-color/60 border-transparent border-dashed py-20;
+  @apply max-w-7xl w-full flex flex-col gap-4 min-h-screen p-6 border-x-2 md:border-sam-secondary-color/60 border-transparent border-dashed py-24 z-10;
 }
 
 .subsection-center-all{
@@ -144,7 +147,7 @@ h3 {
   @apply md:text-2xl text-xl font-semibold text-sam-secondary-color;
 }
 h4 {
-  @apply md:text-xl text-lg text-sam-secondary-color;
+  @apply md:text-xl text-lg text-sam-secondary-color font-semibold;
 }
 h5 {
   @apply text-lg text-sam-secondary-color;
@@ -211,12 +214,9 @@ h6 {
   @apply bg-sam-fg-color;
 }
 
-::-webkit-scrollbar-thumb:vertical {
-  @apply bg-gradient-to-b from-sam-bro-primary-color to-sam-primary-color;
-}
-::-webkit-scrollbar-thumb:horizontal {
-  @apply bg-gradient-to-r from-sam-bro-primary-color to-sam-primary-color;
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
 }
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gradient-to-b from-sam-bro-primary-color to-sam-secondary-color;
+  @apply bg-secondary;
 }

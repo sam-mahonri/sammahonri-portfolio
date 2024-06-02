@@ -11,10 +11,8 @@ export default function Loading(){
     
     <main className="main-section" style={{backgroundImage: `url(${backgroundImage.src})`}}>
         <section className="main-subsection subsection-center-all">
-            <div className=' h-16'>
-                <DynamicLogo className=' text-secondary'/>
-            </div>
-            <p className="font-dyslexia font-semibold">{tc("loading")}</p>
+            <span className=" rounded-full border-2 border-transparent border-b-secondary animate-spin h-12 w-12"></span>
+            
         </section>
     </main>
 
