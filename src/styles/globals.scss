@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GUIDELINES: Estas definições SCSS + Tailwind seguem os padrões Nextfur, desenvolvido por Sam Mahonri */
+
+:root {
+  --transition-duration: 0.3s;
+
+  --sam-light-def-color: 230, 230, 235;
+  --sam-dark-def-color: 30, 30, 35;
+
+  --sam-bg-color: 20, 15, 20;
+  --sam-fg-color: 30, 25, 30;
+
+  --sam-txt-title-color: 240, 240, 240;
+  --sam-txt-content-color: 180, 180, 190;
+  --sam-txt-pybtn-color: var(--sam-txt-title-color);
+  --sam-txt-sybtn-color: var(--sam-txt-content-color);
+
+  --SCSSsam-bg-color: rgb(15, 10, 15);
+  --SCSSsam-fg-color: rgb(30, 25, 30);
+  --SCSSsam-primary-color: rgb(130, 100, 230);
+  --SCSSsam-bro-primary-color: rgb(160, 90, 220);
+  --SCSSsam-secondary-color: rgb(80, 240, 150);
+  --SCSSsam-txt-color: rgb(240, 240, 240);
+
+  --sam-primary-color: 130, 100, 230;
+  --sam-bro-primary-color: 7, 155, 171;
+  --sam-secondary-color: 80, 240, 150;
+
+  --sam-border-btn-radius: 0;
+  --sam-border-panels-radius: 0;
+  --sam-border-color: 70, 70, 80;
+
+  --sam-divider-color: var(--sam-border-color);
+}
+
+:root.light {
+  --sam-bg-color: 240, 240, 245;
+  --sam-fg-color: 250, 250, 250;
+
+  --sam-txt-title-color: 70, 90, 110;
+  --sam-txt-content-color: 110, 130, 150;
+  --sam-txt-pybtn-color: var(--sam-txt-title-color);
+  --sam-txt-sybtn-color: var(--sam-txt-content-color);
+
+  --SCSSsam-bg-color: rgb(240, 240, 245);
+  --SCSSsam-primary-color: rgb(130, 100, 230);
+  --SCSSsam-bro-primary-color: rgb(7, 155, 171);
+  --SCSSsam-secondary-color: rgb(80, 170, 130);
+  --SCSSsam-txt-color: rgb(80, 100, 120);
+
+  --sam-primary-color: 130, 100, 230;
+  --sam-bro-primary-color: 190, 100, 220;
+  --sam-secondary-color: 80, 170, 130;
+
+  --sam-border-color: 255, 255, 255;
+
+  --sam-divider-color: var(--sam-border-color);
+}
+
+body,
+html {
+  margin: 0;
+  @apply bg-sam-bg-color transition-colors duration-300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  @apply font-dyslexia text-sam-txt-title-color uppercase;
+}
+p,
+p *,
+a {
+  @apply font-unbounded text-sam-txt-content-color text-base font-light transition-colors;
+}
+a {
+  @apply hover:text-secondary;
+}
+
+.elink{
+  @apply text-secondary;
+}
+
+.slink{
+  @apply py-1;
+}
+
+.olink{
+  
+  background-image: linear-gradient(to right, var(--SCSSsam-secondary-color), var(--SCSSsam-secondary-color));
+  background-size: 0% 2px;
+  background-position-y: 100%;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--transition-duration) ease-in-out, color var(--transition-duration);
+
+  &:hover,
+  &:focus,
+  &:active{
+    background-size: 100% 2px;
+    background-position-x: 0%;
+  }
+
+}
+
+.active-link{
+  background-size: 100% 2px;
+  background-position-x: 0%;
+  @apply text-secondary;
+}
+
+button {
+  @apply font-unbounded uppercase font-medium;
+}
+
+h1 {
+  @apply md:text-6xl text-5xl;
+}
+h2 {
+  @apply md:text-3xl text-2xl font-bold text-sam-secondary-color;
+}
+h3 {
+  @apply md:text-2xl text-xl font-semibold text-sam-secondary-color;
+}
+h4 {
+  @apply md:text-xl text-lg text-sam-secondary-color;
+}
+h5 {
+  @apply text-lg text-sam-secondary-color;
+}
+h6 {
+  @apply text-base text-sam-secondary-color;
+}
+
+.text-theme-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-sam-bro-primary-color via-sam-secondary-color to-sam-primary-color;
+}
+
+.p-tag {
+  @apply flex flex-row bg-sam-primary-color/20 border border-sam-primary-color/50 rounded-2xl py-1 px-3 text-xs text-sam-txt-title-color;
+}
+
+/* Botões */
+.btn {
+  transition: color 0.2s, scale var(--transition-duration), transform var(--transition-duration), background-color var(--transition-duration), border-color var(--transition-duration), box-shadow var(--transition-duration);
+  
+  @apply inline-flex items-center justify-center rounded-sam-border-btn-radius gap-2 text-sm border border-primary;
+  @apply active:scale-95;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-plain{
+  @apply px-5 py-3;
+}
+
+.btn-primary,
+.btn-selector{
+  @apply bg-primary text-sam-light;
+  @apply hover:text-background hover:border-secondary;
+  &:hover{
+    box-shadow: inset 0 -3.25em 0 0 var(--SCSSsam-secondary-color);
+  }
+}
+
+.btn-secondary,
+.btn-selector-secondary{
+  @apply bg-transparent text-primary;
+  @apply hover:text-sam-light;
+  &:hover{
+    box-shadow: inset 0 -3.25em 0 0 var(--SCSSsam-primary-color);
+  }
+}
+
+.btn-selector-secondary,
+.btn-selector{
+  @apply p-3;
+}
+
+.dyslexia{
+  @apply font-dyslexia;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-sam-fg-color;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  @apply bg-gradient-to-b from-sam-bro-primary-color to-sam-primary-color;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  @apply bg-gradient-to-r from-sam-bro-primary-color to-sam-primary-color;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gradient-to-b from-sam-bro-primary-color to-sam-secondary-color;
+}

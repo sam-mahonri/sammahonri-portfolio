@@ -8,10 +8,40 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        dyslexia: ['var(--font-dyslexia)'],
+        unbounded: ['var(--font-unbounded)']
+      },
+      spacing: {
+        'full-minus-1': 'calc(100% - 0.25rem)',
+      },
+      colors: {
+        'sam-light': "rgba(var(--sam-light-def-color))",
+        'sam-dark': "rgba(var(--sam-dark-def-color))",
+        background: "rgba(var(--sam-bg-color))",
+        foreground: "rgba(var(--sam-fg-color))",
+        primary: "rgba(var(--sam-primary-color))",
+        secondary: "rgba(var(--sam-secondary-color))",
+        border: "rgba(var(--sam-border-color))",
+        divider: "rgba(var(--sam-divider-color))",
+        'sam-bg-color': "rgba(var(--sam-bg-color))",
+        'sam-fg-color': "rgba(var(--sam-fg-color))",
+        'sam-txt-title-color': "rgba(var(--sam-txt-title-color))",
+        'sam-txt-content-color': "rgba(var(--sam-txt-content-color))",
+        'sam-txt-pybtn-color': "rgba(var(--sam-txt-pybtn-color))",
+        'sam-txt-sybtn-color': "rgba(var(--sam-txt-sybtn-color))",
+        'sam-primary-color': "rgba(var(--sam-primary-color))",
+        'sam-bro-primary-color': "rgba(var(--sam-bro-primary-color))",
+        'sam-secondary-color': "rgba(var(--sam-secondary-color))",
+        'sam-border-color': "rgba(var(--sam-border-color))",
+        'sam-divider-color': "rgba(var(--sam-divider-color))",
+      },
+      borderRadius: {
+        'sam-border-btn-radius': 'var(--sam-border-btn-radius)',
+        'sam-border-panels-radius': 'var(--sam-border-panels-radius)',
+      },
+      backgroundSize: {
+        '105p': '105%',
       },
     },
   },

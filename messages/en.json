@@ -1,0 +1,15 @@
+{
+    "Meta": {
+        "description": "Sam Mahonri's portfolio"
+    },
+    "Index": {
+        "subtitle": "Designer & Developer",
+        "about_me": "About me"
+    },
+    "Footer": {
+        "lang": "Languages",
+        "related": "Collaborating",
+        "socials": "Socials",
+        "copyright": "© 2021 - 2024 - All Rights Reserved - Sam Mahonri"
+    }
+}

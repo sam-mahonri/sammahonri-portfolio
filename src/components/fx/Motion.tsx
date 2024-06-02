@@ -1,0 +1,72 @@
+"use client";
+
+import { motion, useInView, useAnimation, easeIn } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+
+interface RevealProps {
+    children: React.ReactNode;
+    overflow?: "hidden" | "visible";
+    width?: "fit-content" | "100%";
+    height?: "fit-content" | "100%";
+    delay?: number;
+    duration?: number;
+    initial?: number;
+    final?: number;
+    ease?: string;
+    once?: boolean;
+    showSlider?: 0 | 1
+    sliderColor?: string
+}
+
+export const Reveal = ({ children, delay = 0, duration = 0.5, initial = 64, final = 0, ease = "easeOut", width = "fit-content", height = "fit-content", overflow = "hidden", once = true, showSlider = 1, sliderColor = "var(--SCSSsam-secondary-color)"}: RevealProps) => {
+    
+    const ref = useRef(null);
+    
+    const isInView = useInView(ref, { once: once });
+
+    const mainControls = useAnimation();
+    const slideControls = useAnimation();
+
+    useEffect(() => {
+        if (isInView) {
+            mainControls.start("visible");
+            slideControls.start("visible");
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isInView]);
+
+    return <>
+        <div ref = {ref} style = {{ position: "relative", width, height, overflow: overflow}}>
+            <motion.div
+            variants = {{
+                hidden: { opacity: 0, y: initial },
+                visible: { opacity: 1, y: final }
+            }}
+            initial = "hidden"
+            animate = {mainControls}
+            transition = {{ duration: duration, delay: delay, ease: ease }}
+            >
+                {children}
+            </motion.div>
+            <motion.div 
+                variants = {{
+                    hidden: {left: 0},
+                    visible: {left: "100%"},
+                }}
+                initial = "hidden"
+                animate = {slideControls}
+                transition = {{ duration: duration, ease: "easeIn", delay: delay}}
+                style={{
+                    opacity: showSlider,
+                    position: "absolute",
+                    top: 2,
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    background: sliderColor,
+                    zIndex: 2,
+                }}
+            />
+        </div>
+    </>
+};
