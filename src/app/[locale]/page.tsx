@@ -1,16 +1,16 @@
 import {useTranslations} from 'next-intl';
-import backgroundImage from "../../public/backgrounds/home.svg"
+import backgroundImage from "/public/backgrounds/home.svg"
 import { Reveal } from '@/components/fx/Motion';
 import { DynamicLogo } from '@/components/ui/SamLogos';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function Index() {
   const t = useTranslations('Index');
   const tc = useTranslations('Common');
   return <>
-    <main className="flex flex-col items-center justify-center bg-cover bg-center bg-fixed" style={{backgroundImage: `url(${backgroundImage.src})`}}>
-      <section className="max-w-7xl w-full flex flex-col items-center gap-4 min-h-screen place-items-center place-content-center p-6 pt-12 border-l border-r md:border-sam-secondary-color/60 border-transparent border-dashed">
+    <main className="main-section" style={{backgroundImage: `url(${backgroundImage.src})`}}>
+      <section className="main-subsection subsection-center-all">
         <Reveal delay={0.1} overflow='visible' showSlider={0}>
           
           <div className=' md:h-52 h-36'>
@@ -23,9 +23,14 @@ export default function Index() {
         <Reveal delay={0.2}>
             <h4>{t('toptitle')}</h4>
           </Reveal>
-          <Reveal delay={0.4}>
-            <h1>Sam Mahonri</h1>
-          </Reveal>
+          <div className='flex flex-row gap-2 items-center w-full'>
+              <span className=' border-t-2 border-dashed border-secondary flex-grow'></span>
+              <Reveal delay={0.4}>
+                <h1>Sam Mahonri</h1>
+              </Reveal>
+              <span className=' border-t-2 border-dashed border-secondary flex-grow'></span>
+          </div>
+          
           <Reveal delay={0.6}>
             <h4>{t('subtitle')}</h4>
           </Reveal>
@@ -33,12 +38,12 @@ export default function Index() {
         </div>
         <div className='flex flex-row gap-3'>
           <Reveal delay={0.8} sliderColor='var(--SCSSsam-primary-color)'>
-            <Link href={"/"}>
+            <Link href={"/blog"}>
               <button className='btn btn-primary'>{tc('blog')}<ArrowRightIcon /></button>
             </Link>
           </Reveal>
           <Reveal delay={1.0} sliderColor='var(--SCSSsam-primary-color)'>
-            <Link href={"/"}>
+            <Link href={"/about"}>
               <button className='btn btn-secondary'>{tc('about')}</button>
             </Link>
           </Reveal>

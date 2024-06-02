@@ -1,7 +1,10 @@
 {
     "Common": {
         "blog": "Blog",
-        "about": "Sobre mim"
+        "about": "Sobre mim",
+        "projects": "Projetos",
+        "arts":"Artes",
+        "loading": "Preparando UwU"
     },
     "Meta": {
         "description": "Portfólio de Sam Mahonri"
@@ -9,10 +12,6 @@
     "Index": {
         "toptitle": "Olá! Eu sou",
         "subtitle": "Designer & Desenvolvedor"
-    },
-    "Navbar": {
-        "projects": "Projetos",
-        "arts":"Artes"
     },
     "Footer": {
         "lang": "Idiomas",
