@@ -115,6 +115,10 @@ a {
   @apply text-secondary;
 }
 
+button svg, p svg{
+  @apply h-5 w-5;
+}
+
 button {
   @apply font-unbounded uppercase font-medium;
 }

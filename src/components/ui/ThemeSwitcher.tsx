@@ -12,13 +12,13 @@ export default function ThemeSwitch() {
 
     if (!mounted) return (
         <button className="btn btn-selector opacity-25">
-            <ArrowPathIcon className='h-5 w-5' />
+            <ArrowPathIcon />
         </button>
     )
 
     return (
         <button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} className="btn btn-selector">
-            {resolvedTheme === 'dark' ? <MoonIcon className='h-5 w-5' /> : <SunIcon className='h-5 w-5' />}
+            {resolvedTheme === 'dark' ? <MoonIcon /> : <SunIcon />}
         </button>
     );
 };

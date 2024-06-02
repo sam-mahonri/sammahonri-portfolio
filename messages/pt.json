@@ -1,10 +1,18 @@
 {
+    "Common": {
+        "blog": "Blog",
+        "about": "Sobre mim"
+    },
     "Meta": {
         "description": "Portfólio de Sam Mahonri"
     },
     "Index": {
-        "subtitle": "Designer & Desenvolvedor",
-        "about_me": "Sobre mim"
+        "toptitle": "Olá! Eu sou",
+        "subtitle": "Designer & Desenvolvedor"
+    },
+    "Navbar": {
+        "projects": "Projetos",
+        "arts":"Artes"
     },
     "Footer": {
         "lang": "Idiomas",

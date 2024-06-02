@@ -32,7 +32,7 @@ function Navbar() {
     }, []);
 
     return (
-        <nav className={clsx('flex flex-col items-center fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b h-20 border-b-secondary/40 border-dashed', {
+        <nav className={clsx('flex flex-col items-center fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b h-20 border-b-secondary/60 border-dashed', {
             'bg-transparent': isTop && !menuOpened,
             'bg-sam-fg-color/80': !isTop,
             'backdrop-blur-md': !isTop || menuOpened,
@@ -43,7 +43,7 @@ function Navbar() {
             <div className="flex flex-row items-center container max-w-7xl box-border gap-7 h-20 min-h-20">
                 <Reveal width='100%' showSlider={0} initial={64} final={0} delay={0}>
                     <div className="flex flex-row items-center container px-5 py-2 max-w-7xl box-border gap-5 h-fit">
-                        <Reveal>
+                        <Reveal initial={-64} final={0}>
                             <div className='h-8'>
                                 <Link href={"/"}>
                                     <span className=' hidden md:block h-full'> <DynamicInlineLogo className={clsx({"text-secondary": pathname === "/"})}/> </span>
@@ -58,7 +58,7 @@ function Navbar() {
                         
                         <span className='md:hidden block'>
                             <button className='btn btn-selector-secondary' onClick={estadoMenu}>
-                                {menuOpened ? <ArrowUpIcon className='h-5 w-5'/>: <Bars3Icon className='h-5 w-5'/> }
+                                {menuOpened ? <ArrowUpIcon />: <Bars3Icon /> }
                             </button>
                         </span>
                         

@@ -1,10 +1,20 @@
 {
+    
+    "Common": {
+        "blog": "Blog",
+        "about": "About Me"
+    },
     "Meta": {
         "description": "Sam Mahonri's portfolio"
     },
     "Index": {
-        "subtitle": "Designer & Developer",
-        "about_me": "About me"
+        "toptitle": "Hi! I'm",
+        "subtitle": "Designer & Developer"
+    },
+    "Navbar": {
+        "projects": "Projects",
+        "arts":"Arts",
+        "blog":"Blog"
     },
     "Footer": {
         "lang": "Languages",
