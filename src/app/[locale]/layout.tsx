@@ -6,6 +6,9 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import Navbar from "@/components/all/Navbar";
 import { Footer } from "@/components/all/Footer";
+import Splash from "@/components/all/Splash";
+import GoUp from "@/components/all/GoUp";
+
 
 export const metadata: Metadata = {
   title: "Sam Mahonri",
@@ -28,10 +31,11 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <NextThemeProvider>
               <Navbar />
+              <Splash />
               <main>
                 {children}
               </main>
-              
+              <GoUp />
               <Footer />
             </NextThemeProvider>
           </NextIntlClientProvider>

@@ -10,9 +10,9 @@ export async function Footer(){
     const t = useTranslations('Footer');
     const cl = getLocale()
     return <>
-        <div className="flex items-center justify-center border-t border-sam-secondary-color/50 border-dashed">
+        <div className="flex items-center justify-center border-t-2 border-sam-secondary-color/50 border-dashed">
             <div className="max-w-7xl w-full p-6 pt-10 pb-10 flex flex-col gap-4 justify-center items-center">
-            <span className=" h-px w-16 bg-transparent border-t border-t-primary border-dashed"></span>
+            <span className=" h-px w-16 bg-transparent border-t-2 border-t-primary border-dashed"></span>
                 <div className="flex flex-wrap gap-20 items-center justify-center w-full">
                     <div className=" h-14 w-fit">
                         <Reveal>
@@ -42,7 +42,7 @@ export async function Footer(){
                         <Link className="olink font-dyslexia font-semibold" href={"https://bsky.app/sammahonri.com"}>Bluesky</Link>
                     </div>
                 </div>
-                <span className=" h-px w-16 bg-transparent border-t border-t-primary border-dashed"></span>
+                <span className=" h-px w-16 bg-transparent border-t-2 border-t-primary border-dashed"></span>
                 <p className=" text-center font-dyslexia font-bold" >{t('copyright')}</p>
             </div>
         </div>
