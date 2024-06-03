@@ -5,6 +5,10 @@
         "projects": "Projetos",
         "arts":"Artes",
         "loading": "Preparando UwU",
+        "categories": "Categorias",
+        "recent": "Recentes",
+        "new": "Novo",
+        "back": "Voltar",
         "nothing": "Nada por aqui... Por enquanto... ¯\\_(ツ)_/¯"
     },
     "Errors": {
@@ -22,5 +26,15 @@
         "related": "Colaborando",
         "socials": "Redes sociais",
         "copyright": "© 2021 - 2024 - Todos os direitos reservados - Sam Mahonri"
+    },
+    "BlogCategories": {
+        "nextfur": "Nextfur",
+        "mormonism": "Mormonismo",
+        "nightmarefable": "Nightmare Fable DevLog",
+        "news": "Novidades",
+        "dev": "Desenvolvedor"
+    },
+    "Alerts": {
+        "incompleteTransBlog": "O conteúdo do Blog é sempre em Português - BR, a tradução do site não se aplica a ele."
     }
 }

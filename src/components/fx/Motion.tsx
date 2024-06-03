@@ -15,10 +15,11 @@ interface RevealProps {
     ease?: string;
     once?: boolean;
     showSlider?: 0 | 1
-    sliderColor?: string
+    sliderColor?: string,
+    className?: string
 }
 
-export const Reveal = ({ children, delay = 0, duration = 0.5, initial = 64, final = 0, ease = "easeOut", width = "fit-content", height = "fit-content", overflow = "hidden", once = true, showSlider = 1, sliderColor = "var(--SCSSsam-secondary-color)"}: RevealProps) => {
+export const Reveal = ({ children, delay = 0, duration = 0.5, initial = 64, final = 0, ease = "easeOut", width = "fit-content", height = "fit-content", overflow = "hidden", once = true, showSlider = 1, sliderColor = "var(--SCSSsam-secondary-color)", className = ""}: RevealProps) => {
     
     const ref = useRef(null);
     
@@ -36,7 +37,7 @@ export const Reveal = ({ children, delay = 0, duration = 0.5, initial = 64, fina
     }, [isInView]);
 
     return <>
-        <div ref = {ref} style = {{ position: "relative", width, height, overflow: overflow}}>
+        <div ref = {ref} style = {{ position: "relative", width, height, overflow: overflow}} className={className}>
             <motion.div
             variants = {{
                 hidden: { opacity: 0, y: initial },

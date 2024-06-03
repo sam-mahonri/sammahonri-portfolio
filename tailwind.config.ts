@@ -10,7 +10,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         dyslexia: ['var(--font-dyslexia)'],
-        unbounded: ['var(--font-unbounded)']
+        unbounded: ['var(--font-unbounded)'],
+        ibmmono: ['var(--font-ibm-mono)']
       },
       spacing: {
         'full-minus-1': 'calc(100% - 0.25rem)',

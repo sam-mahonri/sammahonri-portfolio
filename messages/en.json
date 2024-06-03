@@ -6,6 +6,10 @@
         "blog": "Blog",
         "about": "About Me",
         "loading": "Preparing UwU",
+        "categories": "Categories",
+        "recent": "Recent",
+        "new": "New",
+        "back": "Back",
         "nothing": "Nothing here... For now... ¯\\_(ツ)_/¯"
     },
     "Errors": {
@@ -23,5 +27,15 @@
         "related": "Collaborating",
         "socials": "Socials",
         "copyright": "© 2021 - 2024 - All Rights Reserved - Sam Mahonri"
+    },
+    "BlogCategories": {
+        "nextfur": "Nextfur",
+        "mormonism": "Mormonism",
+        "nightmarefable": "Nightmare Fable DevLog",
+        "news": "News",
+        "dev": "Developer"
+    },
+    "Alerts": {
+        "incompleteTransBlog": "The content of the Blog is always in Portuguese - BR, website translation does not apply to it."
     }
 }

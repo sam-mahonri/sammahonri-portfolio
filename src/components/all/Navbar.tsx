@@ -19,7 +19,7 @@ function Navbar() {
 
     const estadoMenu = () => {
         setMenuOpened(!menuOpened); // Alterna entre falso e verdadeiro
-      };
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -49,35 +49,37 @@ function Navbar() {
                         <Reveal initial={-64} final={0}>
                             <div className='h-8'>
                                 <Link href={"/"}>
-                                    <span className=' hidden md:block h-full'> <DynamicInlineLogo className={clsx({"text-secondary": pathname === "/"})}/> </span>
-                                    <span className=' block md:hidden h-full'> <DynamicLogo className={clsx({"text-secondary": pathname === "/"})} /> </span>
+                                    <span className=' hidden md:block h-full'> <DynamicInlineLogo className={clsx({ "text-secondary": pathname === "/" })} /> </span>
+                                    <span className=' block md:hidden h-full'> <DynamicLogo className={clsx({ "text-secondary": pathname === "/" })} /> </span>
                                 </Link>
                             </div>
                         </Reveal>
                         <span className='md:hidden block'>
                             <button className='btn btn-selector-secondary' onClick={estadoMenu}>
-                                {menuOpened ? <ArrowUpIcon />: <Bars3Icon /> }
+                                {menuOpened ? <ArrowUpIcon /> : <Bars3Icon />}
                             </button>
                         </span>
                         <span className='flex flex-grow '></span>
-                        <Reveal initial={-32} final={0} delay={0.2}><Link href={"/projects"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden',{"active-link": pathname === "/projects"})}>{tc('projects')}</Link></Reveal>
-                        <Reveal initial={-32} final={0} delay={0.4}><Link href={"/blog"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden',{"active-link": pathname === "/blog"})}>{tc('blog')}</Link></Reveal>
-                        <Reveal initial={-32} final={0} delay={0.4}><Link href={"/arts"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden',{"active-link": pathname === "/arts"})}>{tc('arts')}</Link></Reveal>
-                        <Reveal initial={-32} final={0} delay={0.6}><Link href={"/about"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden',{"active-link": pathname === "/about"})}>{tc('about')}</Link></Reveal>
-                        
-                        
-                        
+
+                        <Reveal initial={-32} final={0} delay={0.4}><Link href={"/blog"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden', { "active-link": pathname === "/blog" })}>{tc('blog')}</Link></Reveal>
+                        <Reveal initial={-32} final={0} delay={0.2}><Link href={"/projects"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden', { "active-link": pathname === "/projects" })}>{tc('projects')}</Link></Reveal>
+                        <Reveal initial={-32} final={0} delay={0.4}><Link href={"/arts"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden', { "active-link": pathname === "/arts" })}>{tc('arts')}</Link></Reveal>
+                        <Reveal initial={-32} final={0} delay={0.6}><Link href={"/about"} className={clsx('olink uppercase font-dyslexia font-semibold md:block hidden', { "active-link": pathname === "/about" })}>{tc('about')}</Link></Reveal>
+
+
+
                         <ThemeSwitch />
                     </div>
                 </Reveal>
             </div>
             {menuOpened ? <>
-            
+
                 <div className=' flex flex-grow flex-col justify-center items-center'>
-                <Reveal initial={-32} final={0} delay={0.2}><Link onClick={estadoMenu} href={"/projects"} className={clsx('olink slink uppercase font-dyslexia font-semibold text-2xl',{"active-link": pathname === "/projects"})}>{tc('projects')}</Link></Reveal>
-                <Reveal initial={-32} final={0} delay={0.4}><Link onClick={estadoMenu} href={"/blog"} className={clsx('olink slink uppercase font-dyslexia font-semibold text-2xl',{"active-link": pathname === "/blog"})}>{tc('blog')}</Link></Reveal>
-                <Reveal initial={-32} final={0} delay={0.6}><Link onClick={estadoMenu} href={"/arts"} className={clsx('olink slink uppercase font-dyslexia font-semibold text-2xl',{"active-link": pathname === "/arts"})}>{tc('arts')}</Link></Reveal>
-                <Reveal initial={-32} final={0} delay={0.8}><Link onClick={estadoMenu} href={"/about"} className={clsx('olink slink uppercase font-dyslexia font-semibold text-2xl',{"active-link": pathname === "/about"})}>{tc('about')}</Link></Reveal>
+
+                    <Reveal initial={-32} final={0} delay={0.4}><Link onClick={estadoMenu} href={"/blog"} className={clsx('olink slink uppercase font-dyslexia font-semibold text-2xl', { "active-link": pathname === "/blog" })}>{tc('blog')}</Link></Reveal>
+                    <Reveal initial={-32} final={0} delay={0.2}><Link onClick={estadoMenu} href={"/projects"} className={clsx('olink slink uppercase font-dyslexia font-semibold text-2xl', { "active-link": pathname === "/projects" })}>{tc('projects')}</Link></Reveal>
+                    <Reveal initial={-32} final={0} delay={0.6}><Link onClick={estadoMenu} href={"/arts"} className={clsx('olink slink uppercase font-dyslexia font-semibold text-2xl', { "active-link": pathname === "/arts" })}>{tc('arts')}</Link></Reveal>
+                    <Reveal initial={-32} final={0} delay={0.8}><Link onClick={estadoMenu} href={"/about"} className={clsx('olink slink uppercase font-dyslexia font-semibold text-2xl', { "active-link": pathname === "/about" })}>{tc('about')}</Link></Reveal>
                 </div>
             </> : <></>}
 
@@ -85,7 +87,7 @@ function Navbar() {
     );
 }
 
-function ListLinks(){
+function ListLinks() {
 
 }
 
