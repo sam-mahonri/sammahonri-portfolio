@@ -35,7 +35,7 @@ function Navbar() {
     }, []);
 
     return (
-        <nav className={clsx('flex flex-col items-center fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b-2 h-20 border-b-secondary/60 border-dashed', {
+        <nav className={clsx('flex flex-col items-center fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b h-20 border-b-secondary/60 border-dashed', {
             'bg-transparent': isTop && !menuOpened,
             'bg-sam-fg-color/80': !isTop,
             'backdrop-blur-md': !isTop || menuOpened,
