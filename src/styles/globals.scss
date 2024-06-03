@@ -98,7 +98,7 @@ a,
 li,
 li *,
 div{
-  @apply font-unbounded text-sam-txt-content-color text-base font-light transition-colors;
+  @apply font-ibm text-sam-txt-content-color text-base transition-colors font-medium;
 }
 a {
   @apply hover:text-secondary;
@@ -152,11 +152,11 @@ button svg, p svg, .alert-warning svg, .alert-success svg, .alert-error svg{
 }
 
 button {
-  @apply font-unbounded uppercase font-medium;
+  @apply font-unbounded uppercase font-bold;
 }
 
 .alert-warning {
-  @apply flex p-3 bg-orange-300/20 text-sm items-center justify-center border border-dashed border-orange-300 gap-3;
+  @apply flex p-3 bg-orange-300/20 items-center justify-center border border-dashed border-orange-300 gap-3;
 }
 
 h1 {
@@ -183,15 +183,15 @@ h6 {
 }
 
 .p-tag {
-  @apply flex flex-row bg-sam-primary-color/20 border border-sam-primary-color border-dashed py-1 px-3 text-xs text-sam-txt-title-color shadow-xl shadow-primary/50;
+  @apply flex flex-row bg-sam-primary-color/20 border border-sam-primary-color border-dashed py-1 px-3 text-sm text-sam-txt-title-color shadow-xl shadow-primary/50 font-bold;
 }
 
 .p-new-tag {
-  @apply flex flex-row bg-secondary border border-secondary py-1 px-3 text-xs text-background shadow-xl shadow-secondary/50;
+  @apply flex flex-row bg-secondary border border-secondary py-1 px-3 text-sm text-background shadow-xl shadow-secondary/50 font-bold;
 }
 
 .p-new-tag-ns {
-  @apply flex flex-row bg-secondary border border-secondary py-1 px-3 text-xs text-background
+  @apply flex flex-row bg-secondary border border-secondary py-1 px-3 text-sm text-background font-bold;
 }
 
 /* Botões */

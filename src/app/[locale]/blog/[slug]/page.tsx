@@ -18,7 +18,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
                     <Link href={"/blog"} className="flex flex-row gap-1 place-items-center">
                         <button className="btn btn-secondary"><ArrowLeftIcon width={20} />{tc("back")}</button>
                     </Link>
-                    <p>{articleData.date.toString()}</p>
+                    <p className="font-dyslexia font-bold">{articleData.date.toString()}</p>
                 </div>
                 <article
                     className="article max-w-4xl"

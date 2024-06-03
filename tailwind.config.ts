@@ -11,7 +11,8 @@ const config: Config = {
       fontFamily: {
         dyslexia: ['var(--font-dyslexia)'],
         unbounded: ['var(--font-unbounded)'],
-        ibmmono: ['var(--font-ibm-mono)']
+        ibmmono: ['var(--font-ibm-mono)'],
+        ibm: ['var(--font-ibm)']
       },
       spacing: {
         'full-minus-1': 'calc(100% - 0.25rem)',

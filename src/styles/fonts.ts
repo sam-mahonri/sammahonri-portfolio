@@ -1,4 +1,4 @@
-import { Unbounded, Major_Mono_Display, IBM_Plex_Mono } from "next/font/google";
+import { Unbounded, Major_Mono_Display, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 
 export const unbounded = Unbounded({
     subsets: ['latin'],
@@ -14,5 +14,11 @@ export const dyslexia = Major_Mono_Display({
 export const mono = IBM_Plex_Mono({
     subsets: ["latin"],
     variable: "--font-ibm-mono",
+    weight: "400"
+})
+
+export const ibm = IBM_Plex_Sans({
+    subsets: ["latin"],
+    variable: "--font-ibm",
     weight: "400"
 })
