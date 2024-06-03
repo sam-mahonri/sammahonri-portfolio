@@ -11,8 +11,21 @@ import GoUp from "@/components/all/GoUp";
 
 
 export const metadata: Metadata = {
-  title: "Sam Mahonri",
-  description: "Portfólio",
+  metadataBase: new URL('https://sammahonri.com' || 'http://localhost:3000'),
+  title: {
+    default: "Sam Mahonri",
+    template: "%s | Sam Mahonri"
+  },
+  openGraph: {
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630
+    }
+    ]
+  },
+  description: "Portfólio de Sam Mahonri",
 };
 
 export default async function LocaleLayout({

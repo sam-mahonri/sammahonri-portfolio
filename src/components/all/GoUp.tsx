@@ -2,8 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
-import { Reveal } from '../fx/Motion';
-import { ArrowUpIcon} from '@heroicons/react/24/outline';
+import { ArrowUpIcon } from '@heroicons/react/24/outline';
 
 export default function GoUp() {
     const [isTop, setIsTop] = useState(true);
@@ -15,22 +14,28 @@ export default function GoUp() {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll()
+        handleScroll();
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
-    return <>
-        <span className={clsx('fixed bottom-4 right-4 transition-opacity',{
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    return (
+        <span className={clsx('fixed bottom-4 right-4 transition-opacity', {
             'opacity-0': isTop,
             'pointer-events-none': isTop,
             'opacity-100': !isTop
         })}>
-            <button className=' btn btn-selector'>
+            <button className='btn btn-selector' onClick={scrollToTop}>
                 <ArrowUpIcon />
             </button>
         </span>
-        
-        </>;
+    );
 }

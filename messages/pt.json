@@ -4,7 +4,8 @@
         "about": "Sobre mim",
         "projects": "Projetos",
         "arts":"Artes",
-        "loading": "Preparando UwU"
+        "loading": "Preparando UwU",
+        "nothing": "Nada por aqui... Por enquanto... ¯\\_(ツ)_/¯"
     },
     "Errors": {
         "404":"Erro 404 - Esta página não existe, verifique a URL e tente novamente."

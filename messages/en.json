@@ -5,7 +5,8 @@
         "arts":"Arts",
         "blog": "Blog",
         "about": "About Me",
-        "loading": "Preparing UwU"
+        "loading": "Preparing UwU",
+        "nothing": "Nothing here... For now... ¯\\_(ツ)_/¯"
     },
     "Errors": {
         "404":"404 Error - This page doesn't exists, verify the URL and try again."
