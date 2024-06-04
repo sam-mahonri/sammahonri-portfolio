@@ -104,7 +104,7 @@ a {
   @apply hover:text-secondary;
 }
 
-.elink{
+.elink, article a{
   @apply text-secondary;
 }
 
@@ -124,7 +124,7 @@ strong{
   @apply font-bold;
 }
 
-.olink{
+.olink, article a{
   background-image: linear-gradient(to right, var(--SCSSsam-secondary-color), var(--SCSSsam-secondary-color));
   background-size: 0% 2px;
   background-position-y: 100%;
@@ -178,6 +178,8 @@ h6 {
   @apply text-base text-sam-secondary-color;
 }
 
+h1, h2, h3, h4, h5, h6 { word-break: break-word; }
+
 .text-theme-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-sam-bro-primary-color via-sam-secondary-color to-sam-primary-color;
 }
@@ -208,8 +210,8 @@ h6 {
   @apply px-5 py-3;
 }
 
-.article *{
-  @apply my-6;
+.article {
+  * { @apply my-6; }
 }
 
 .btn-primary,

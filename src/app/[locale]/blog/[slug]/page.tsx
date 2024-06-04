@@ -3,9 +3,15 @@ import { Metadata } from "next";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid"
 import { getArticleData } from "@/lib/articles"
 import { getTranslations } from "next-intl/server";
+import { ArticleItem } from "@/types";
 
-export const metadata: Metadata = {
-    title: "Blog"
+export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
+    const articleData = await getArticleData(params.slug);
+    const title = articleData.title;
+    console.log(articleData)
+    return {
+        title: `${title}`,
+    };
 };
 
 const Article = async ({ params }: { params: { slug: string } }) => {
@@ -21,7 +27,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
                     <p className="font-dyslexia font-bold">{articleData.date.toString()}</p>
                 </div>
                 <article
-                    className="article max-w-4xl"
+                    className="article max-w-4xl flex-grow"
                     dangerouslySetInnerHTML={{ __html: articleData.contentHtml }}
                 />
             </section>
