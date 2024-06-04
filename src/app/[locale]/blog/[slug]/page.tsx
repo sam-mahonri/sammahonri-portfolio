@@ -8,7 +8,6 @@ import { ArticleItem } from "@/types";
 export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
     const articleData = await getArticleData(params.slug);
     const title = articleData.title;
-    console.log(articleData)
     return {
         title: `${title}`,
     };

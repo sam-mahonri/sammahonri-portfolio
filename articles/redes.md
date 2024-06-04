@@ -6,4 +6,4 @@ date: "03-06-2024"
 
 # Alguns links úteis
 
-[Twitter/X](https://x.com/sammahonri)
+Você pode conversar comigo pela DM do [Twitter/X](https://x.com/sammahonri), [Instagram](https://instagram.com/sammahonri) ou [Discord](https://discord.com)
