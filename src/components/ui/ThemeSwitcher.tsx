@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { SunIcon, MoonIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
+import { SunIcon, MoonIcon, ArrowPathIcon } from '@heroicons/react/24/solid';
 import { useTheme } from 'next-themes';
 
 export default function ThemeSwitch() {

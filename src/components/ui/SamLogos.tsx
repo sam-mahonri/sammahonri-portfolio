@@ -21,3 +21,13 @@ export function DynamicLogo({ className = 'text-sam-txt-title-color' }: DynamicL
         </svg>
     </>
 }
+
+export function Arrow({ className = 'text-sam-txt-title-color' }: DynamicLogoProps) {
+    return <>
+        <svg className={`fill-current h-full w-full aspect-auto ${className}`} viewBox="0 0 67.733332 33.866666">
+            <g id="layer1" transform="matrix(1.9136922,0,0,1.1048707,-18.078166,-3.5592818)">
+                <path id="path24" d="M 27.143776,33.8736 18.295262,18.547523 9.4467469,3.2214475 27.143776,16.165112 44.840804,3.2214465 35.992289,18.547523 Z" />
+            </g>
+        </svg>
+    </>
+}

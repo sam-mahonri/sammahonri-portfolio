@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { unbounded, dyslexia, mono, ibm } from "@/styles/fonts";
+import { unbounded, dyslexia, mono, lexend } from "@/styles/fonts";
 import "@/styles/globals.scss";
 import { NextThemeProvider } from "@/providers/themes";
 import {NextIntlClientProvider} from 'next-intl';
@@ -39,8 +39,8 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${dyslexia.variable} ${unbounded.variable} ${mono.variable} ${ibm.variable} dark`} suppressHydrationWarning={true}>
-      <body >
+    <html lang={locale} className={`${unbounded.variable} ${dyslexia.variable} ${mono.variable} ${lexend.variable} dark`} suppressHydrationWarning={true}>
+      <body className="main-top" style={{backgroundImage: `url(${backgroundImage.src})`}}>
           <NextIntlClientProvider messages={messages}>
             <NextThemeProvider>
               <Navbar />

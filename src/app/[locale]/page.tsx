@@ -1,15 +1,16 @@
 import {useTranslations} from 'next-intl';
 import backgroundImage from "/public/backgrounds/home.svg"
 import { Reveal } from '@/components/fx/Motion';
-import { DynamicLogo } from '@/components/ui/SamLogos';
+import { Arrow, DynamicLogo } from '@/components/ui/SamLogos';
 import { Link } from '@/navigation';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import { JumpingArrow } from '@/components/fx/JumpingArrow';
 
 export default function Index() {
   const t = useTranslations('Index');
   const tc = useTranslations('Common');
   return <>
-    <main className="main-section" style={{backgroundImage: `url(${backgroundImage.src})`}}>
+    <main className="main-section">
       <section className="main-subsection subsection-center-all">
         <Reveal delay={0.1} overflow='visible' showSlider={0}>
           
@@ -39,16 +40,16 @@ export default function Index() {
         <div className='flex flex-row gap-3'>
           <Reveal delay={0.8} sliderColor='var(--SCSSsam-primary-color)'>
             <Link href={"/blog"}>
-              <button className='btn btn-primary'>{tc('blog')}<ArrowRightIcon /></button>
+              <button className='btn btn-secondary'>{tc('blog')}<ArrowRightIcon /></button>
             </Link>
           </Reveal>
           <Reveal delay={1.0} sliderColor='var(--SCSSsam-primary-color)'>
             <Link href={"/about"}>
-              <button className='btn btn-secondary'>{tc('about')}</button>
+              <button className='btn btn-primary'>{tc('about')}</button>
             </Link>
           </Reveal>
         </div>
-        
+        <JumpingArrow className=' h-5 mt-4'/>
       </section>
     </main>
   </>;

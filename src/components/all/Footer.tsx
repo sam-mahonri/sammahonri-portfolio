@@ -5,14 +5,18 @@ import { SwitchLanguageLink } from "../ui/LanguageSwitcherLink";
 import { useTranslations } from "next-intl";
 import { getLocale } from "next-intl/server";
 import clsx from "clsx";
+import { Divider } from "../ui/Divider";
 
 export async function Footer(){
     const t = useTranslations('Footer');
     const cl = getLocale()
+
+    const isJune = new Date().getMonth() === 5;
+
     return <>
-        <div className="flex items-center justify-center border-t border-sam-secondary-color/50 border-dashed">
+        <div className="flex items-center justify-center border-t border-sam-secondary-color/50 border-dashed bg-foreground">
             <div className="max-w-7xl w-full p-6 pt-10 pb-10 flex flex-col gap-4 justify-center items-center">
-            <span className=" h-px w-16 bg-transparent border-t border-t-primary border-dashed"></span>
+                <Divider />
                 <div className="flex flex-wrap gap-20 items-center justify-center w-full">
                     <div className=" h-14 w-fit">
                         <Reveal>
@@ -42,7 +46,7 @@ export async function Footer(){
                         <Link className="olink font-dyslexia font-semibold" href={"https://bsky.app/sammahonri.com"}>Bluesky</Link>
                     </div>
                 </div>
-                <span className=" h-px w-16 bg-transparent border-t border-t-primary border-dashed"></span>
+                <Divider />
                 <p className=" text-center font-dyslexia font-bold" >{t('copyright')}</p>
             </div>
         </div>

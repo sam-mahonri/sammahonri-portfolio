@@ -10,16 +10,16 @@
   --sam-light-def-color: 230, 230, 235;
   --sam-dark-def-color: 30, 30, 35;
 
-  --sam-bg-color: 20, 15, 20;
-  --sam-fg-color: 30, 25, 30;
+  --sam-bg-color: 40, 40, 45;
+  --sam-fg-color: 50, 50, 55;
 
   --sam-txt-title-color: 240, 240, 240;
   --sam-txt-content-color: 200, 200, 210;
   --sam-txt-pybtn-color: var(--sam-txt-title-color);
   --sam-txt-sybtn-color: var(--sam-txt-content-color);
 
-  --SCSSsam-bg-color: rgb(15, 10, 15);
-  --SCSSsam-fg-color: rgb(30, 25, 30);
+  --SCSSsam-bg-color: rgb(30, 30, 35);
+  --SCSSsam-fg-color: rgb(40, 40, 45);
   --SCSSsam-primary-color: rgb(130, 100, 230);
   --SCSSsam-bro-primary-color: rgb(160, 90, 220);
   --SCSSsam-secondary-color: rgb(80, 240, 150);
@@ -77,11 +77,16 @@ html {
 }
 
 .main-subsection{
-  @apply max-w-7xl w-full flex flex-col gap-4 min-h-screen p-6 border-x md:border-sam-secondary-color/60 border-transparent border-dashed py-24 z-10;
+  @apply max-w-7xl w-full flex flex-col gap-4 min-h-screen p-5 border-x md:border-sam-secondary-color/60 border-transparent border-dashed py-24 z-10;
 }
 
 .subsection-center-all{
   @apply items-center place-items-center place-content-center;
+}
+
+.backfixed{
+  z-index: 0;
+  @apply fixed top-0 left-0 w-full h-screen;
 }
 
 h1,
@@ -98,7 +103,7 @@ a,
 li,
 li *,
 div{
-  @apply font-ibm text-sam-txt-content-color text-base transition-colors font-medium;
+  @apply font-lexend text-sam-txt-content-color text-base transition-colors font-light;
 }
 a {
   @apply hover:text-secondary;
@@ -116,6 +121,7 @@ pre{
   @apply bg-secondary/10 p-4 border border-dashed border-secondary break-all;
   code {
     white-space: pre-wrap;
+    word-break: break-word;
     @apply font-ibmmono text-secondary;
   }
 }
@@ -212,6 +218,23 @@ h1, h2, h3, h4, h5, h6 { word-break: break-word; }
 
 .article {
   * { @apply my-6; }
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  @apply bg-primary;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.rainbow-border {
+  border-image: linear-gradient(to right, red, blue, green, yellow, orange, purple, gray, darkgray);
+  border-image-slice: 1;
+  border-style: dashed;
 }
 
 .btn-primary,

@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/fx/Motion";
-import { BugAntIcon, CheckCircleIcon, ExclamationTriangleIcon } from "@heroicons/react/24/outline";
+import { BugAntIcon, CheckCircleIcon, ExclamationTriangleIcon } from "@heroicons/react/24/solid";
 import { useTranslations } from "next-intl"
 
 interface Props {

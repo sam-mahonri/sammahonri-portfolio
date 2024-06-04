@@ -31,7 +31,7 @@ export const CategorizedArticleItemList = ({
                         <div className="flex flex-col gap-2.5 font-unbounded text-lg text-center items-center justify-center">
                             {articles[category].slice().reverse().map((article, index) => (
                                 <Reveal key={article.id}>
-                                    <span className="flex flex-wrap gap-2 items-center">
+                                    <span className="flex flex-wrap gap-2 items-center justify-center">
                                         <Link
                                             href={`blog/${article.id}`}
                                             className="olink slink"

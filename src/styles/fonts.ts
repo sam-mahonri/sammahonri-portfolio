@@ -1,4 +1,4 @@
-import { Unbounded, Major_Mono_Display, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import { Unbounded, Major_Mono_Display, IBM_Plex_Mono, Lexend } from "next/font/google";
 
 export const unbounded = Unbounded({
     subsets: ['latin'],
@@ -17,8 +17,7 @@ export const mono = IBM_Plex_Mono({
     weight: "400"
 })
 
-export const ibm = IBM_Plex_Sans({
+export const lexend = Lexend({
     subsets: ["latin"],
-    variable: "--font-ibm",
-    weight: "400"
+    variable: "--font-lexend"
 })

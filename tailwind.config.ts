@@ -12,7 +12,7 @@ const config: Config = {
         dyslexia: ['var(--font-dyslexia)'],
         unbounded: ['var(--font-unbounded)'],
         ibmmono: ['var(--font-ibm-mono)'],
-        ibm: ['var(--font-ibm)']
+        lexend: ['var(--font-lexend)']
       },
       spacing: {
         'full-minus-1': 'calc(100% - 0.25rem)',
@@ -38,6 +38,15 @@ const config: Config = {
         'sam-secondary-color': "rgba(var(--sam-secondary-color))",
         'sam-border-color': "rgba(var(--sam-border-color))",
         'sam-divider-color': "rgba(var(--sam-divider-color))",
+        rainbow: {
+          red: '#FF0000',
+          orange: '#FFA500',
+          yellow: '#FFFF00',
+          green: '#008000',
+          blue: '#0000FF',
+          indigo: '#4B0082',
+          violet: '#9400D3',
+        },
       },
       borderRadius: {
         'sam-border-btn-radius': 'var(--sam-border-btn-radius)',

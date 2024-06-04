@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
-import { ArrowUpIcon } from '@heroicons/react/24/outline';
+import { ArrowUpIcon } from '@heroicons/react/24/solid';
 
 export default function GoUp() {
     const [isTop, setIsTop] = useState(true);

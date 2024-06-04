@@ -19,9 +19,9 @@ const Article = async ({ params }: { params: { slug: string } }) => {
     return (
         <main className="main-section">
             <section className="main-subsection place-content-center items-center">
-                <div className="flex justify-between font-poppins w-full">
+                <div className="flex justify-between font-poppins w-full mt-2">
                     <Link href={"/blog"} className="flex flex-row gap-1 place-items-center">
-                        <button className="btn btn-secondary"><ArrowLeftIcon width={20} />{tc("back")}</button>
+                        <button className="btn btn-secondary"><ArrowLeftIcon width={20} />{tc("blog")}</button>
                     </Link>
                     <p className="font-dyslexia font-bold">{articleData.date.toString()}</p>
                 </div>
