@@ -3,7 +3,7 @@
 import { Link, usePathname } from "@/navigation";
 import { Reveal } from "../fx/Motion";
 import { useTranslations } from "next-intl";
-import { MusicalNoteIcon, CubeIcon, PencilIcon, PaintBrushIcon } from "@heroicons/react/24/outline";
+import { MusicalNoteIcon, CubeIcon, PencilSquareIcon, PaintBrushIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import { useState, useEffect, useRef } from "react";
 
@@ -36,20 +36,21 @@ export default function FilterArts() {
                         <div className={clsx("flex flex-wrap w-full transition-all", { " shadow-md": isSticky, "shadow-none": !isSticky })}>
                             <Link href={"/arts"} className="flex-grow">
                                 <div className={clsx(" bg-secondary/20 border-b-2 border-b-secondary btn-primary-fx-secondary", { "active-fx": pathname == "/arts", "h-16": !isSticky, " h-12": isSticky })}>
-                                    <PaintBrushIcon />
+                                    <CubeIcon />
                                     <span className="md:block hidden"> {ta('all')} </span>
                                 </div>
                             </Link>
                             <Link href={"/arts/vectorial"} className="flex-grow">
                                 <div className={clsx("bg-primary/20 border-b-2 btn-primary-fx-primary border-b-primary", { "active-fx": pathname == "/arts/vectorial", "h-16": !isSticky, " h-12": isSticky })}>
-                                    <PencilIcon />
+                                    <PencilSquareIcon />
                                     <span className="md:block hidden">{ta('vectorial')} </span>
                                 </div>
                             </Link>
-                            <Link href={"/arts/other"} className="flex-grow">
-                                <div className={clsx("bg-orange-400/20 border-b-2 btn-primary-fx-orange border-b-orange-400", { "active-fx": pathname == "/arts/other", "h-16": !isSticky, " h-12": isSticky })}>
-                                    <CubeIcon />
-                                    <span className="md:block hidden">{ta('other')} </span>
+                            <Link href={"/arts/paintings"} className="flex-grow">
+                                <div className={clsx("bg-orange-400/20 border-b-2 btn-primary-fx-orange border-b-orange-400", { "active-fx": pathname == "/arts/paintings", "h-16": !isSticky, " h-12": isSticky })}>
+                                    
+                                    <PaintBrushIcon />
+                                    <span className="md:block hidden">{ta('paintings')} </span>
                                 </div>
                             </Link>
                             <Link href={"/arts/music"} className="flex-grow">

@@ -99,6 +99,10 @@ a {
   @apply hover:text-secondary;
 }
 
+li {
+  @apply list-disc ml-8
+}
+
 .elink, article a{
   @apply text-secondary;
 }

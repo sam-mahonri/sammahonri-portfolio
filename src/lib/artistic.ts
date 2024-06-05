@@ -20,7 +20,7 @@ export interface ArtItem {
     contentWarning?: boolean;
 }
 
-type ArtCategory = 'sona' | 'vectorial' | 'other' | 'all';
+type ArtCategory = 'vectorial' | 'painting' | 'all';
 
 export function getArtCategorizedRefs(category: ArtCategory = 'all'): ArtItem[] {
     const content = readJSON(artsDictPath);

@@ -10,7 +10,7 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
     };
 };
 export default function Arts() {
-    const artsContent = getArtCategorizedRefs("other");
+    const artsContent = getArtCategorizedRefs("painting");
 
     return <Gallery Arts={artsContent}/>
     
