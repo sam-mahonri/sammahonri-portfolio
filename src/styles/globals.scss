@@ -5,7 +5,7 @@
 /* GUIDELINES: Estas definições SCSS + Tailwind seguem os padrões Nextfur, desenvolvido por Sam Mahonri */
 
 :root {
-  --transition-duration: 0.3s;
+  --transition-duration: 0.4s;
 
   --sam-light-def-color: 230, 230, 235;
   --sam-dark-def-color: 30, 30, 35;
@@ -15,16 +15,12 @@
 
   --sam-txt-title-color: 240, 240, 240;
   --sam-txt-content-color: 200, 200, 210;
+
   --sam-txt-pybtn-color: var(--sam-txt-title-color);
   --sam-txt-sybtn-color: var(--sam-txt-content-color);
 
-  --SCSSsam-bg-color: rgb(30, 30, 35);
-  --SCSSsam-fg-color: rgb(40, 40, 45);
-  --SCSSsam-primary-color: rgb(130, 100, 230);
-  --SCSSsam-bro-primary-color: rgb(160, 90, 220);
-  --SCSSsam-secondary-color: rgb(80, 240, 150);
-  --SCSSsam-txt-color: rgb(240, 240, 240);
-  --SCSSsam-error-color: rgb(230, 33, 105);
+  --sam-orange-color: 251, 146, 60;
+  --sam-pink-color: 236, 72, 153;
 
   --sam-error-color: 230, 33, 105;
   --sam-primary-color: 130, 100, 230;
@@ -46,12 +42,6 @@
   --sam-txt-content-color: 90, 100, 125;
   --sam-txt-pybtn-color: var(--sam-txt-title-color);
   --sam-txt-sybtn-color: var(--sam-txt-content-color);
-
-  --SCSSsam-bg-color: rgb(220, 220, 230);
-  --SCSSsam-primary-color: rgb(130, 100, 230);
-  --SCSSsam-bro-primary-color: rgb(7, 155, 171);
-  --SCSSsam-secondary-color: rgb(70, 160, 120);
-  --SCSSsam-txt-color: rgb(60, 80, 100);
 
   --sam-error-color: 230, 33, 105;
   --sam-primary-color: 130, 100, 230;
@@ -131,7 +121,7 @@ strong{
 }
 
 .olink, article a{
-  background-image: linear-gradient(to right, var(--SCSSsam-secondary-color), var(--SCSSsam-secondary-color));
+  background-image: linear-gradient(to right, rgb(var(--sam-secondary-color)), rgb(var(--sam-secondary-color)));
   background-size: 0% 2px;
   background-position-y: 100%;
   background-position-x: 100%;
@@ -224,13 +214,64 @@ h1, h2, h3, h4, h5, h6 { word-break: break-word; }
   @apply bg-primary text-sam-light;
   @apply hover:text-background hover:border-secondary;
   &:hover{
-    box-shadow: inset 0 -3.25em 0 0 var(--SCSSsam-secondary-color);
+    box-shadow: inset 0 -3.25em 0 0 rgb(var(--sam-secondary-color));
+  }
+}
+
+.btn-primary-fx-secondary,
+.btn-primary-fx-primary,
+.btn-primary-fx-orange,
+.btn-primary-fx-pink{
+  svg {
+    @apply h-7;
+  }
+  @apply transition-all duration-500 font-dyslexia flex justify-center items-center text-center uppercase text-xl font-bold gap-3;
+  @apply active:scale-95;
+}
+
+.btn-primary-fx-secondary {
+  &:hover,
+  &.active-fx,
+  &:active,
+  &:focus{
+    box-shadow: inset 0 -4em 0 0 rgb(var(--sam-secondary-color));
+    @apply text-background;
+  }
+}
+
+.btn-primary-fx-primary {
+  &:hover,
+  &.active-fx,
+  &:active,
+  &:focus{
+    box-shadow: inset 0 -4em 0 0 rgb(var(--sam-primary-color));
+    @apply text-sam-light;
+  }
+}
+
+.btn-primary-fx-orange {
+  &:hover,
+  &.active-fx,
+  &:active,
+  &:focus{
+    box-shadow: inset 0 -4em 0 0 rgb(var(--sam-orange-color));
+    @apply text-sam-light;
+  }
+}
+
+.btn-primary-fx-pink {
+  &:hover,
+  &.active-fx,
+  &:active,
+  &:focus{
+    box-shadow: inset 0 -4em 0 0 rgb(var(--sam-pink-color));
+    @apply text-sam-light;
   }
 }
 
 .btn-plain{
-  @apply border-transparent;
-  @apply hover:border-primary;
+  @apply border-transparent px-0 transition-all duration-300;
+  @apply hover:border-primary hover:px-4;
 }
 .btn-secondary,
 .btn-selector-secondary,
@@ -238,7 +279,7 @@ h1, h2, h3, h4, h5, h6 { word-break: break-word; }
   @apply bg-transparent text-primary;
   @apply hover:text-sam-light;
   &:hover{
-    box-shadow: inset 0 -3.25em 0 0 var(--SCSSsam-primary-color);
+    box-shadow: inset 0 -3.25em 0 0 rgb(var(--sam-primary-color));
   }
 }
 

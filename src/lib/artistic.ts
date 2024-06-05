@@ -22,7 +22,7 @@ export interface ArtItem {
 
 type ArtCategory = 'sona' | 'vectorial' | 'other' | 'all';
 
-export function getArtCategorizedRefs(category: ArtCategory = 'sona'): ArtItem[] {
+export function getArtCategorizedRefs(category: ArtCategory = 'all'): ArtItem[] {
     const content = readJSON(artsDictPath);
 
     if (!content) {

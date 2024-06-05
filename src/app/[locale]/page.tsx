@@ -38,12 +38,12 @@ export default function Index() {
           
         </div>
         <div className='flex flex-row gap-3'>
-          <Reveal delay={0.8} sliderColor='var(--SCSSsam-primary-color)'>
+          <Reveal delay={0.8} sliderColor='rgb(var(--sam-primary-color))'>
             <Link href={"/blog"}>
               <button className='btn btn-secondary'>{tc('blog')}<ArrowRightIcon /></button>
             </Link>
           </Reveal>
-          <Reveal delay={1.0} sliderColor='var(--SCSSsam-primary-color)'>
+          <Reveal delay={1.0} sliderColor='rgb(var(--sam-primary-color))'>
             <Link href={"/about"}>
               <button className='btn btn-primary'>{tc('about')}</button>
             </Link>

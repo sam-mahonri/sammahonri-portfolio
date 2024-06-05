@@ -19,7 +19,7 @@ interface RevealProps {
     className?: string
 }
 
-export const Reveal = ({ children, delay = 0, duration = 0.5, initial = 64, final = 0, ease = "easeOut", width = "fit-content", height = "fit-content", overflow = "hidden", once = true, showSlider = 1, sliderColor = "var(--SCSSsam-secondary-color)", className = ""}: RevealProps) => {
+export const Reveal = ({ children, delay = 0, duration = 0.5, initial = 64, final = 0, ease = "easeOut", width = "fit-content", height = "fit-content", overflow = "hidden", once = true, showSlider = 1, sliderColor = "rgb(var(--sam-secondary-color))", className = ""}: RevealProps) => {
     
     const ref = useRef(null);
     
