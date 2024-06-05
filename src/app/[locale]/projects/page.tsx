@@ -2,9 +2,13 @@ import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/fx/Motion';
 import type { Metadata } from "next";
 import { Title } from '@/components/ui/Titles';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-    title: "Projects"
+export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
+    const t = await getTranslations("Common")
+    return {
+        title: `${t('projects')}`,
+    };
 };
 
 export default function Projects() {

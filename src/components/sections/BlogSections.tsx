@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getSortedArticles, getCategorizedArticles } from "@/lib/articles";
 import { DatedArticleItemList, CategorizedArticleItemList } from "../ui/ArticleItemList";
 import { Reveal } from "../fx/Motion";
 import { useLocale, useTranslations } from "next-intl";
@@ -55,8 +54,8 @@ export function BlogSections({
     return (<>
         <Reveal delay={0.5}>
             <span className=' flex flex-wrap justify-center'>
-                <button className={clsx('btn', { 'btn-primary': layout == 'sorted', 'btn-secondary': layout == 'categorized' })} onClick={() => changeLayout("sorted")}>{tc("recent")}</button>
-                <button className={clsx('btn', { 'btn-primary': layout == 'categorized', 'btn-secondary': layout == 'sorted' })} onClick={() => changeLayout("categorized")}>{tc("categories")}</button>
+                <button className={clsx('btn flex-grow', { 'btn-primary': layout == 'sorted', 'btn-secondary': layout == 'categorized' })} onClick={() => changeLayout("sorted")}>{tc("recent")}</button>
+                <button className={clsx('btn flex-grow', { 'btn-primary': layout == 'categorized', 'btn-secondary': layout == 'sorted' })} onClick={() => changeLayout("categorized")}>{tc("categories")}</button>
 
             </span>
         </Reveal>

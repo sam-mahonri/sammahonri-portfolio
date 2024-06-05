@@ -4,14 +4,18 @@ import { Reveal } from '@/components/fx/Motion';
 import { Link } from '@/navigation';
 import { AcademicCapIcon } from '@heroicons/react/24/solid';
 import { Title } from '@/components/ui/Titles';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-    title: "About Me"
+export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
+    const t = await getTranslations("Common")
+    return {
+        title: `${t('about')}`,
+    };
 };
 
 export default function About() {
     const tc = useTranslations('Common');
-    
+    const ta = useTranslations('About')
     return <>
         <main className="main-section">
             <section className="main-subsection place-content-center items-center">
@@ -21,11 +25,9 @@ export default function About() {
                     <section className='flex flex-col gap-11'>
                         <div className=' flex flex-wrap'>
                             <div className='*:my-3'>
-                                <Reveal delay={0.4}><h4 className=' text-center'>Formação Acadêmica</h4></Reveal>
+                                <Reveal delay={0.4}><h4 className=' text-center'>{ta('t_fa')}</h4></Reveal>
                                 <Reveal delay={0.5}>
-                                <p>
-                                    Cursei meu ensino médio integrado de Informática no Instituto Federal do Sertão Pernambucano em Petrolina-PE, Brasil, onde desenvolvi uma sólida base em tecnologia. Atualmente, estou cursando graduação em Ciência da Computação na Universidade Cruzeiro do Sul Virtual, aprofundando meus conhecimentos e habilidades na área.
-                                </p>
+                                <p>{ta('fa_content')}</p>
                                 </Reveal>
                                 <Reveal delay={0.55}>
                                     <div className=' flex flex-wrap gap-4'>
@@ -42,22 +44,18 @@ export default function About() {
 
                         <div className=' flex flex-wrap'>
                             <div className='*:my-3'>
-                                <Reveal delay={0.6}><h4 className=' text-center'>Interesses Profissionais</h4></Reveal>
+                                <Reveal delay={0.6}><h4 className=' text-center'>{ta('t_ip')}</h4></Reveal>
                                 <Reveal delay={0.7}>
-                                <p>
-                                    Tenho um amplo leque de interesses profissionais, incluindo design (web design e desenvolvimento web), desenvolvimento de jogos, composição de artes e composição de músicas. Essa diversidade de interesses me permite explorar diferentes áreas da tecnologia e da criatividade, buscando soluções inovadoras e atraentes.
-                                </p>
+                                <p>{ta('ip_content')}</p>
                                 </Reveal>
                             </div>
                         </div>
 
                         <div className=' flex flex-wrap'>
                             <div className='*:my-3'>
-                                <Reveal delay={0.8}><h4 className=' text-center'>Expressão Artística</h4></Reveal>
+                                <Reveal delay={0.8}><h4 className=' text-center'>{ta('t_ea')}</h4></Reveal>
                                 <Reveal delay={0.9}>
-                                <p>
-                                    Sou um entusiasta da cultura Furry e tenho um fursona da espécie dragão, com características marcantes como orelhas grandes e uma cauda longa. Esse fursona, com suas cores principais de verde, roxo e branco, e olhos azuis, me permite expressar minha criatividade e proatividade de maneira única. Essa paixão pela arte e pela expressão pessoal é um aspecto fundamental da minha identidade.
-                                </p>
+                                <p>{ta('ea_content')}</p>
                                 </Reveal>
                             </div>
                         </div>

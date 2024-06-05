@@ -37,12 +37,14 @@ function Navbar() {
     const isJune = new Date().getMonth() === 5;
     
     return (
-        <nav className={clsx('flex flex-col items-center fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b h-20 border-dashed border-b-secondary/60', {
+        <nav className={clsx('flex flex-col items-center fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b h-20 border-dashed', {
             'bg-transparent': isTop && !menuOpened,
             'backdrop-blur-md': !isTop || menuOpened,
             'backdrop-blur-none': menuOpened,
             'bg-foreground/90': menuOpened || !isTop,
-            'h-full': menuOpened
+            'h-full': menuOpened,
+            'border-b-secondary/60': !isTop,
+            'border-transparent': isTop
         })}>
             <div className="flex flex-row items-center container max-w-7xl box-border gap-7 h-20 min-h-20">
                 <Reveal width='100%' showSlider={0} initial={64} final={0} delay={0}>

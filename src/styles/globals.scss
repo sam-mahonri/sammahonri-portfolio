@@ -202,6 +202,9 @@ h1, h2, h3, h4, h5, h6 { word-break: break-word; }
   @apply flex flex-row bg-secondary border border-secondary py-1 px-3 text-sm text-background font-bold;
 }
 
+.article {
+  * { @apply my-6; }
+}
 /* Botões */
 .btn {
   transition: color 0.2s, scale var(--transition-duration), transform var(--transition-duration), background-color var(--transition-duration), border-color var(--transition-duration), box-shadow var(--transition-duration);
@@ -216,27 +219,6 @@ h1, h2, h3, h4, h5, h6 { word-break: break-word; }
   @apply px-5 py-3;
 }
 
-.article {
-  * { @apply my-6; }
-}
-
-.cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  @apply bg-primary;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-.rainbow-border {
-  border-image: linear-gradient(to right, red, blue, green, yellow, orange, purple, gray, darkgray);
-  border-image-slice: 1;
-  border-style: dashed;
-}
-
 .btn-primary,
 .btn-selector{
   @apply bg-primary text-sam-light;
@@ -246,8 +228,13 @@ h1, h2, h3, h4, h5, h6 { word-break: break-word; }
   }
 }
 
+.btn-plain{
+  @apply border-transparent;
+  @apply hover:border-primary;
+}
 .btn-secondary,
-.btn-selector-secondary{
+.btn-selector-secondary,
+.btn-plain{
   @apply bg-transparent text-primary;
   @apply hover:text-sam-light;
   &:hover{

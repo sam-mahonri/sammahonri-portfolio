@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid"
 import { getArticleData } from "@/lib/articles"
 import { getTranslations } from "next-intl/server";
-import { ArticleItem } from "@/types";
 
 export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
     const articleData = await getArticleData(params.slug);
@@ -19,9 +18,9 @@ const Article = async ({ params }: { params: { slug: string } }) => {
     return (
         <main className="main-section">
             <section className="main-subsection place-content-center items-center">
-                <div className="flex justify-between font-poppins w-full mt-2">
+                <div className="flex justify-between font-poppins max-w-4xl w-full items-center">
                     <Link href={"/blog"} className="flex flex-row gap-1 place-items-center">
-                        <button className="btn btn-secondary"><ArrowLeftIcon width={20} />{tc("blog")}</button>
+                        <button className="btn btn-plain"><ArrowLeftIcon width={20} />{tc("blog")}</button>
                     </Link>
                     <p className="font-dyslexia font-bold">{articleData.date.toString()}</p>
                 </div>

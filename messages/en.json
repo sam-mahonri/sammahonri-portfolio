@@ -37,5 +37,15 @@
     },
     "Alerts": {
         "incompleteTransBlog": "The content of the Blog is always in Portuguese - BR, website translation does not apply to it."
+    },
+    "About": {
+        "t_fa": "Academic Background",
+        "t_ip": "Professional Interests",
+        "t_ea": "Artistic Expression",
+    
+        "fa_content": "I completed my high school integrated with Informatics at the Federal Institute of Sertão Pernambucano in Petrolina-PE, Brazil, where I developed a solid foundation in technology. Currently, I am pursuing a degree in Computer Science at Universidade Cruzeiro do Sul Virtual, deepening my knowledge and skills in the field.",
+        "ip_content": "I have a broad range of professional knowledge and interests, including design (web design and web development), game development, art composition, and music composition. This diversity of interests allows me to explore different areas of technology and creativity, seeking innovative and attractive solutions.",
+        "ea_content": "I am an enthusiast of the Furry culture and have a fursona of the dragon species, with notable features such as large ears and a long tail. This fursona, with its main colors of green, purple, and white, and blue eyes, allows me to express my creativity and proactivity in a unique way. This passion for art and personal expression is a fundamental aspect of my identity."
     }
+    
 }
