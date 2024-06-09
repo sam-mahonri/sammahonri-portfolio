@@ -45,7 +45,7 @@ export default async function LocaleLayout({
             <NextThemeProvider>
               <Navbar />
               <Splash />
-              <main>
+              <main className=" min-h-screen">
                 {children}
               </main>
               <GoUp />
