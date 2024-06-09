@@ -21,7 +21,7 @@ export function GenericAlert({alertType, transMessageKey, dismiss = true} : Prop
     }
 
     return (
-        <Reveal sliderColor="var(--SCSSsam-txt-color)" delay={0.3}>
+        <Reveal sliderColor="rgb(var(--sam-txt-title-color))" delay={0.3}>
             <div className={` alert-${alertType} `}>
                 {alertIcon}
                 {alertMessage}

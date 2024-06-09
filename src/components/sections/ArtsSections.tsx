@@ -16,7 +16,7 @@ interface Props {
 }
 
 const Gallery = ({ Arts }: Props) => {
-    const [isLoading, setLoading] = useState(true);
+    const [loadingStates, setLoadingStates] = useState<{ [key: number]: boolean }>({});
     const [fullScreenImage, setFullScreenImage] = useState<ArtItem | null>(null);
     const [visibleArts, setVisibleArts] = useState<ArtItem[]>([]);
     const [hasMore, setHasMore] = useState(true);
@@ -59,7 +59,6 @@ const Gallery = ({ Arts }: Props) => {
             }
             setLoadingMore(false);
         }, 1000); // Costumo deixar as pessoas esperando só pra ver o spinner UwU
-        
     };
 
     const handleImageClick = (art: ArtItem) => {
@@ -70,6 +69,13 @@ const Gallery = ({ Arts }: Props) => {
         setFullScreenImage(null);
     };
 
+    const handleImageLoad = (index: number) => {
+        setLoadingStates(prev => ({
+            ...prev,
+            [index]: false,
+        }));
+    };
+
     return (
         <div>
             <div className="md:grid md:grid-cols-3 flex flex-col items-center justify-center flex-grow w-full gap-3">
@@ -77,8 +83,8 @@ const Gallery = ({ Arts }: Props) => {
                     <div
                         key={index}
                         className={clsx("border-2 border-secondary/20 hover:border-secondary w-full transition-all duration-300 cursor-pointer", {
-                            "opacity-0": isLoading,
-                            "opacity-100": !isLoading
+                            "opacity-0": loadingStates[index] !== false,
+                            "opacity-100": loadingStates[index] === false
                         })}
                         onClick={() => handleImageClick(art)}
                     >
@@ -104,7 +110,7 @@ const Gallery = ({ Arts }: Props) => {
                                     (max-width: 1280px) 50vw,
                                     (max-width: 1536px) 33vw,
                                     25vw"
-                                    onLoad={() => setLoading(false)}
+                                    onLoad={() => handleImageLoad(index)}
                                 />
                             </div>
                         </Reveal>
@@ -146,7 +152,7 @@ const Gallery = ({ Arts }: Props) => {
                                 src={fullScreenImage.imgUrl}
                                 fill
                                 sizes=""
-                                onLoad={() => setLoading(false)}
+                                onLoad={() => handleImageLoad(-1)}
                             />
                         </div>
                     </div>
