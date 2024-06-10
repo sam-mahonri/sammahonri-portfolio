@@ -41,11 +41,11 @@ export default function About() {
                                     </div>
                                 </Reveal>
                             </div>
-                            <Grad className=' min-w-64 w-2/4 text-secondary' />
+                            <Grad className=' min-w-32 w-2/4 max-w-80 text-secondary' />
                         </div>
 
                         <div className=' flex md:flex-row flex-col items-center'>
-                            <CodeArtist className=' min-w-64 w-2/4 text-secondary' />
+                            <CodeArtist className=' min-w-32 w-2/4 max-w-80 text-secondary' />
                             <div className='*:my-3'>
                                 <Reveal delay={0.6}><h4 className=' text-center'>{ta('t_ip')}</h4></Reveal>
                                 <Reveal delay={0.7}>
@@ -62,7 +62,7 @@ export default function About() {
                                 <p>{ta('ea_content')}</p>
                                 </Reveal>
                             </div>
-                            <MeSona className=' min-w-64 w-2/4 text-secondary' />
+                            <MeSona className=' min-w-32 w-2/4 max-w-80 text-secondary' />
                         </div>
                     </section>
                     

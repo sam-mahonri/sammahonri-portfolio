@@ -33,7 +33,7 @@ const Gallery = ({ Arts }: Props) => {
         const handleScroll = () => {
             if (loadMoreRef.current) {
                 const rect = loadMoreRef.current.getBoundingClientRect();
-                if (rect.top <= window.innerHeight && !loadingMore) {
+                if (rect.top <= window.innerHeight + 64 && !loadingMore) {
                     loadMore();
                 }
             }
@@ -58,7 +58,7 @@ const Gallery = ({ Arts }: Props) => {
                 setHasMore(false);
             }
             setLoadingMore(false);
-        }, 1000); // Costumo deixar as pessoas esperando só pra ver o spinner UwU
+        }, 500); // Costumo deixar as pessoas esperando só pra ver o spinner UwU
     };
 
     const handleImageClick = (art: ArtItem) => {
