@@ -14,7 +14,7 @@ export async function Footer(){
     const isJune = new Date().getMonth() === 5;
 
     return <>
-        <div className="flex items-center justify-center border-t border-sam-secondary-color/50 border-dashed bg-foreground">
+        <div className="flex items-center justify-center border-t-2 border-sam-secondary-color/50 bg-foreground">
             <div className="max-w-7xl w-full p-6 pt-10 pb-10 flex flex-col gap-4 justify-center items-center">
                 <Divider />
                 <div className="flex flex-wrap gap-20 items-center justify-center w-full">

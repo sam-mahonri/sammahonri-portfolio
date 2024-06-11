@@ -10,8 +10,8 @@
   --sam-light-def-color: 230, 230, 235;
   --sam-dark-def-color: 30, 30, 35;
 
-  --sam-bg-color: 40, 40, 45;
-  --sam-fg-color: 50, 50, 55;
+  --sam-bg-color: 15, 15, 20;
+  --sam-fg-color: 25, 25, 30;
 
   --sam-txt-title-color: 240, 240, 240;
   --sam-txt-content-color: 200, 200, 210;
@@ -67,7 +67,7 @@ html {
 }
 
 .main-subsection{
-  @apply max-w-7xl w-full flex flex-col gap-4 min-h-screen p-5 border-x md:border-sam-secondary-color/60 border-transparent border-dashed py-24 z-10;
+  @apply max-w-7xl w-full flex flex-col gap-4 min-h-screen p-5 pt-24 z-10;
 }
 
 .subsection-center-all{
