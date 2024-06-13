@@ -16,7 +16,7 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
 
 export default function About() {
     const tc = useTranslations('Common');
-    const ta = useTranslations('About')
+    const ta = useTranslations('About');
     return <>
         <main className="main-section">
             <section className="main-subsection place-content-center items-center">
