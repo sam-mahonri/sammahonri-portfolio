@@ -29,6 +29,12 @@ export async function Footer(){
                         </Reveal> 
                         <SwitchLanguageLink newLocale="pt" className={clsx("olink font-dyslexia font-semibold", {"active-link": await cl === 'pt'})}>Português - BR</SwitchLanguageLink>
                         <SwitchLanguageLink newLocale="en" className={clsx("olink font-dyslexia font-semibold", {"active-link": await cl === 'en'})}>English - EN</SwitchLanguageLink>
+                        <SwitchLanguageLink newLocale="es" className={clsx("olink font-dyslexia font-semibold", {"active-link": await cl === 'es'})}>Español - ES</SwitchLanguageLink>
+                        <SwitchLanguageLink newLocale="fr" className={clsx("olink font-dyslexia font-semibold", {"active-link": await cl === 'fr'})}>Français - FR</SwitchLanguageLink>
+                        <SwitchLanguageLink newLocale="it" className={clsx("olink font-dyslexia font-semibold", {"active-link": await cl === 'it'})}>Italiano - IT</SwitchLanguageLink>
+                        <SwitchLanguageLink newLocale="ja" className={clsx("olink font-dyslexia font-semibold", {"active-link": await cl === 'ja'})}>日本語 - JA</SwitchLanguageLink>
+                        <SwitchLanguageLink newLocale="de" className={clsx("olink font-dyslexia font-semibold", {"active-link": await cl === 'de'})}>Deutsch - DE</SwitchLanguageLink>
+
                     </div>
                     <div className="flex flex-col justify-center items-center gap-1">
                         <Reveal>

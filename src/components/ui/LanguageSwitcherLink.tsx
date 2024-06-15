@@ -4,7 +4,7 @@ import { Link, usePathname } from '@/navigation';
 import { ReactNode } from 'react';
 
 interface SwitchLanguageLinkProps {
-  newLocale: "pt" | "en";
+  newLocale: "pt" | "en" | "es" | "fr" | "it" | "ja" | "de" | "ru";
   children: ReactNode;
   className?: string;
 }

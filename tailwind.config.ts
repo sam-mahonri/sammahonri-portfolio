@@ -38,6 +38,7 @@ const config: Config = {
         'sam-secondary-color': "rgba(var(--sam-secondary-color))",
         'sam-border-color': "rgba(var(--sam-border-color))",
         'sam-divider-color': "rgba(var(--sam-divider-color))",
+        'sam-orange-color': "rgba(var(--sam-orange-color))",
         rainbow: {
           red: '#FF0000',
           orange: '#FFA500',

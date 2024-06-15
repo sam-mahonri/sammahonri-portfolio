@@ -16,13 +16,57 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
 
 export default function Projects() {
     const tc = useTranslations('Common');
-    const ta = useTranslations('About');
+    const tp = useTranslations('Projects');
     return <>
         <main className="main-section">
             <section className="main-subsection place-content-center items-center">
                 
                     <Title title='projects'/>
-                    <Reveal delay={1.0}><h4 className=' text-center'>{tc('nothing')}</h4></Reveal>
+                    <div className=' flex md:flex-row flex-col items-start w-full *:p-4 *:w-full gap-2'>
+                        <div className=' flex flex-col flex-grow border-2 border-dashed border-transparent hover:border-secondary/30 gap-2'>
+                            <Reveal delay={0.6}><h2>{tc('col_in')}</h2></Reveal>
+                            <Reveal delay={0.5} showSlider={0}>
+                            <Link href={"https://nextfur.net"} target='blank'>
+                                <div className='w-full flex flex-col justify-start items-start border-2 border-transparent border-t-secondary/20 hover:border-secondary p-4 gap-2 hover:bg-secondary/10'>
+                                    <h3>Nextfur</h3>
+                                    <span className='flex flex-wrap'> 
+                                        <p className='p-tag'>{tp('foundation')}</p>
+                                        <p className='p-tag'>Nextfur</p>
+                                    </span>
+                                    <p>{tp('nxtfr_content')}</p>
+                                </div>
+                            </Link></Reveal>
+                        </div>
+                        <div className=' flex flex-col flex-grow border-2 border-dashed border-transparent hover:border-secondary/30 gap-2'>
+                            <Reveal delay={0.2}><h2>{tc('byme')}</h2></Reveal>
+                            <Reveal delay={0.3} showSlider={0}>
+                            <Link href={"https://furlibre.com"} target='blank'>
+                                <div className='w-full flex flex-col justify-start items-start border-2 border-transparent border-t-secondary/20 hover:border-secondary p-4 gap-2 hover:bg-secondary/10'>
+                                    <h3>Furlibre</h3>
+                                    <span className='flex flex-wrap'> 
+                                        <p className='p-tag'>{tp('studio')}</p>
+                                        <p className='p-tag'>Nextfur</p>
+                                        <p className='p-tag-orange'>{tc('hiato')}</p>
+                                    </span>
+                                    <p>{tp('fl_content')}</p>
+                                </div>
+                            </Link></Reveal>
+
+                            <Reveal delay={0.4} showSlider={0}>
+                            <Link href={""}>
+                                <div className='w-full flex flex-col justify-start items-start border-2 border-transparent border-t-secondary/20 hover:border-secondary p-4 gap-2 hover:bg-secondary/10'>
+                                    <h3>Nightmare Fable</h3>
+                                    <span className='flex flex-wrap'> 
+                                        <p className='p-tag'>{tp('game')}</p>
+                                        <p className='p-tag-orange'>{tc('hiato')}</p>
+                                    </span>
+                                    <p>{tp('nf_content')}</p>
+                                </div>
+                            </Link></Reveal>
+                            
+                        </div>
+                        
+                    </div>
                     {/*  
                     <section className='flex flex-col gap-4'>
                         <div className=' flex md:flex-row flex-col-reverse items-center'>

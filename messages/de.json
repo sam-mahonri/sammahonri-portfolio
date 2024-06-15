@@ -1,0 +1,71 @@
+{
+    "Common": {
+        "blog": "Blog",
+        "about": "Über mich",
+        "projects": "Projekte",
+        "arts": "Kunst",
+        "loading": "Vorbereitung UwU",
+        "categories": "Kategorien",
+        "recent": "Neueste",
+        "new": "Neu",
+        "back": "Zurück",
+        "close": "Schließen",
+        "like": "Gefällt mir",
+        "nothing": "Hier gibt es nichts... Bisher... ¯\\_(ツ)_/¯",
+        "byme": "Persönlich",
+        "col_in": "Mitwirkend an",
+        "hiato": "Im Ruhestand"
+    },
+    "Errors": {
+        "404": "Fehler 404 - Diese Seite existiert nicht. Bitte überprüfen Sie die URL und versuchen Sie es erneut."
+    },
+    "Meta": {
+        "description": "Portfolio von Sam Mahonri"
+    },
+    "Index": {
+        "toptitle": "Hallo! Ich bin",
+        "subtitle": "Designer & Entwickler"
+    },
+    "Footer": {
+        "lang": "Sprachen",
+        "related": "Mitwirkend",
+        "socials": "Soziale Netzwerke",
+        "copyright": "© 2021 - 2024 - Alle Rechte vorbehalten - Sam Mahonri"
+    },
+    "BlogCategories": {
+        "nextfur": "Nextfur",
+        "mormonism": "Mormonismus",
+        "nightmarefable": "Nightmare Fable DevLog",
+        "news": "Neuigkeiten",
+        "dev": "Entwickler"
+    },
+    "Alerts": {
+        "incompleteTransBlog": "Der Blog-Inhalt ist immer auf Portugiesisch - BR. Die Übersetzung der Website gilt nicht dafür."
+    },
+    "About": {
+        "t_fa": "Akademische Ausbildung",
+        "t_ip": "Berufliche Interessen",
+        "t_ea": "Künstlerischer Ausdruck",
+
+        "fa_content": "Ich habe die integrierte Sekundarschulbildung in Informatik am Instituto Federal do Sertão Pernambucano in Petrolina-PE, Brasilien, absolviert, wo ich eine solide Grundlage in der Technologie erworben habe. Derzeit studiere ich Informatik an der Universidade Cruzeiro do Sul Virtual. Ich plane jedoch, dieses Studium vorübergehend zu unterbrechen oder abzubrechen, da ich meine zweijährige mormonische Vollzeitmission von 2025 bis 2026 antreten werde. Nach Abschluss der Mission kann ich das Studium wieder aufnehmen, wobei die bereits absolvierten Kurse angerechnet werden können.",
+        "ip_content": "Ich habe ein breites Spektrum an Kenntnissen und beruflichen Interessen, einschließlich Design (Webdesign und Webentwicklung), Spieleentwicklung, Kunstkomposition und Musikkomposition. Diese Vielfalt an Interessen ermöglicht es mir, verschiedene Bereiche der Technologie und Kreativität zu erkunden und innovative und ansprechende Lösungen zu suchen.",
+        "ea_content": "Ich bin ein Enthusiast der Furry-Kultur und habe ein Fursona der Drachenart mit markanten Merkmalen wie großen Ohren und einem langen Schwanz. Dieses Fursona, mit den Hauptfarben Grün, Violett und Weiß sowie blauen Augen, ermöglicht es mir, meine Kreativität und Proaktivität auf einzigartige Weise auszudrücken. Diese Leidenschaft für Kunst und persönlichen Ausdruck ist ein grundlegender Aspekt meiner Identität."
+    },
+    "Arts": {
+        "all": "Alle",
+        "vectorial": "Vektorgrafik",
+        "paintings": "Gemälde",
+        "music": "Musik"
+    },
+    "Projects": {
+        "game": "Videospiel",
+        "foundation": "Stiftung",
+        "co_foundation": "Mitgründung",
+        "designer": "Designer",
+        "studio": "Studio",
+
+        "nf_content": "Nightmare Fable ist ein Third-Person-RPG-Spiel, das derzeit in Entwicklung ist (obwohl es pausiert ist) und charismatische Charaktere und eine fesselnde Handlung bietet. Die Geschichte dreht sich um zwei Freunde: eine Fledermaus namens Sunset und einen Hund namens Rover. Rover verirrt sich in einem Wald mit einer kleinen Zeitspalte. In der Handlung spielst du Sunset, der Rover folgt und in dieselbe Zeitspalte gerät, verschiedene Welten und Universen entdeckend, die von einem einzigen Gott kontrolliert werden. Im Portalraum gefangen, besteht deine Mission darin, in jeder Welt Ratschläge zu erhalten, um in der Geschichte voranzukommen. Auf dieser Reise wirst du Freundschaften (oder Feindschaften) mit Charakteren schließen, die auf kontroversen historischen und religiösen Persönlichkeiten basieren. Ein Beispiel für eine Nebenfigur ist der Salamander, der dich auf dem Weg begleitet. Er ist ein fiktives mystisches Wesen, das von einem Dokumentenfälscher geschaffen wurde, und deine Begegnung mit dieser Kreatur verleiht der Handlung mehr Tiefe. Am Ende sollte ein epischer Kampf gegen den Gott dieses Universums stattfinden, der wie ein großer anthropomorpher Widder mit drei Hörnern aussieht. Leider wird die Weiterentwicklung des Spiels aufgrund persönlicher Probleme und zweijähriger Abwesenheit beeinträchtigt.",
+        "fl_content": "Furlibre Studio, auch bekannt als Furlibre Project, war ursprünglich als Studio für die Entwicklung von Nightmare Fable gedacht. Aufgrund finanzieller Probleme, mangelnder Unterstützer und Entwickler wurde Furlibre Teil der Nextfur-Stiftung und verfolgt weiterhin dieselben Ziele und Projekte, die noch geheim gehalten werden. Die visuelle Identität wurde von mir, Sam Mahonri, entwickelt.",
+        "nxtfr_content": "Nextfur Foundation ist eine Stiftung zur kooperativen, finanziellen und gemeinschaftlichen Unterstützung von Projekten im Zusammenhang mit der brasilianischen Furry-Kultur. Das Projekt wurde hauptsächlich von Diogo Nunes Spigato konzipiert und entwickelt. Die visuelle Identität und die Frontend-Entwicklung wurden von mir, Sam Mahonri, realisiert."
+    }
+}

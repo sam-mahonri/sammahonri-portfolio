@@ -188,6 +188,10 @@ h1, h2, h3, h4, h5, h6 { word-break: break-word; }
   @apply flex flex-row bg-sam-primary-color/20 border border-sam-primary-color border-dashed py-1 px-3 text-sm text-sam-txt-title-color shadow-xl shadow-primary/50 font-bold;
 }
 
+.p-tag-orange{
+  @apply flex flex-row bg-sam-orange-color/20 border border-sam-orange-color border-dashed py-1 px-3 text-sm text-sam-txt-title-color shadow-xl shadow-sam-orange-color/50 font-bold;
+}
+
 .p-new-tag {
   @apply flex flex-row bg-secondary border border-secondary py-1 px-3 text-sm text-background shadow-xl shadow-secondary/50 font-bold;
 }
