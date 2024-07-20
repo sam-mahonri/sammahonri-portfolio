@@ -18,7 +18,6 @@ interface Props {
 }
 
 const Gallery = ({ Arts }: Props) => {
-    const [loadingStates, setLoadingStates] = useState<{ [key: number]: boolean }>({});
     const [fullScreenImage, setFullScreenImage] = useState<ArtItem | null>(null);
     const [visibleArts, setVisibleArts] = useState<ArtItem[]>([]);
     const [hasMore, setHasMore] = useState(true);
@@ -36,7 +35,7 @@ const Gallery = ({ Arts }: Props) => {
         const url = window.location.href;
         navigator.clipboard.writeText(url).then(() => {
             setCopied(true);
-            setTimeout(() => setCopied(false), 2000); // Volta ao ícone original após 2 segundos
+            setTimeout(() => setCopied(false), 2000);
         });
     };
 
@@ -69,15 +68,11 @@ const Gallery = ({ Arts }: Props) => {
                 setHasMore(false);
             }
             setLoadingMore(false);
-        }, 500); // Costumo deixar as pessoas esperando só pra ver o spinner UwU
+        }, 250); // Costumo deixar as pessoas esperando só pra ver o spinner
     };
 
     const handleImageClick = (art: ArtItem) => {
         setFullScreenImage(art);
-        setLoadingStates(prev => ({
-            ...prev,
-            [-1]: true,
-        }));
         const params = new URLSearchParams(window.location.search);
         params.set("art", encodeURIComponent(art.imgUrl));
         const newUrl = `${window.location.pathname}?${params.toString()}`;
@@ -92,13 +87,6 @@ const Gallery = ({ Arts }: Props) => {
         window.history.pushState(null, '', newUrl);
     };
 
-    const handleImageLoad = (index: number) => {
-        setLoadingStates(prev => ({
-            ...prev,
-            [index]: false,
-        }));
-    };
-
     useEffect(() => {
         const artImgUrl = searchParams.get("art");
         setTimeout(() => {
@@ -106,10 +94,6 @@ const Gallery = ({ Arts }: Props) => {
                 const art = Arts.find(a => a.imgUrl === decodeURIComponent(artImgUrl));
                 if (art) {
                     setFullScreenImage(art);
-                    setLoadingStates(prev => ({
-                        ...prev,
-                        [-1]: true,
-                    }));
                 }
             }
         }, 1000);
@@ -124,8 +108,7 @@ const Gallery = ({ Arts }: Props) => {
                     <div
                         key={index}
                         className={clsx("border-2 border-secondary/20 hover:border-secondary w-full transition-all duration-1000 cursor-pointer", {
-                            "opacity-0": loadingStates[index] !== false,
-                            "opacity-100": loadingStates[index] === false
+
                         })}
                         onClick={() => handleImageClick(art)}
                     >
@@ -142,8 +125,7 @@ const Gallery = ({ Arts }: Props) => {
                                     alt=""
                                     placeholder="blur"
                                     blurDataURL={placeholderImage.src}
-                                    className="transform transition will-change-auto"
-                                    style={{ objectFit: "cover" }}
+                                    className="object-cover opacity-0 transition-all duration-1000"
                                     loading="lazy"
                                     src={art.imgUrl}
                                     fill
@@ -151,7 +133,10 @@ const Gallery = ({ Arts }: Props) => {
                                     (max-width: 1280px) 50vw,
                                     (max-width: 1536px) 33vw,
                                     25vw"
-                                    onLoad={() => handleImageLoad(index)}
+                                    onLoad={(event) => {
+                                        const target = event.target as HTMLImageElement;
+                                        target.classList.remove("opacity-0");
+                                    }}
                                 />
                             </div>
                         </Reveal>
@@ -176,27 +161,23 @@ const Gallery = ({ Arts }: Props) => {
                             position: "relative",
                             height: "100%",
                             width: "100%",
-                        }} className={clsx(" transition-opacity duration-1000",{
-                            "opacity-0": loadingStates[-1] !== false,
-                            "opacity-100": loadingStates[-1] === false
-                        })}>
+                        }} className={clsx(" transition-opacity duration-1000",{})}>
                             
                             <Image
                                 alt=""
                                 placeholder="blur"
                                 blurDataURL={placeholderImage.src}
-                                className="transform transition will-change-auto"
-                                style={{ objectFit: "contain" }}
+                                className=" object-contain opacity-0 transition-all duration-1000"
                                 loading="lazy"
                                 src={fullScreenImage.imgUrl}
                                 fill
                                 sizes=""
-                                onLoad={() => handleImageLoad(-1)}
+                                onLoad={(event) => {
+                                    const target = event.target as HTMLImageElement;
+                                    target.classList.remove("opacity-0", "scale-125");
+                                }}
                             />
                         </div>
-                        {loadingStates[-1] && <span className="flex w-full items-center justify-center py-8">
-                            <Spinner />
-                        </span>}
                         <div className="flex flex-row items-center justify-center gap-1">
                             <button className="btn btn-selector" onClick={closeFullScreen}>
                                 <XMarkIcon />
