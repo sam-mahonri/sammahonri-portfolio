@@ -1,6 +1,6 @@
 ---
 title: "Desenvolvi um sistema de leilão de OCs!"
-category: "nextfur"
+category: "dev"
 date: "20-07-2024"
 ---
 
