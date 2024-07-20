@@ -11,7 +11,7 @@ date: "20-07-2024"
 Desenvolvi um sistema de leilão de OCs a pedido da [@sukriarte](https://twitter.com/sukriarte). Agora você pode acessar o [Sukriarte Auctions](https://auctions.furlibre.com), que ainda está em beta e em testes constantes. O principal objetivo da plataforma é facilitar e organizar a venda de OCs, oferecendo interatividade através de salas de chat ao vivo e tornando o processo mais humanizado.
 
 ```
-A plataforma ainda está em testes e é atualizada constantemente. Portanto será comum alguns momentos instáveis especialmente quando melhorias e correções estão sendo aplicadas.
+A plataforma ainda está em testes e é atualizada constantemente. Portanto, é comum realizar checagens de integridade do acesso por questões de segurança, além de experimentar alguns momentos de instabilidade, especialmente durante a aplicação de melhorias e correções.
 ```
 
 ## Como posso usar?
