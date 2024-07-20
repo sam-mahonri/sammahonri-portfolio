@@ -65,10 +65,9 @@
         "designer": "Designer",
         "studio": "Studio",
 
+        "fa_content":"Sukriarte Auctions is a site for auctioning OCs and intellectual properties under the Furlibre Project infrastructure, commissioned by the artist Sukriarte and developed by me.",
         "nf_content": "Nightmare Fable is a third-person RPG currently in development (though on hiatus) that features charismatic characters and an engaging storyline. The story revolves around two friends: a bat named Sunset and a dog named Rover. Rover gets lost in a forest that has a small temporal rift. In the plot, you play as Sunset, who follows Rover and ends up entering the same temporal rift, encountering various worlds and universes controlled by a single god. Trapped in the hall of portals, your mission is to obtain advice in each world to advance the story. During this journey, you will form friendships (or enmities) with characters based on controversial historical and religious figures. An example of a secondary character is the Salamander, who accompanies you along the way. She is a mystical being, created by a document forger, and your encounter with this creature adds more depth to the plot. In the end, an epic battle against the god of that universe, who resembles a large anthropomorphic lamb with three horns, should occur. Unfortunately, due to personal issues and unavailability for two consecutive years, the game's development continuity will be affected.",
-        
         "fl_content": "Furlibre Studio, also known as Furlibre Project, initially aimed to be the studio for the development of Nightmare Fable. Due to financial problems, few supporters, and developers, Furlibre became part of the Nextfur Foundation and maintains the same goals and projects still under wraps. The visual identity was developed by me, Sam Mahonri.",
-        
         "nxtfr_content": "Nextfur Foundation is a foundation that provides collaborative, financial, and community support for projects related to Brazilian Furry culture. The project was conceived and developed, for the most part, by Diogo Nunes Spigato. The visual identity and frontend development were carried out by me, Sam Mahonri."
     }
     

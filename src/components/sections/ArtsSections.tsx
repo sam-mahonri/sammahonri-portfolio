@@ -17,7 +17,7 @@ interface Props {
     Arts: ArtItem[];
 }
 
-const Gallery = ({ Arts }: Props) => {
+export default function Gallery({ Arts }: Props) {
     const [fullScreenImage, setFullScreenImage] = useState<ArtItem | null>(null);
     const [visibleArts, setVisibleArts] = useState<ArtItem[]>([]);
     const [hasMore, setHasMore] = useState(true);
@@ -102,7 +102,7 @@ const Gallery = ({ Arts }: Props) => {
     }, []);
 
     return (
-        <div>
+        <>
             <div className="md:grid md:grid-cols-3 flex flex-col items-center justify-center flex-grow w-full gap-3">
                 {visibleArts.map((art, index) => (
                     <div
@@ -151,12 +151,8 @@ const Gallery = ({ Arts }: Props) => {
             )}
 
             {fullScreenImage && (
-                <div className="fixed top-0 z-50 left-0 w-full h-full flex flex-col justify-center items-center bg-background/90 pt-20" style={{zIndex: 9999}}>
+                <div className="fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-background/90" style={{zIndex: 9999}}>
                     <div className="relative w-full max-w-7xl flex-grow p-8 flex flex-col gap-2">
-                        
-
-                        
-
                         <div style={{ 
                             position: "relative",
                             height: "100%",
@@ -167,14 +163,14 @@ const Gallery = ({ Arts }: Props) => {
                                 alt=""
                                 placeholder="blur"
                                 blurDataURL={placeholderImage.src}
-                                className=" object-contain opacity-0 transition-all duration-1000"
+                                className=" object-contain opacity-0 transition-all duration-1000 scale-90"
                                 loading="lazy"
                                 src={fullScreenImage.imgUrl}
                                 fill
                                 sizes=""
                                 onLoad={(event) => {
                                     const target = event.target as HTMLImageElement;
-                                    target.classList.remove("opacity-0", "scale-125");
+                                    target.classList.remove("opacity-0", "scale-90");
                                 }}
                             />
                         </div>
@@ -194,8 +190,7 @@ const Gallery = ({ Arts }: Props) => {
                     </div>
                 </div>
             )}
-        </div>
+        </>
     );
 };
 
-export default Gallery;

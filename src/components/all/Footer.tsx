@@ -23,7 +23,7 @@ export async function Footer(){
                             <DynamicInlineLogo />
                         </Reveal>
                     </div>
-                    <div className="flex flex-col justify-center items-center gap-1">
+                    <div className="flex flex-col justify-center items-center gap-1 ">
                         <Reveal>
                             <h3>{t('lang')}</h3>
                         </Reveal> 

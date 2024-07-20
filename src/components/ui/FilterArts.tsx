@@ -27,11 +27,11 @@ export default function FilterArts() {
     }, []);
 
     return (
-        <div className=" w-full">
-            <div ref={ref} className={clsx("w-full", { "h-16": isSticky })}></div> {/* Placeholder for sticky element */}
+        <div className=" w-full z-30">
+            <div ref={ref} className={clsx("w-full", { "h-16": isSticky })}></div>
             <Reveal width="100%" delay={0.5}>
-                <span className={clsx("w-full fixed left-0 top-20 pointer-events-none transition-colors h-12 z-40 duration-500", { "bg-foreground/80 backdrop-blur-sm": isSticky, "bg-transparent": !isSticky })}></span>
-                <div className={clsx("w-full flex items-center justify-center", { "fixed left-0 top-20 z-50 backdrop-blur-sm": isSticky})}>
+                <span className={clsx("w-full fixed left-0 top-20 pointer-events-none transition-colors h-12 duration-500", { "bg-foreground/80 backdrop-blur-sm": isSticky, "bg-transparent": !isSticky })}></span>
+                <div className={clsx("w-full flex items-center justify-center", { "fixed left-0 top-20 backdrop-blur-sm": isSticky})}>
                     <div className={clsx("w-full max-w-7xl", { "px-5": isSticky })}>
                         <div className={clsx("flex flex-wrap w-full transition-all", { " shadow-md": isSticky, "shadow-none": !isSticky })}>
                             <Link href={"/arts"} className="flex-grow">

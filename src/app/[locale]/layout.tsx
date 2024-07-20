@@ -9,6 +9,8 @@ import { Footer } from "@/components/all/Footer";
 import Splash from "@/components/all/Splash";
 import GoUp from "@/components/all/GoUp";
 import backgroundImage from "/public/backgrounds/home.svg"
+import BackgroundImage from "@/components/all/BackgroundImage";
+import StandaloneBackground from "@/components/all/StandaloneBackground";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sammahonri.com' || 'http://localhost:3000'),
@@ -40,15 +42,16 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${unbounded.variable} ${dyslexia.variable} ${mono.variable} ${lexend.variable} dark`} suppressHydrationWarning={true}>
-      <body className="main-top" style={{backgroundImage: `url(${backgroundImage.src})`}}>
+      <body className="main-top">
+      <StandaloneBackground/>
           <NextIntlClientProvider messages={messages}>
             <NextThemeProvider>
               <Navbar />
-              <Splash />
-              <main className=" min-h-screen">
-                {children}
-              </main>
-              <GoUp />
+                <Splash />
+                  <main className=" min-h-screen">
+                    {children}
+                  </main>
+                <GoUp />
               <Footer />
             </NextThemeProvider>
           </NextIntlClientProvider>

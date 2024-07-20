@@ -4,8 +4,6 @@ import type { Metadata } from "next";
 import { Title } from '@/components/ui/Titles';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/navigation';
-import { CodeArtist, Grad, MeSona } from '@/components/ui/SamLogos';
-import { AcademicCapIcon, LinkIcon } from '@heroicons/react/24/solid';
 
 export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
     const t = await getTranslations("Common")
@@ -26,16 +24,28 @@ export default function Projects() {
                         <div className=' flex flex-col flex-grow border-2 border-dashed border-transparent hover:border-secondary/30 gap-2'>
                             <Reveal delay={0.6}><h2>{tc('col_in')}</h2></Reveal>
                             <Reveal delay={0.5} showSlider={0}>
-                            <Link href={"https://nextfur.net"} target='blank'>
-                                <div className='w-full flex flex-col justify-start items-start border-2 border-transparent border-t-secondary/20 hover:border-secondary p-4 gap-2 hover:bg-secondary/10'>
-                                    <h3>Nextfur</h3>
-                                    <span className='flex flex-wrap'> 
-                                        <p className='p-tag'>{tp('foundation')}</p>
-                                        <p className='p-tag'>Nextfur</p>
-                                    </span>
-                                    <p>{tp('nxtfr_content')}</p>
-                                </div>
-                            </Link></Reveal>
+                                <Link href={"https://nextfur.net"} target='blank'>
+                                    <div className='w-full flex flex-col justify-start items-start border-2 border-transparent border-t-secondary/20 hover:border-secondary p-4 gap-2 hover:bg-secondary/10'>
+                                        <h3>Nextfur</h3>
+                                        <span className='flex flex-wrap'> 
+                                            <p className='p-tag'>{tp('foundation')}</p>
+                                            <p className='p-tag'>Nextfur</p>
+                                        </span>
+                                        <p>{tp('nxtfr_content')}</p>
+                                    </div>
+                                </Link>
+                            </Reveal>
+                            <Reveal delay={0.6} showSlider={0}>
+                                <Link href={"https://auctions.furlibre.com"} target='blank'>
+                                    <div className='w-full flex flex-col justify-start items-start border-2 border-transparent border-t-secondary/20 hover:border-secondary p-4 gap-2 hover:bg-secondary/10'>
+                                        <h3>Sukriarte Auctions [BETA]</h3>
+                                        <span className='flex flex-wrap'> 
+                                            <p className='p-tag'>Furlibre</p>
+                                        </span>
+                                        <p>{tp('fa_content')}</p>
+                                    </div>
+                                </Link>
+                            </Reveal>
                         </div>
                         <div className=' flex flex-col flex-grow border-2 border-dashed border-transparent hover:border-secondary/30 gap-2'>
                             <Reveal delay={0.2}><h2>{tc('byme')}</h2></Reveal>

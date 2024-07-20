@@ -37,7 +37,7 @@ function Navbar() {
     const isJune = new Date().getMonth() === 5;
     
     return (
-        <nav className={clsx('flex flex-col items-center justify-center fixed top-0 left-0 w-full z-20 transition-all duration-300', {
+        <nav className={clsx('flex flex-col items-center justify-center fixed top-0 left-0 w-full transition-all duration-300 z-40', {
             'bg-transparent': isTop && !menuOpened,
             'backdrop-blur-md': !isTop || menuOpened,
             'bg-foreground/90': menuOpened || !isTop,

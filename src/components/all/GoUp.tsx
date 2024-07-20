@@ -28,7 +28,7 @@ export default function GoUp() {
     };
 
     return (
-        <span className={clsx('fixed bottom-5 right-5 transition-opacity z-40', {
+        <span className={clsx('fixed bottom-5 right-5 transition-opacit', {
             'opacity-0': isTop,
             'pointer-events-none': isTop,
             'opacity-100': !isTop

@@ -56,7 +56,7 @@
 body,
 html {
   margin: 0;
-  @apply bg-sam-bg-color transition-colors duration-300;
+  @apply transition-colors duration-300;
 }
 
 .main-top {
@@ -67,16 +67,16 @@ html {
 }
 
 .main-subsection{
-  @apply max-w-7xl w-full flex flex-col gap-4 min-h-screen p-5 pt-24 z-10;
+  @apply max-w-7xl w-full flex flex-col gap-4 min-h-screen p-5 pt-24;
 }
 
 .subsection-center-all{
   @apply items-center place-items-center place-content-center;
 }
 
-.backfixed{
-  z-index: 0;
-  @apply fixed top-0 left-0 w-full h-screen;
+.background-degrade {
+  background-image: linear-gradient(to bottom, rgba(var(--sam-bg-color), 75%), rgba(var(--sam-bg-color), 75%), rgba(var(--sam-bg-color)));
+  @apply bg-fixed bg-center bg-cover;
 }
 
 h1,

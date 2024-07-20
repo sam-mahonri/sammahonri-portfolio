@@ -10,7 +10,7 @@ export default function Splash(){
         initial={{ opacity: 1 }}
         animate={{ opacity: 0, visibility: "hidden" }}
         transition={{ease: 'easeInOut', duration: 0.75}}
-        className="fixed top-0 left-0 w-full h-full bg-background flex items-center justify-center flex-col z-50 gap-3"
+        className="fixed top-0 left-0 w-full h-full bg-background flex items-center justify-center flex-col gap-3"
         >
             <div className=" max-h-28">
                 <DynamicLogo className=' text-sam-primary-color -translate-x-2 animate-pulse'/>
