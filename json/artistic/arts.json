@@ -1,5 +1,15 @@
 [   
     {
+        "imgUrl": "https://pbs.twimg.com/media/GVsqxgcWIAAk1x7?format=jpg&name=4096x4096",
+        "postUrl": "https://x.com/SamMahonri/status/1827101507067552002/photo/1",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "https://pbs.twimg.com/media/GVNuV7ZXMAAhfyz?format=jpg&name=large",
+        "postUrl": "https://x.com/SamMahonri/status/1824923600815604209/photo/1",
+        "category": "painting"
+    },
+    {
         "imgUrl": "https://pbs.twimg.com/media/GULmqyIXYAA1pnD?format=jpg&name=4096x4096",
         "postUrl": "https://x.com/SamMahonri/status/1820272887221170528/photo/1",
         "category": "painting"
