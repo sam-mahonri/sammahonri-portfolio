@@ -40,7 +40,9 @@
         "dev": "Desenvolvedor"
     },
     "Alerts": {
-        "incompleteTransBlog": "O conteúdo do Blog é sempre em Português - BR, a tradução do site não se aplica a ele."
+        "incompleteTransBlog": "O conteúdo do Blog é sempre em Português - BR, a tradução do site não se aplica a ele.",
+        "xandao": "AVISO: A galeria de artes no Brasil pode não funcionar corretamente devido ao bloqueio do Twitter (X) no país, imposto por ordem judicial do Ministro Alexandre de Moraes em resposta às ações de Elon Musk, atual dono da plataforma. As obras podem estar disponíveis no meu Instagram ou Bluesky."
+    
     },
     "About": {
         "t_fa":"Formação Acadêmica",
