@@ -1,5 +1,9 @@
 [
     {
+        "imgUrl": "/artistic/arts/revelation.png",
+        "category": "painting"
+    },
+    {
         "imgUrl": "/artistic/arts/1.png",
         "category": "painting"
     },
