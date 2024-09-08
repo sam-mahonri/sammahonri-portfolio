@@ -5,6 +5,7 @@ import { Arrow, DynamicLogo } from '@/components/ui/SamLogos';
 import { Link } from '@/navigation';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import { JumpingArrow } from '@/components/fx/JumpingArrow';
+import { FaBluesky, FaInstagram } from "react-icons/fa6";
 
 export default function Index() {
   const t = useTranslations('Index');
@@ -50,6 +51,16 @@ export default function Index() {
           </Reveal>
         </div>
         <JumpingArrow className=' h-5 mt-4'/>
+        <div className=' flex flex-row gap-4 m-4'>
+          <Link href={"https://bsky.app/profile/sammahonri.com"}>
+            <FaBluesky className='h-12 w-12 text-primary hover:text-secondary transition-colors' title='Bluesky @sammahonri.com'/>
+          </Link>
+          <Link href={"https://instagram.com/sammahonri"}>
+            <FaInstagram className='h-12 w-12 text-primary hover:text-secondary transition-colors' title='Instagram @sammahonri'/>
+          </Link>
+        </div>
+        
+        
       </section>
     </main>
   </>;

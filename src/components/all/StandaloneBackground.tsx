@@ -12,7 +12,8 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
             const backgrounds = [
                 "/backgrounds/home.svg",
                 "/backgrounds/lastfer.png",
-                "/backgrounds/streetlucifer.png"
+                "/backgrounds/streetlucifer.png",
+                "/backgrounds/5am.png"
             ];
 
             if (customImage) {

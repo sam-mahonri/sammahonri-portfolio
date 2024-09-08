@@ -178,11 +178,6 @@ export default function Gallery({ Arts }: Props) {
                             <button className="btn btn-selector" onClick={closeFullScreen}>
                                 <XMarkIcon />
                             </button>
-                            <Link href={fullScreenImage.postUrl} target="blank">
-                                <button className="btn btn-selector-secondary" onClick={closeFullScreen}>
-                                    <HeartIcon />
-                                </button>
-                            </Link>
                             <button className="btn btn-selector-secondary" onClick={handleCopyUrl}>
                                 {copied ? <CheckIcon /> : <ShareIcon />}
                             </button>

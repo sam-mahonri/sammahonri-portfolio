@@ -15,7 +15,6 @@ export default async function LocaleLayout({
     return (
         <main className="main-section">
             <section className="main-subsection place-content-center items-center">
-                {locale === "pt" ? <GenericAlert transMessageKey="xandao" alertType="warning" /> : <> </>}
                     <Title title='arts'/>
                     
                     <FilterArts />

@@ -15,7 +15,6 @@ function readJSON(caminho: string): any {
 
 export interface ArtItem {
     imgUrl: string;
-    postUrl: string;
     category: string;
     contentWarning?: boolean;
 }
