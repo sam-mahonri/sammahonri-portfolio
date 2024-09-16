@@ -32,7 +32,7 @@ export default function Index() {
           </Reveal>
           
         </div>
-        <div className='flex flex-row gap-3'>
+        <div className='flex flex-wrap gap-3 items-center justify-center'>
           <Reveal delay={0.8} sliderColor='rgb(var(--sam-primary-color))'>
             <Link href={"/arts"}>
               <button className='btn btn-primary'>{tc('arts')}<ArrowRightIcon /></button>
