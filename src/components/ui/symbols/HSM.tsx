@@ -17,7 +17,7 @@ const TimeHSM: React.FC = () => {
 
             if (((hours === 7 || hours === 19) && minutes === 8) 
                 || ((hours === 8 || hours === 20) && minutes === 5)
-                || (hours === 14 && minutes === 53)) {
+                || (hours === 0 && minutes === 0)) {
                 setShowComponent(true);
             } else {
                 setShowComponent(false);
