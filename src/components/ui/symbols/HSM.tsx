@@ -17,7 +17,7 @@ const TimeHSM: React.FC = () => {
 
             if (((hours === 7 || hours === 19) && minutes === 8) 
                 || ((hours === 8 || hours === 20) && minutes === 5)
-                || (hours === 0 && minutes === 0)) {
+                || (hours === 14 && minutes === 53)) {
                 setShowComponent(true);
             } else {
                 setShowComponent(false);
@@ -42,15 +42,17 @@ const TimeHSM: React.FC = () => {
                 </Reveal>
                 
             ) : (
-                <div className=' animate-pulse' title='"Draco parvus felinum parvum invenit, ut sic in aeternum felices viverent.🌻✨"'>
+                <div className=' animate-pulse flex justify-center items-center flex-col' title='"Draco parvus felinum parvum invenit, ut sic in aeternum felices viverent.🌻✨"'>
                     <Reveal delay={0.1} overflow='visible' showSlider={0}>
                         <Image
                             src="/icons/seven.svg"
-                            alt="hsm"
+                            alt="Draco parvus felinum parvum invenit, ut sic in aeternum felices viverent.🌻✨"
                             height={300}
                             width={300}
+                            className=' hover:scale-110 transition-transform duration-500'
                         />
                     </Reveal>
+                    <p className='p-tag text-center'>Draco parvus felinum parvum invenit, ut sic in aeternum felices viverent.🌻✨</p>
                 </div>
                 
             )}

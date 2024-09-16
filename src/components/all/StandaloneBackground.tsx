@@ -7,7 +7,6 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
     const [selectedBackground, setSelectedBackground] = useState<string>('');
 
     useEffect(() => {
-        // Função para definir o fundo
         const determineBackground = () => {
             const backgrounds = [
                 "/backgrounds/home.svg",
@@ -25,11 +24,8 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
                 return backgrounds[randomBackground];
             }
         };
-
-        // Defina o fundo apenas após o componente ser montado
         setSelectedBackground(determineBackground());
     }, [customImage, defaultImg]);
 
-    // Renderize o componente BackgroundImage somente quando selectedBackground estiver definido
     return selectedBackground ? <BackgroundImage source={selectedBackground} /> : null;
 }

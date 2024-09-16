@@ -97,14 +97,18 @@ export default function Gallery({ Arts }: Props) {
         setFullScreenImage(null);
         handleImageClick(Arts[newIndex], newIndex)
     }
+    
     // Abrir a arte caso tenha sido compartilhada avulsa 
     useEffect(() => {
         const artImgUrl = searchParams.get("art");
         setTimeout(() => {
             if (artImgUrl && Arts) {
-                const art = Arts.find(a => a.imgUrl === decodeURIComponent(artImgUrl));
-                if (art) {
+                const artIndex = Arts.findIndex(a => a.imgUrl === decodeURIComponent(artImgUrl));
+                
+                if (artIndex !== -1) {
+                    const art = Arts[artIndex];
                     setFullScreenImage(art);
+                    setPID(artIndex)
                 }
             }
         }, 1000);

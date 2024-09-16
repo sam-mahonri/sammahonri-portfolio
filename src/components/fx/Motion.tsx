@@ -56,7 +56,7 @@ export const Reveal = ({ children, delay = 0, duration = 0.75, initial = 64, fin
                 }}
                 initial = "hidden"
                 animate = {slideControls}
-                transition = {{ duration: duration, ease: "anticipate", delay: delay}}
+                transition = {{ duration: duration, ease: "circInOut", delay: delay}}
                 style={{
                     opacity: showSlider,
                     position: "absolute",
