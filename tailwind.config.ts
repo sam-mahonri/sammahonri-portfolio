@@ -22,6 +22,7 @@ const config: Config = {
         'sam-dark': "rgba(var(--sam-dark-def-color))",
         background: "rgba(var(--sam-bg-color))",
         foreground: "rgba(var(--sam-fg-color))",
+        surface: "rgba(var(--sam-surface-color))",
         primary: "rgba(var(--sam-primary-color))",
         secondary: "rgba(var(--sam-secondary-color))",
         border: "rgba(var(--sam-border-color))",

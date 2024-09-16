@@ -2,7 +2,7 @@ interface DynamicLogoProps {
     className?: string;
 }
 
-export function DynamicInlineLogo({ className = 'text-sam-txt-title-color' }: DynamicLogoProps) {
+export function DynamicInlineLogo({ className = 'text-foreground' }: DynamicLogoProps) {
     return <>
         <svg className={`fill-current h-full w-full aspect-auto ${className}`} viewBox="0 0 215.97538 47.538507">
             <g id="layer1" transform="translate(-126.43399,82.741211)">
@@ -12,7 +12,7 @@ export function DynamicInlineLogo({ className = 'text-sam-txt-title-color' }: Dy
     </>
 }
 
-export function DynamicLogo({ className = 'text-sam-txt-title-color' }: DynamicLogoProps) {
+export function DynamicLogo({ className = 'text-foreground' }: DynamicLogoProps) {
     return <>
         <svg className={`fill-current h-full w-full aspect-auto ${className}`} viewBox="0 0 50.539711 43.966951">
             <g id="layer1" transform="translate(-138.00354,83.161072)">
@@ -22,7 +22,7 @@ export function DynamicLogo({ className = 'text-sam-txt-title-color' }: DynamicL
     </>
 }
 
-export function Arrow({ className = 'text-sam-txt-title-color' }: DynamicLogoProps) {
+export function Arrow({ className = 'text-foreground' }: DynamicLogoProps) {
     return <>
         <svg className={`fill-current h-full w-full aspect-auto ${className}`} viewBox="0 0 67.733332 33.866666">
             <g id="layer1" transform="matrix(1.9136922,0,0,1.1048707,-18.078166,-3.5592818)">
@@ -32,7 +32,7 @@ export function Arrow({ className = 'text-sam-txt-title-color' }: DynamicLogoPro
     </>
 }
 
-export function Grad({ className = 'text-sam-txt-title-color' }: DynamicLogoProps) {
+export function Grad({ className = 'text-foreground' }: DynamicLogoProps) {
     return <>
         <svg className={`fill-current h-full w-full aspect-auto ${className}`} viewBox="0 0 135.46666 135.46667">
             <g id="layer1">
@@ -42,7 +42,7 @@ export function Grad({ className = 'text-sam-txt-title-color' }: DynamicLogoProp
     </>
 }
 
-export function CodeArtist({ className = 'text-sam-txt-title-color' }: DynamicLogoProps) {
+export function CodeArtist({ className = 'text-foreground' }: DynamicLogoProps) {
     return <>
         <svg className={`fill-current h-full w-full aspect-auto ${className}`} viewBox="0 0 135.46666 135.46667">
             <g id="layer1">
@@ -52,7 +52,7 @@ export function CodeArtist({ className = 'text-sam-txt-title-color' }: DynamicLo
     </>
 }
 
-export function MeSona({ className = 'text-sam-txt-title-color' }: DynamicLogoProps) {
+export function MeSona({ className = 'text-foreground' }: DynamicLogoProps) {
     return <>
         <svg className={`fill-current h-full w-full aspect-auto ${className}`} viewBox="0 0 135.46666 135.46667">
             <g id="layer1">

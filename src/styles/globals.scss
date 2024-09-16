@@ -11,10 +11,8 @@
   --sam-dark-def-color: 30, 30, 35;
 
   --sam-bg-color: 15, 15, 20;
-  --sam-fg-color: 25, 25, 30;
-
-  --sam-txt-title-color: 240, 240, 240;
-  --sam-txt-content-color: 200, 200, 210;
+  --sam-fg-color: 240, 240, 240;
+  --sam-surface-color: 25, 25, 30;
 
   --sam-txt-pybtn-color: var(--sam-txt-title-color);
   --sam-txt-sybtn-color: var(--sam-txt-content-color);
@@ -36,12 +34,8 @@
 
 :root.light {
   --sam-bg-color: 220, 220, 230;
-  --sam-fg-color: 250, 250, 250;
-
-  --sam-txt-title-color: 60, 80, 100;
-  --sam-txt-content-color: 90, 100, 125;
-  --sam-txt-pybtn-color: var(--sam-txt-title-color);
-  --sam-txt-sybtn-color: var(--sam-txt-content-color);
+  --sam-fg-color: 60, 80, 100;
+  --sam-surface-color: 250, 250, 250;
 
   --sam-error-color: 230, 33, 105;
   --sam-primary-color: 130, 100, 230;
@@ -85,7 +79,7 @@ h3,
 h4,
 h5,
 h6{
-  @apply font-dyslexia text-sam-txt-title-color uppercase;
+  @apply font-dyslexia text-foreground uppercase;
 }
 p,
 p *,
@@ -93,7 +87,7 @@ a,
 li,
 li *,
 div{
-  @apply font-lexend text-sam-txt-content-color text-base transition-colors font-light;
+  @apply font-lexend text-foreground text-base transition-colors font-light;
 }
 a {
   @apply hover:text-secondary;
@@ -163,33 +157,33 @@ h1 {
   @apply md:text-6xl text-5xl;
 }
 h2 {
-  @apply md:text-3xl text-2xl font-bold text-sam-secondary-color;
+  @apply md:text-3xl text-2xl font-bold text-secondary;
 }
 h3 {
-  @apply md:text-2xl text-xl font-semibold text-sam-secondary-color;
+  @apply md:text-2xl text-xl font-semibold text-secondary;
 }
 h4 {
-  @apply md:text-xl text-lg text-sam-secondary-color font-semibold;
+  @apply md:text-xl text-lg text-secondary font-semibold;
 }
 h5 {
-  @apply text-lg text-sam-secondary-color;
+  @apply text-lg text-secondary;
 }
 h6 {
-  @apply text-base text-sam-secondary-color;
+  @apply text-base text-secondary;
 }
 
 h1, h2, h3, h4, h5, h6 { word-break: break-word; }
 
 .text-theme-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-sam-bro-primary-color via-sam-secondary-color to-sam-primary-color;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-sam-bro-primary-color via-secondary to-primary;
 }
 
 .p-tag {
-  @apply flex flex-row bg-sam-primary-color/20 border border-sam-primary-color border-dashed py-1 px-3 text-sm text-sam-txt-title-color shadow-xl shadow-primary/50 font-bold;
+  @apply flex flex-row bg-primary/20 border border-primary border-dashed py-1 px-3 text-sm text-foreground shadow-xl shadow-primary/50 font-bold;
 }
 
 .p-tag-orange{
-  @apply flex flex-row bg-sam-orange-color/20 border border-sam-orange-color border-dashed py-1 px-3 text-sm text-sam-txt-title-color shadow-xl shadow-sam-orange-color/50 font-bold;
+  @apply flex flex-row bg-sam-orange-color/20 border border-sam-orange-color border-dashed py-1 px-3 text-sm text-foreground shadow-xl shadow-sam-orange-color/50 font-bold;
 }
 
 .p-new-tag {

@@ -50,7 +50,7 @@ export default function Projects() {
                         <div className=' flex flex-col flex-grow border-2 border-dashed border-transparent hover:border-secondary/30 gap-2'>
                             <Reveal delay={0.2}><h2>{tc('byme')}</h2></Reveal>
                             <Reveal delay={0.3} showSlider={0}>
-                            <Link href={"https://furlibre.com"} target='blank'>
+                            <Link href={"https://furlibre.nextfur.net"} target='blank'>
                                 <div className='w-full flex flex-col justify-start items-start border-2 border-transparent border-t-secondary/20 hover:border-secondary p-4 gap-2 hover:bg-secondary/10'>
                                     <h3>Furlibre</h3>
                                     <span className='flex flex-wrap'> 
@@ -77,47 +77,6 @@ export default function Projects() {
                         </div>
                         
                     </div>
-                    {/*  
-                    <section className='flex flex-col gap-4'>
-                        <div className=' flex md:flex-row flex-col-reverse items-center'>
-                            <div className='*:my-3 flex-grow'>
-                                <Reveal delay={0.4}><h4 className=' text-center'>{ta('t_fa')}</h4></Reveal>
-                                <Reveal delay={0.5}>
-                                <p>{ta('fa_content')}</p>
-                                </Reveal>
-                                <Reveal delay={0.55}>
-                                    <div className=' flex flex-wrap gap-4'>
-                                        <Link href={"https://nextfur.net"} target='blank'>
-                                            <button className='btn btn-secondary'><LinkIcon /> Nextfur</button>
-                                        </Link>
-                                    </div>
-                                </Reveal>
-                            </div>
-                            <Grad className=' min-w-32 w-2/4 max-w-80 text-secondary' />
-                        </div>
-
-                        <div className=' flex md:flex-row flex-col items-center'>
-                            <CodeArtist className=' min-w-32 w-2/4 max-w-80 text-secondary' />
-                            <div className='*:my-3'>
-                                <Reveal delay={0.6}><h4 className=' text-center'>{ta('t_ip')}</h4></Reveal>
-                                <Reveal delay={0.7}>
-                                <p>{ta('ip_content')}</p>
-                                </Reveal>
-                            </div>
-                            
-                        </div>
-
-                        <div className=' flex md:flex-row flex-col-reverse items-center'>
-                            <div className='*:my-3'>
-                                <Reveal delay={0.8}><h4 className=' text-center'>{ta('t_ea')}</h4></Reveal>
-                                <Reveal delay={0.9}>
-                                <p>{ta('ea_content')}</p>
-                                </Reveal>
-                            </div>
-                            <MeSona className=' min-w-32 w-2/4 max-w-80 text-secondary' />
-                        </div>
-                    </section>
-                    */}
             </section>
         </main>
     </>

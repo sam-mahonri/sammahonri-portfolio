@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { DatedArticleItemList, CategorizedArticleItemList } from "../ui/ArticleItemList";
 import { Reveal } from "../fx/Motion";
 import { useLocale, useTranslations } from "next-intl";
@@ -30,26 +30,27 @@ export function BlogSections({
     const pathname = usePathname();
     const { replace } = useRouter();
 
-    function handleSearch(term: string) {
-        const params = new URLSearchParams(searchParams);
-        if (term) {
-            params.set('filter', term);
-        } else {
-            params.delete('filter');
-        }
-        replace(`${pathname}?${params.toString()}`);
-    }
 
-    const changeLayout = (layout: string) => {
+
+    const changeLayout = useCallback((layout: string) => {
+        function handleSearch(term: string) {
+            const params = new URLSearchParams(searchParams);
+            if (term) {
+                params.set('filter', term);
+            } else {
+                params.delete('filter');
+            }
+            replace(`${pathname}?${params.toString()}`);
+        }
+
         setLayout(layout);
         handleSearch(layout);
-    }
+    }, [pathname, replace, searchParams])
 
     useEffect(() => {
         changeLayout(searchParams.get('filter') || firstPage);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-    
+    }, [changeLayout, firstPage, searchParams]);
+
 
     return (<>
         <Reveal delay={0.5}>

@@ -13,7 +13,7 @@ export default function Splash(){
         className="fixed top-0 left-0 w-full h-full bg-background flex items-center justify-center flex-col gap-3"
         >
             <div className=" max-h-28">
-                <DynamicLogo className=' text-sam-primary-color -translate-x-2 animate-pulse'/>
+                <DynamicLogo className=' text-primary -translate-x-2 animate-pulse'/>
             </div>
             <Spinner />
         </motion.div>

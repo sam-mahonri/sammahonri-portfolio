@@ -19,7 +19,7 @@ interface RevealProps {
     className?: string
 }
 
-export const Reveal = ({ children, delay = 0, duration = 0.5, initial = 64, final = 0, ease = "easeOut", width = "fit-content", height = "fit-content", overflow = "hidden", once = true, showSlider = 1, sliderColor = "rgb(var(--sam-secondary-color))", className = ""}: RevealProps) => {
+export const Reveal = ({ children, delay = 0, duration = 0.75, initial = 64, final = 0, ease = "easeInOut", width = "fit-content", height = "fit-content", overflow = "hidden", once = true, showSlider = 1, sliderColor = "rgb(var(--sam-secondary-color))", className = ""}: RevealProps) => {
     
     const ref = useRef(null);
     
@@ -33,8 +33,8 @@ export const Reveal = ({ children, delay = 0, duration = 0.5, initial = 64, fina
             mainControls.start("visible");
             slideControls.start("visible");
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isInView]);
+
+    }, [isInView, mainControls, slideControls]);
 
     return <>
         <div ref = {ref} style = {{ position: "relative", width, height, overflow: overflow}} className={className}>
@@ -52,11 +52,11 @@ export const Reveal = ({ children, delay = 0, duration = 0.5, initial = 64, fina
             <motion.div 
                 variants = {{
                     hidden: {left: 0},
-                    visible: {left: "100%"},
+                    visible: {left: "101%"},
                 }}
                 initial = "hidden"
                 animate = {slideControls}
-                transition = {{ duration: duration, ease: "easeIn", delay: delay}}
+                transition = {{ duration: duration, ease: "anticipate", delay: delay}}
                 style={{
                     opacity: showSlider,
                     position: "absolute",
