@@ -42,7 +42,7 @@ const TimeHSM: React.FC = () => {
                 </Reveal>
                 
             ) : (
-                <div className=' animate-pulse'>
+                <div className=' animate-pulse' title='"Draco parvus felinum parvum invenit, ut sic in aeternum felices viverent.🌻✨"'>
                     <Reveal delay={0.1} overflow='visible' showSlider={0}>
                         <Image
                             src="/icons/seven.svg"
