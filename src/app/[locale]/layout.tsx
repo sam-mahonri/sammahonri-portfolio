@@ -13,7 +13,7 @@ import BackgroundImage from "@/components/all/BackgroundImage";
 import StandaloneBackground from "@/components/all/StandaloneBackground";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sammahonri.com' || 'http://localhost:3000'),
+  metadataBase: new URL('https://sammahonri.com'),
   title: {
     default: "Sam Mahonri",
     template: "%s | Sam Mahonri"
