@@ -192,6 +192,10 @@
         "category": "painting"
     },
     {
+        "imgUrl": "/artistic/vectorial/bubi.png",
+        "category": "vectorial"
+    },
+    {
         "imgUrl": "/artistic/vectorial/2.png",
         "category": "vectorial"
     },

@@ -98,10 +98,10 @@ function Navbar() {
                 'md:p-6 p-0': isTop && !menuOpened
             })}>
                 <div className="flex flex-row items-center container max-w-7xl box-border gap-7 h-20 min-h-20">
-                    <Reveal width='100%' showSlider={0} initial={64} final={0} delay={0}>
+                    <Reveal width='100%' showSlider={0} initial={64} final={0} delay={1.5} ease='backOut'>
                         <div className="flex flex-row items-center container px-5 py-2 max-w-7xl box-border gap-2 h-fit">
-                            <Reveal initial={-64} final={0}>
-                                <div className='h-8 min-w-8'>
+                            <Reveal initial={-64} final={0} delay={1}>
+                                <div className='h-10 min-w-8'>
                                     <Link href={"/"} className='text-primary'>
                                         <span className=' hidden md:block h-full'> <DynamicInlineLogo className={clsx("min-w-fit", { "text-secondary": pathname === "/" })} /> </span>
                                         <span className=' block md:hidden h-full'> <DynamicLogo className={clsx("min-w-fit", { "text-secondary": pathname === "/" })} /> </span>
@@ -109,26 +109,27 @@ function Navbar() {
                                 </div>
                             </Reveal>
                             <span className='flex-grow' />
-                            <button className={clsx('btn btn-selector', {
-                                "animate-pulse": menuOpened,
-                            })} onClick={estadoMenu}>
-                                {menuOpened ?
-                                    <>
-                                        <XMarkIcon />
-                                        <span className='md:block hidden'> {tc("close")} </span>
-                                    </>
-                                    :
-                                    <>
-                                        <BiCompass />
-                                        <span className='md:block hidden'> {tc("explore")} </span>
-                                    </>
+                            <Reveal initial={-64} final={0} delay={1.2} showSlider={0}>
+                                <button className={clsx('btn btn-selector', {
+                                    "animate-pulse": menuOpened,
+                                })} onClick={estadoMenu}>
+                                    {menuOpened ?
+                                        <>
+                                            <XMarkIcon />
+                                            <span className='md:block hidden'> {tc("close")} </span>
+                                        </>
+                                        :
+                                        <>
+                                            <BiCompass />
+                                            <span className='md:block hidden'> {tc("explore")} </span>
+                                        </>
+                                    }
+                                </button>
+                            </Reveal>
+                            <Reveal initial={-64} final={0} delay={1.4} showSlider={0}>
+                                <ThemeSwitch />
+                            </Reveal>
 
-                                }
-                                
-                                
-
-                            </button>
-                            <ThemeSwitch />
                         </div>
                     </Reveal>
                 </div>
