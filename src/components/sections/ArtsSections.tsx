@@ -26,6 +26,7 @@ export default function Gallery({ Arts }: Props) {
     const [hasMore, setHasMore] = useState(true);
     const [loadingMore, setLoadingMore] = useState(false);
     const [fullImageLoaded, setFILoaded] = useState(false);
+    const [sliding, setSliding] = useState(false);
     const loadMoreRef = useRef<HTMLDivElement>(null);
     const searchParams = useSearchParams();
     const [copied, setCopied] = useState(false);
@@ -93,18 +94,22 @@ export default function Gallery({ Arts }: Props) {
     };
 
     const replaceCurrent = (newIndex: number) => {
-        setFILoaded(false);
-        setFullScreenImage(null);
-        handleImageClick(Arts[newIndex], newIndex)
+        setSliding(true);
+        setTimeout(() => {
+            setSliding(false);
+            setFILoaded(false);
+            setFullScreenImage(null);
+            handleImageClick(Arts[newIndex], newIndex)
+        }, 250);
     }
-    
+
     // Abrir a arte caso tenha sido compartilhada avulsa 
     useEffect(() => {
         const artImgUrl = searchParams.get("art");
         setTimeout(() => {
             if (artImgUrl && Arts) {
                 const artIndex = Arts.findIndex(a => a.imgUrl === decodeURIComponent(artImgUrl));
-                
+
                 if (artIndex !== -1) {
                     const art = Arts[artIndex];
                     setFullScreenImage(art);
@@ -170,69 +175,90 @@ export default function Gallery({ Arts }: Props) {
                 {fullScreenImage && (
                     <motion.div
                         initial={{
+                            translateY: "100vw",
                             opacity: 0
                         }}
                         animate={{
+                            translateY: 0,
                             opacity: 1
                         }}
                         exit={{
+                            translateY: "100vw",
                             opacity: 0
                         }}
                         transition={{
-                            duration: 0.5, ease: "easeInOut"
+                            duration: 0.75, ease: "circInOut"
                         }}
-                        className="fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-background/75 backdrop-blur-sm"
+                        className="fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-background/75 backdrop-blur-sm border-t-4 border-secondary"
                         style={{ zIndex: 9998 }}
                     >
                         <div className="relative w-full max-w-7xl flex-grow p-8 pt-2 flex flex-col gap-2">
                             <div className="flex items-center justify-center">
-                                <button className={clsx("mx-4 p-2 text-secondary hover:bg-secondary hover:text-sam-dark transition-colors", {
-                                    "opacity-0 pointer-events-none": currentPID == 0
-                                })}  onClick={() => replaceCurrent(currentPID - 1)}>
+                                <button className={clsx("mx-4 p-2 text-secondary hover:bg-secondary hover:text-sam-dark transition-all duration-300", {
+                                    "opacity-10 pointer-events-none": currentPID == 0 || sliding || !fullImageLoaded
+                                })} onClick={() => replaceCurrent(currentPID - 1)}>
                                     <ArrowLeftIcon />
                                 </button>
 
                                 <h4>{currentPID + 1} / {totalArtsCount}</h4>
 
-                                <button className={clsx("mx-4 p-2 text-secondary hover:bg-secondary hover:text-sam-dark transition-colors", {
-                                    "opacity-0 pointer-events-none": currentPID == totalArtsCount - 1
+                                <button className={clsx("mx-4 p-2 text-secondary hover:bg-secondary hover:text-sam-dark transition-all duration-300", {
+                                    "opacity-10 pointer-events-none": currentPID == totalArtsCount - 1 || sliding || !fullImageLoaded
                                 })} onClick={() => replaceCurrent(currentPID + 1)}>
                                     <ArrowRightIcon />
                                 </button>
 
                             </div>
                             {!fullImageLoaded &&
-                                <span className=" flex w-full items-center justify-center absolute top-2/4 left-0">
+                                <span className=" flex w-full items-center justify-center absolute top-2/4 left-0 -translate-y-12">
                                     <Spinner />
                                 </span>
                             }
-                            <div style={{
-                                position: "relative",
-                                height: "100%",
-                                width: "100%"
-                            }} className={clsx(" transition-all duration-500", {
-                                "opacity-25 scale-90": !fullImageLoaded
-                            })}
-                            >
-                                <Image
-                                    
-                                    alt=""
-                                    placeholder="blur"
-                                    blurDataURL={placeholderImage.src}
-                                    className=" object-contain opacity-0 transition-all duration-500 scale-90"
-                                    loading="lazy"
-                                    src={fullScreenImage.imgUrl}
-                                    fill
-                                    sizes="(max-width: 100%) 100vw"
-                                    onLoad={(event) => {
-                                        const target = event.target as HTMLImageElement;
-                                        target.classList.remove("opacity-0", "scale-90");
-                                        setFILoaded(true)
-                                    }}
-                                    unoptimized
-                                />
+                            <div className=" flex flex-row flex-grow justify-center items-center gap-1">
+                                <span className={clsx("  transition-opacity duration-300 md:block hidden", {
+                                    "opacity-50 pointer-events-none": currentPID == 0 || sliding || !fullImageLoaded
+                                })}>
+                                    <button className="btn btn-selector" onClick={() => replaceCurrent(currentPID - 1)}>
+                                        <ArrowLeftIcon />
+                                    </button>
+                                </span>
+                                
+                                <div style={{
+                                    position: "relative",
+                                    height: "100%",
+                                }} className={clsx(" transition-all duration-500 flex-grow", {
+                                    "opacity-25 scale-90": !fullImageLoaded || sliding
+                                })}
+                                >
+                                    <Image
+
+                                        alt=""
+                                        placeholder="blur"
+                                        blurDataURL={placeholderImage.src}
+                                        className=" object-contain opacity-0 transition-all duration-500 scale-90"
+                                        loading="lazy"
+                                        src={fullScreenImage.imgUrl}
+                                        fill
+                                        sizes="(max-width: 100%) 100vw"
+                                        onLoad={(event) => {
+                                            const target = event.target as HTMLImageElement;
+                                            target.classList.remove("opacity-0", "scale-90");
+                                            setFILoaded(true)
+                                        }}
+                                        unoptimized
+                                    />
+
+                                </div>
+                                <span className={clsx("  transition-opacity duration-300 md:block hidden", {
+                                    "opacity-50 pointer-events-none": currentPID == totalArtsCount - 1 || sliding || !fullImageLoaded
+                                })}>
+                                    <button className="btn btn-selector" onClick={() => replaceCurrent(currentPID + 1)}>
+                                        <ArrowRightIcon />
+                                    </button>
+                                </span>
 
                             </div>
+
 
                             <div className="flex flex-row items-center justify-center gap-1">
                                 <button className="btn btn-selector" onClick={closeFullScreen} title="Ocultar / Close">

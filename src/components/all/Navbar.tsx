@@ -66,7 +66,7 @@ function Navbar() {
                                 ease: "circInOut"
                             }
                         }}
-                        className=' p-8 py-14 pb-32 flex flex-grow w-full h-full backdrop-blur-md bg-surface/75 justify-center items-center fixed top-20 left-0 z-40 border-t-2 border-secondary'>
+                        className=' p-8 py-14 pb-32 flex flex-grow w-full h-full backdrop-blur-md bg-surface/75 justify-center items-center fixed top-20 left-0 z-40 border-t-4 border-secondary'>
                         <div className='max-w-7xl w-full h-full flex flex-col items-center'>
                             <div className="flex flex-col gap-2 items-center w-full min-h-32 pb-5">
                                 <div className='flex flex-col gap-8 items-center justify-center w-full flex-grow '>

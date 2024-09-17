@@ -9,7 +9,7 @@ export const JumpingArrow = ({className = "h-6" }: {className?: string}) => {
                 <motion.div
                     className={className}
                     animate={{ y: ["0%", "-50%", "0%"] }}
-                    transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut'}}
+                    transition={{ repeat: Infinity, duration: 2, ease: 'circInOut'}}
                 >
                     <Arrow className="text-secondary"/>
                 </motion.div>
