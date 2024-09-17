@@ -15,7 +15,9 @@
         "nothing": "Nothing here... For now... ¯\\_(ツ)_/¯",
         "byme": "Personal",
         "col_in": "Collaborating on",
-        "hiato": "On hiatus"
+        "hiato": "On hiatus",
+        "explore":"Explore",
+        "lang":"Languages"
     },
     "Errors": {
         "404":"404 Error - This page doesn't exists, verify the URL and try again."

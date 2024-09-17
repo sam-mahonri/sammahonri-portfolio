@@ -14,7 +14,9 @@
         "nothing": "Nada por aquí... Por ahora... ¯\\_(ツ)_/¯",
         "byme": "Personales",
         "col_in": "Colaborando en",
-        "hiato": "En pausa"
+        "hiato": "En pausa",
+        "explore":"Explorar",
+        "lang": "Idiomas"
     },
     "Errors": {
         "404": "Error 404 - Esta página no existe, verifique la URL y vuelva a intentarlo."

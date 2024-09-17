@@ -210,8 +210,8 @@ export default function Gallery({ Arts }: Props) {
                                 position: "relative",
                                 height: "100%",
                                 width: "100%"
-                            }} className={clsx(" transition-opacity duration-500", {
-                                "opacity-25": !fullImageLoaded
+                            }} className={clsx(" transition-all duration-500", {
+                                "opacity-25 scale-90": !fullImageLoaded
                             })}
                             >
                                 <Image
