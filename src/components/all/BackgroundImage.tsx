@@ -13,10 +13,10 @@ export default function BackgroundImage({ source, fixed = false, wBack = false }
     useEffect(() => {
         const updateValues = () => {
             const latest = scrollY.get();
-            const newOpacity = 1 - latest / 500; // Ajuste o valor de 500 conforme necessário
+            const newOpacity = 1 - latest / 750; // Ajuste o valor de 500 conforme necessário
             opacity.set(newOpacity > 0 ? newOpacity : 0);
 
-            const newY = -latest / 4; // Ajuste o valor de 5 conforme necessário para o efeito de parallax
+            const newY = -latest / 3; // Ajuste o valor de 5 conforme necessário para o efeito de parallax
             y.set(newY);
         };
 
@@ -44,7 +44,7 @@ export default function BackgroundImage({ source, fixed = false, wBack = false }
                     }}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                 />
-                <span className="absolute background-degrade w-full h-full" />
+                <span className="absolute bg-background/60 background-degrade w-full h-full transition-colors duration-500" />
             </motion.div>
         </div>
     );

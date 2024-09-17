@@ -6,7 +6,7 @@ import ThemeSwitch from '@/components/ui/ThemeSwitcher';
 import { DynamicInlineLogo, DynamicLogo } from '../ui/SamLogos';
 import { Link, usePathname } from '@/navigation';
 import { Reveal } from '../fx/Motion';
-import { Bars3Icon, ArrowUpIcon, ArrowLeftIcon, ArrowDownIcon, GlobeAltIcon } from '@heroicons/react/24/solid';
+import { Bars3Icon, ArrowUpIcon, ArrowLeftIcon, ArrowDownIcon, GlobeAltIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { useLocale, useTranslations } from 'next-intl';
 import { AnimatePresence, motion } from 'framer-motion';
 import { BiCompass } from 'react-icons/bi';
@@ -70,7 +70,7 @@ function Navbar() {
                         <div className='max-w-7xl w-full h-full flex flex-col items-center'>
                             <div className="flex flex-col gap-2 items-center w-full min-h-32 pb-5">
                                 <div className='flex flex-col gap-8 items-center justify-center w-full flex-grow '>
-                                    <Reveal><h1 className='break-all text-secondary'>- {tc("explore")} -</h1></Reveal>
+                                    <Reveal><h1 className='break-all text-secondary'>{tc("explore")}</h1></Reveal>
                                     <JumpingArrow />
                                 </div>
                             </div>
@@ -80,7 +80,7 @@ function Navbar() {
                             <Reveal delay={0.8}><Link onClick={estadoMenu} href={"/projects"} className={clsx('olink slink uppercase font-dyslexia font-semibold md:text-5xl text-3xl', { "active-link": pathname.startsWith("/projects") })}>{tc('projects')}</Link></Reveal>
                             <span className=' flex-grow' />
                             <Reveal>
-                                
+
                                 <h3>- {tc('lang')} -</h3>
                             </Reveal>
                             <div className="flex md:flex-row flex-col items-center justify-center md:gap-8 gap-1 mb-4">
@@ -109,9 +109,24 @@ function Navbar() {
                                 </div>
                             </Reveal>
                             <span className='flex-grow' />
-                            <button className='btn btn-selector-secondary' onClick={estadoMenu}>
-                                {menuOpened ? <ArrowDownIcon /> : <BiCompass />}
-                                {tc("explore")}
+                            <button className={clsx('btn btn-selector', {
+                                "animate-pulse": menuOpened,
+                            })} onClick={estadoMenu}>
+                                {menuOpened ?
+                                    <>
+                                        <XMarkIcon />
+                                        <span className='md:block hidden'> {tc("close")} </span>
+                                    </>
+                                    :
+                                    <>
+                                        <BiCompass />
+                                        <span className='md:block hidden'> {tc("explore")} </span>
+                                    </>
+
+                                }
+                                
+                                
+
                             </button>
                             <ThemeSwitch />
                         </div>
