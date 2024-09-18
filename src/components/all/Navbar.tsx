@@ -13,6 +13,8 @@ import { BiCompass } from 'react-icons/bi';
 import { Title } from '../ui/Titles';
 import { JumpingArrow } from '../fx/JumpingArrow';
 import { SwitchLanguageLink } from '../ui/LanguageSwitcherLink';
+import { BsTranslate } from 'react-icons/bs';
+import ButtonLanguage from '../ui/menus/buttons/LanguageButton';
 
 function Navbar() {
 
@@ -70,19 +72,20 @@ function Navbar() {
                         <motion.div
                         initial={{
                             opacity: 0,
-                            translateY: 128
+                            translateY: "100vw"
                         }}
                         animate={{
                             opacity: 1,
-                            translateY: 32
+                            translateY: 64
                         }}
                         transition={{
                             duration: 1.5,
                             delay: 1,
                             ease: "easeInOut"
                         }}
-                        className=' absolute w-full h-full bg-gradient-to-b from-transparent via-transparent to-primary/25'/>
+                        className=' absolute w-full h-full bg-gradient-to-b from-transparent to-primary/40'/>
                         <div className='max-w-7xl w-full h-full flex flex-col items-center'>
+                            <span className=' flex-grow' />
                             <div className="flex flex-col gap-2 items-center w-full min-h-32 pb-5">
                                 <div className='flex flex-col gap-8 items-center justify-center w-full flex-grow '>
                                     <Reveal><h1 className='break-all text-secondary'>{tc("explore")}</h1></Reveal>
@@ -94,15 +97,6 @@ function Navbar() {
                             <Reveal delay={0.6}><Link onClick={estadoMenu} href={"/about"} className={clsx('olink slink uppercase font-dyslexia font-semibold md:text-5xl text-3xl', { "active-link": pathname.startsWith("/about") })}>{tc('about')}</Link></Reveal>
                             <Reveal delay={0.8}><Link onClick={estadoMenu} href={"/projects"} className={clsx('olink slink uppercase font-dyslexia font-semibold md:text-5xl text-3xl', { "active-link": pathname.startsWith("/projects") })}>{tc('projects')}</Link></Reveal>
                             <span className=' flex-grow' />
-                            <Reveal>
-
-                                <h3>- {tc('lang')} -</h3>
-                            </Reveal>
-                            <div className="flex md:flex-row flex-col items-center justify-center md:gap-8 gap-1 mb-4 z-30">
-                                <SwitchLanguageLink newLocale="pt" className={clsx("olink font-dyslexia font-semibold", { "active-link": cl === 'pt' })}>Português - BR</SwitchLanguageLink>
-                                <SwitchLanguageLink newLocale="en" className={clsx("olink font-dyslexia font-semibold", { "active-link": cl === 'en' })}>English - EN</SwitchLanguageLink>
-                                <SwitchLanguageLink newLocale="es" className={clsx("olink font-dyslexia font-semibold", { "active-link": cl === 'es' })}>Español - ES</SwitchLanguageLink>
-                            </div>
                             <Link onClick={estadoMenu} href={"/"} className=' md:h-20 h-14 mb-8 -translate-x-2  self-center'><DynamicInlineLogo className={clsx({ "text-secondary": pathname === "/" })} /></Link>
                         </div>
                     </motion.div>}
@@ -131,12 +125,12 @@ function Navbar() {
                                     {menuOpened ?
                                         <>
                                             <XMarkIcon />
-                                            <span className='md:block hidden'> {tc("close")} </span>
+                                            {tc("close")}
                                         </>
                                         :
                                         <>
                                             <BiCompass />
-                                            <span className='md:block hidden'> {tc("explore")} </span>
+                                            {tc("explore")}
                                         </>
                                     }
                                 </button>
@@ -144,6 +138,12 @@ function Navbar() {
                             <Reveal initial={-64} final={0} delay={1.4} showSlider={0}>
                                 <ThemeSwitch />
                             </Reveal>
+                            {/*
+                                <Reveal initial={-64} final={0} delay={1.6} showSlider={0}>
+                                    <ButtonLanguage/>
+                                </Reveal>
+                            */}
+                            
 
                         </div>
                     </Reveal>

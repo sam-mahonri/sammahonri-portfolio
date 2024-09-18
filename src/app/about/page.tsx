@@ -1,7 +1,7 @@
 import {useTranslations} from 'next-intl';
 import { Metadata } from 'next';
 import { Reveal } from '@/components/fx/Motion';
-import { Link } from '@/navigation';
+import Link from 'next/link';
 import { AcademicCapIcon } from '@heroicons/react/24/solid';
 import { Title } from '@/components/ui/Titles';
 import { getTranslations } from 'next-intl/server';

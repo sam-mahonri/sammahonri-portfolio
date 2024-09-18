@@ -2,11 +2,12 @@ import { useLocale, useTranslations } from 'next-intl';
 import backgroundImage from "/public/backgrounds/home.svg"
 import { Reveal } from '@/components/fx/Motion';
 import { Arrow, DynamicLogo } from '@/components/ui/SamLogos';
-import { Link } from '@/navigation';
+import Link from 'next/link';
 import { ArrowRightIcon, ExclamationTriangleIcon } from '@heroicons/react/24/solid';
 import { JumpingArrow } from '@/components/fx/JumpingArrow';
 import { FaBluesky, FaInstagram, FaTwitter } from "react-icons/fa6";
 import TimeHSM from '@/components/ui/symbols/HSM';
+
 
 export default function Index() {
   const t = useTranslations('Index');
