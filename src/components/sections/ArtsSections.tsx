@@ -193,22 +193,7 @@ export default function Gallery({ Arts }: Props) {
                         style={{ zIndex: 9998 }}
                     >
                         <div className="relative w-full max-w-7xl flex-grow p-8 pt-2 flex flex-col gap-2">
-                            <div className="flex items-center justify-center">
-                                <button className={clsx("mx-4 p-2 text-secondary hover:bg-secondary hover:text-sam-dark transition-all duration-300", {
-                                    "opacity-10 pointer-events-none": currentPID == 0 || sliding || !fullImageLoaded
-                                })} onClick={() => replaceCurrent(currentPID - 1)}>
-                                    <ArrowLeftIcon />
-                                </button>
-
-                                <h4>{currentPID + 1} / {totalArtsCount}</h4>
-
-                                <button className={clsx("mx-4 p-2 text-secondary hover:bg-secondary hover:text-sam-dark transition-all duration-300", {
-                                    "opacity-10 pointer-events-none": currentPID == totalArtsCount - 1 || sliding || !fullImageLoaded
-                                })} onClick={() => replaceCurrent(currentPID + 1)}>
-                                    <ArrowRightIcon />
-                                </button>
-
-                            </div>
+                            <h4 className=" self-center">{currentPID + 1} / {totalArtsCount}</h4>
                             {!fullImageLoaded &&
                                 <span className=" flex w-full items-center justify-center absolute top-2/4 left-0 -translate-y-12">
                                     <Spinner />
@@ -222,7 +207,7 @@ export default function Gallery({ Arts }: Props) {
                                         <ArrowLeftIcon />
                                     </button>
                                 </span>
-                                
+
                                 <div style={{
                                     position: "relative",
                                     height: "100%",
@@ -259,20 +244,28 @@ export default function Gallery({ Arts }: Props) {
 
                             </div>
 
-
                             <div className="flex flex-row items-center justify-center gap-1">
+                                <button className={clsx(" p-2 text-secondary hover:bg-secondary hover:text-sam-dark transition-all duration-300", {
+                                    "opacity-10 pointer-events-none": currentPID == 0 || sliding || !fullImageLoaded
+                                })} onClick={() => replaceCurrent(currentPID - 1)}>
+                                    <ArrowLeftIcon />
+                                </button>
                                 <button className="btn btn-selector" onClick={closeFullScreen} title="Ocultar / Close">
                                     <XMarkIcon />
                                 </button>
-                                <button className="btn btn-selector-secondary" onClick={handleCopyUrl} title="Link">
+                                <button className="btn btn-selector-secondary" onClick={handleCopyUrl} title="Copiar Link / Copy Link">
                                     {copied ? <CheckIcon /> : <ShareIcon />}
                                 </button>
                                 <a href={fullScreenImage.imgUrl} download={true} >
-                                    <button className="btn btn-selector" title="Download">
+                                    <button className="btn btn-selector-secondary" title="Download">
                                         <ArrowDownTrayIcon />
                                     </button>
                                 </a>
-
+                                <button className={clsx(" p-2 text-secondary hover:bg-secondary hover:text-sam-dark transition-all duration-300", {
+                                    "opacity-10 pointer-events-none": currentPID == totalArtsCount - 1 || sliding || !fullImageLoaded
+                                })} onClick={() => replaceCurrent(currentPID + 1)}>
+                                    <ArrowRightIcon />
+                                </button>
                             </div>
                         </div>
                     </motion.div>

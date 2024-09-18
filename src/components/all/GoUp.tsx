@@ -28,10 +28,9 @@ export default function GoUp() {
     };
 
     return (
-        <span className={clsx('fixed bottom-5 right-5 transition-opacit', {
-            'opacity-0': isTop,
-            'pointer-events-none': isTop,
-            'opacity-100': !isTop
+        <span className={clsx('fixed bottom-5 right-5 transition-all duration-500 z-50', {
+            'opacity-0 pointer-events-none scale-0 translate-y-24': isTop,
+            'opacity-100 scale-100 translate-y-0': !isTop
         })}>
             <button className='btn btn-selector' onClick={scrollToTop}>
                 <ArrowUpIcon />

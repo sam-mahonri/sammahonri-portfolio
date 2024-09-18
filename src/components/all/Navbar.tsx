@@ -67,6 +67,21 @@ function Navbar() {
                             }
                         }}
                         className=' p-8 py-14 pb-32 flex flex-grow w-full h-full backdrop-blur-md bg-surface/75 justify-center items-center fixed top-20 left-0 z-40 border-t-4 border-secondary'>
+                        <motion.div
+                        initial={{
+                            opacity: 0,
+                            translateY: 128
+                        }}
+                        animate={{
+                            opacity: 1,
+                            translateY: 32
+                        }}
+                        transition={{
+                            duration: 1.5,
+                            delay: 1,
+                            ease: "easeInOut"
+                        }}
+                        className=' absolute w-full h-full bg-gradient-to-b from-transparent via-transparent to-primary/25'/>
                         <div className='max-w-7xl w-full h-full flex flex-col items-center'>
                             <div className="flex flex-col gap-2 items-center w-full min-h-32 pb-5">
                                 <div className='flex flex-col gap-8 items-center justify-center w-full flex-grow '>
@@ -83,7 +98,7 @@ function Navbar() {
 
                                 <h3>- {tc('lang')} -</h3>
                             </Reveal>
-                            <div className="flex md:flex-row flex-col items-center justify-center md:gap-8 gap-1 mb-4">
+                            <div className="flex md:flex-row flex-col items-center justify-center md:gap-8 gap-1 mb-4 z-30">
                                 <SwitchLanguageLink newLocale="pt" className={clsx("olink font-dyslexia font-semibold", { "active-link": cl === 'pt' })}>Português - BR</SwitchLanguageLink>
                                 <SwitchLanguageLink newLocale="en" className={clsx("olink font-dyslexia font-semibold", { "active-link": cl === 'en' })}>English - EN</SwitchLanguageLink>
                                 <SwitchLanguageLink newLocale="es" className={clsx("olink font-dyslexia font-semibold", { "active-link": cl === 'es' })}>Español - ES</SwitchLanguageLink>
@@ -110,7 +125,7 @@ function Navbar() {
                             </Reveal>
                             <span className='flex-grow' />
                             <Reveal initial={-64} final={0} delay={1.2} showSlider={0}>
-                                <button className={clsx('btn btn-selector', {
+                                <button className={clsx('btn btn-alt-primary', {
                                     "animate-pulse": menuOpened,
                                 })} onClick={estadoMenu}>
                                     {menuOpened ?

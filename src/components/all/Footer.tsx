@@ -43,9 +43,11 @@ export async function Footer(){
                         <Reveal>
                             <h3>{t('socials')}</h3>
                         </Reveal>
-                        <Link className="olink font-dyslexia font-semibold" href={"https://x.com/SamMahonri"}>Twitter</Link>
-                        <Link className="olink font-dyslexia font-semibold" href={"https://instagram.com/sammahonri"}>Instagram</Link>
                         <Link className="olink font-dyslexia font-semibold" href={"https://bsky.app/profile/sammahonri.com"}>Bluesky</Link>
+                        <Link className="olink font-dyslexia font-semibold" href={"https://instagram.com/sammahonri"}>Instagram</Link>
+                        <Link className="olink font-dyslexia font-semibold" href={"https://x.com/SamMahonri"}>Twitter</Link>
+                        
+                        
                     </div>
                 </div>
                 <Divider />
