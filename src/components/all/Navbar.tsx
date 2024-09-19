@@ -15,6 +15,7 @@ import { JumpingArrow } from '../fx/JumpingArrow';
 import { SwitchLanguageLink } from '../ui/LanguageSwitcherLink';
 import { BsTranslate } from 'react-icons/bs';
 import ButtonLanguage from '../ui/menus/buttons/LanguageButton';
+import { DropdownLangSelector } from '../ui/menus/Language';
 
 function Navbar() {
 
@@ -107,7 +108,7 @@ function Navbar() {
                 'md:p-6 p-0': isTop && !menuOpened
             })}>
                 <div className="flex flex-row items-center container max-w-7xl box-border gap-7 h-20 min-h-20">
-                    <Reveal width='100%' showSlider={0} initial={64} final={0} delay={1.5} ease='backOut'>
+                    <Reveal width='100%' showSlider={0} initial={64} final={0} delay={1.5} ease='backOut' endNoOverflow={true}>
                         <div className="flex flex-row items-center container px-5 py-2 max-w-7xl box-border gap-2 h-fit">
                             <Reveal initial={-64} final={0} delay={1}>
                                 <div className='h-10 min-w-8'>
@@ -138,11 +139,10 @@ function Navbar() {
                             <Reveal initial={-64} final={0} delay={1.4} showSlider={0}>
                                 <ThemeSwitch />
                             </Reveal>
-                            {/*
-                                <Reveal initial={-64} final={0} delay={1.6} showSlider={0}>
-                                    <ButtonLanguage/>
-                                </Reveal>
-                            */}
+
+                            <Reveal initial={-64} final={0} delay={1.6} showSlider={0} endNoOverflow={true}>
+                                <DropdownLangSelector/>
+                            </Reveal>
                             
 
                         </div>

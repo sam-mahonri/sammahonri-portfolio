@@ -12,44 +12,78 @@ export default function SimpleDropdown({
     icon = null,
     closeOnClick = true,
     autoClose = true,
-    type = "only-icon",
+    type = "btn-selector",
     disabled = false
 }: SimpleDropdownProps) {
     const [isVisible, setIsVisible] = useState(false);
     const [hasCalculated, setHasCalculated] = useState(false);
     const [overflowY, setOverflowY] = useState<'auto' | 'hidden'>('hidden');
     const dropdownRef = useRef<HTMLDivElement>(null);
+    const buttonRef = useRef<HTMLButtonElement>(null);
     const [dropdownStyle, setDropdownStyle] = useState<React.CSSProperties>({});
     const transition = { duration: 0.3 };
 
+
     useEffect(() => {
-        if (isVisible && dropdownRef.current && !hasCalculated) {
-            requestAnimationFrame(() => {
-                const dropdownRect = dropdownRef.current!.getBoundingClientRect();
-                
-                const viewportWidth = window.innerWidth;
-                const viewportHeight = window.innerHeight;
+        function calculatePosition() {
+            if (dropdownRef.current) {
+                requestAnimationFrame(() => {
+                    const dropdownRect = dropdownRef.current!.getBoundingClientRect();
 
-                const adjustments: [boolean, React.CSSProperties][] = [
-                    [dropdownRect.right > viewportWidth, { right: 16, left: 'auto', translate: "0 8px" }],
-                    [dropdownRect.bottom > viewportHeight, { bottom: 16, top: 'auto', translate: "0 8px" }],
-                    [dropdownRect.top < 0, { top: 16, translate: "0 8px" }],
-                    [dropdownRect.left < 0, { left: 16, translate: "0 8px" }]
-                ];
+                    const viewportWidth = window.innerWidth;
+                    const viewportHeight = window.innerHeight;
 
-                const newStyle = adjustments
-                    .filter(([condition]) => condition)
-                    .reduce((acc, [, style]) => ({ ...acc, ...style }), {});
+                    const adjustments: [boolean, React.CSSProperties][] = [
+                        [dropdownRect.right > viewportWidth, { right: 0, left: 'auto', translate: "0 8px" }],
+                        [dropdownRect.bottom > viewportHeight, { bottom: 0, top: 'auto', translate: "0 -8px" }],
+                        [dropdownRect.top < 0, { top: 0, translate: "0 8px" }],
+                        [dropdownRect.left < 0, { left: 0, translate: "0 8px" }]
+                    ];
 
-                setDropdownStyle(newStyle);
-                setHasCalculated(true); // Marcar o cálculo como feito
-            });
+                    const newStyle: React.CSSProperties = adjustments
+                        .filter(([condition]) => condition)
+                        .reduce((acc, [, style]) => ({ ...acc, ...style }), {});
+
+                    if (Object.keys(newStyle).length === 0) {
+                        newStyle.translate = "0 8px";
+                    }
+
+                    const hasStyleChanged = Object.keys(newStyle).some(key => {
+                        const styleKey = key as keyof React.CSSProperties;
+                        return dropdownStyle[styleKey] !== newStyle[styleKey];
+                    });
+
+                    if (hasStyleChanged) {
+                        setDropdownStyle(newStyle);
+                    }
+                });
+            }
         }
-    }, [isVisible, hasCalculated]);
+
+        if (isVisible) {
+            calculatePosition();
+            window.addEventListener('resize', calculatePosition);
+        }
+
+        return () => {
+            window.removeEventListener('resize', calculatePosition);
+        };
+    }, [isVisible, dropdownStyle]);
+
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target as Node)
+            ) {
+                if (
+                    buttonRef.current &&
+                    buttonRef.current.contains(event.target as Node)
+                ) {
+                    return;
+                }
+
                 setIsVisible(false);
             }
         }
@@ -66,48 +100,51 @@ export default function SimpleDropdown({
     }, [isVisible]);
 
     return (
-        <div className={` transition-opacity ${ disabled && 'opacity-50 pointer-events-none' }`}>
-            <button className={`${type} ${isVisible ? 'active' : ''}`} onClick={() => setIsVisible(prev => !prev)}>
+        <div className={`relative transition-opacity ${disabled && 'opacity-50 pointer-events-none'}`}>
+            <button ref={buttonRef} className={`btn ${type} ${isVisible ? 'active' : ''}`} onClick={() => { setIsVisible(prev => !prev); }}>
                 {buttonText}
                 {icon}
             </button>
 
             <AnimatePresence >
-                {isVisible && 
-                    <motion.div
-                        className={clsx("bg-surface rounded-sm min-w-32 flex flex-col gap-1 shadow-lg border-y-2 border-primary", {
-                            " overflow-y-auto": overflowY === "auto",
-                            " overflow-y-hidden ": overflowY === "hidden"
-                        })}
-                        ref={dropdownRef}
-                        style={{ 
-                            position: 'absolute',
-                            maxHeight: '80vh',
-                            maxWidth: '90vh',
-                            ...dropdownStyle 
-                        }}
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0, overflowY: "hidden" }}
-                        transition={transition}
-                        onClick={() => {if (closeOnClick) {setIsVisible(false)}}}
-                        onMouseLeave={() => {if (autoClose) {setIsVisible(false)}}}
-                        onAnimationStart={() => setOverflowY('hidden')}
-                        onAnimationComplete={() => setOverflowY('auto')}
-                        
-                        
-                    >
-                        <div className=" w-full flex flex-col gap-1.5 py-3 pb-2 min-w-64">
-                            {children}
-                        </div>
-                    </motion.div>
+                {isVisible &&
+                    <>
+                        <motion.div
+                            className={clsx("bg-surface min-w-32 flex flex-col gap-1 shadow-lg border-y-2 border-primary z-50", {
+                                " overflow-y-auto": overflowY === "auto",
+                                " overflow-y-hidden ": overflowY === "hidden"
+                            })}
+                            ref={dropdownRef}
+                            style={{
+                                position: 'absolute',
+                                maxHeight: '80vh',
+                                maxWidth: '90vh',
+                                ...dropdownStyle
+                            }}
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0, overflowY: "hidden" }}
+                            transition={transition}
+                            onClick={() => { if (closeOnClick) { setIsVisible(false) } }}
+                            onMouseLeave={() => { if (autoClose) { setIsVisible(false) } }}
+                            onAnimationStart={() => setOverflowY('hidden')}
+                            onAnimationComplete={() => setOverflowY('auto')}
+
+
+                        >
+                            <div className=" w-full flex flex-col gap-1.5 py-3 pb-2 min-w-64">
+                                {children}
+                            </div>
+                        </motion.div>
+                    </>
+
                 }
             </AnimatePresence>
         </div>
     );
 }
 
-export function DropdownButton({ children, callback = () => {}, active = false }: { children: ReactNode, callback?: Function, active?: boolean }) {
+export function DropdownButton({ children, callback = () => { }, active = false }: { children: ReactNode, callback?: Function, active?: boolean }) {
     return <button className={clsx("context", {
         "active": active
     })} onClick={() => callback()}>

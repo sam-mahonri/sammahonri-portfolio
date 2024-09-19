@@ -6,6 +6,6 @@ export interface SimpleDropdownProps {
     icon?: ReactNode,
     closeOnClick?: boolean,
     autoClose?: boolean,
-    type?: "only-icon" | "icon-primary" | "secondary" | "primary",
+    type?: "btn-selector-secondary" | "btn-selector" | "btn-secondary" | "btn-primary",
     disabled?: boolean
 }

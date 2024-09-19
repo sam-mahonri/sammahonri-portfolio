@@ -8,10 +8,9 @@ import { GlobeAmericasIcon, LanguageIcon } from "@heroicons/react/24/solid";
 import { setUserLocale } from '@/services/locale';
 import { Locale } from "@/config";
 
-export function DropdownLangSelector({ type = "only-icon" }: { type?: "only-icon" | "secondary" }) {
-    const t = useTranslations("Common.settings.lang");
+export function DropdownLangSelector({ type = "btn-selector" }: { type?: "btn-selector" | "btn-secondary" }) {
     const l = useLocale();
-
+    const t = useTranslations("Common")
     const [isPending, startTransition] = useTransition();
 
     function onChange(value: string) {
@@ -23,19 +22,23 @@ export function DropdownLangSelector({ type = "only-icon" }: { type?: "only-icon
 
     return <SimpleDropdown
         disabled={isPending}
-        icon={<GlobeAmericasIcon />}
+        icon={<LanguageIcon />}
         type={type}
-        buttonText={type != "only-icon" ? t("_") : ""}
+        buttonText={type != "btn-selector" ? t("lang") : ""}
         closeOnClick={false}>
-        <h5 className="px-4 flex flex-row gap-2 items-center"><GlobeAmericasIcon className=" h-7 w-7" /> {t("_")} </h5>
-        <HRDivider />
-        <DropdownButton callback={async () => { if (l !== "pt") onChange("pt") }} active={l === "pt"}>
-            <LanguageIcon />
-            {t("pt-br")}
-        </DropdownButton>
-        <DropdownButton callback={async () => { if (l !== "en") onChange("en") }} active={l === "en"}>
-            <LanguageIcon />
-            {t("en-us")}
-        </DropdownButton>
+            <h5 className="px-4 flex flex-row gap-2 items-center"><GlobeAmericasIcon className=" h-7 w-7" /> {t("lang")} </h5>
+            <HRDivider />
+            <DropdownButton callback={async () => { if (l !== "pt") onChange("pt") }} active={l === "pt"}>
+                <LanguageIcon />
+                PT - BR
+            </DropdownButton>
+            <DropdownButton callback={async () => { if (l !== "en") onChange("en") }} active={l === "en"}>
+                <LanguageIcon />
+                EN - US
+            </DropdownButton>
+            <DropdownButton callback={async () => { if (l !== "es") onChange("es") }} active={l === "es"}>
+                <LanguageIcon />
+                ES - ES
+            </DropdownButton>
     </SimpleDropdown>
 }

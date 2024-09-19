@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView, useAnimation, easeIn } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface RevealProps {
     children: React.ReactNode;
@@ -16,14 +16,16 @@ interface RevealProps {
     once?: boolean;
     showSlider?: 0 | 1
     sliderColor?: string,
-    className?: string
+    className?: string,
+    endNoOverflow?: boolean
 }
 
-export const Reveal = ({ children, delay = 0, duration = 0.75, initial = 64, final = 0, ease = "circInOut", width = "fit-content", height = "fit-content", overflow = "hidden", once = true, showSlider = 1, sliderColor = "rgb(var(--sam-secondary-color))", className = ""}: RevealProps) => {
+export const Reveal = ({ children, delay = 0, duration = 0.75, initial = 64, final = 0, ease = "circInOut", width = "fit-content", height = "fit-content", overflow = "hidden", once = true, showSlider = 1, sliderColor = "rgb(var(--sam-secondary-color))", className = "", endNoOverflow = false}: RevealProps) => {
     
     const ref = useRef(null);
     
     const isInView = useInView(ref, { once: once });
+    const [currentOverflow, setCurrentOverflow] = useState(overflow)
 
     const mainControls = useAnimation();
     const slideControls = useAnimation();
@@ -37,15 +39,16 @@ export const Reveal = ({ children, delay = 0, duration = 0.75, initial = 64, fin
     }, [isInView, mainControls, slideControls]);
 
     return <>
-        <div ref = {ref} style = {{ position: "relative", width, height, overflow: overflow}} className={className}>
+        <div ref = {ref} style = {{ position: "relative", width, height, overflow: currentOverflow}} className={className}>
             <motion.div
             variants = {{
                 hidden: { opacity: 0, y: initial },
-                visible: { opacity: 1, y: final }
+                visible: { opacity: 1, y: final}
             }}
             initial = "hidden"
             animate = {mainControls}
             transition = {{ duration: duration, delay: delay, ease: ease }}
+            onAnimationComplete={() => { if (endNoOverflow) { setCurrentOverflow("visible"); } }}
             >
                 {children}
             </motion.div>
