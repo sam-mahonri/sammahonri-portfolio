@@ -12,6 +12,7 @@ import TimeHSM from '@/components/ui/symbols/HSM';
 export default function Index() {
   const t = useTranslations('Index');
   const tc = useTranslations('Common');
+
   return <>
     <main className="main-section">
       <section className="main-subsection subsection-center-all">
@@ -56,7 +57,7 @@ export default function Index() {
             <FaInstagram className='h-12 w-12 text-primary hover:text-secondary transition-all hover:scale-105' title='Instagram @sammahonri' />
           </Link>
           <Link href={"https://bsky.app/profile/sammahonri.com"}>
-            <FaBluesky className='h-14 w-14 text-secondary hover:text-primary transition-all hover:scale-105' title='Bluesky @sammahonri.com' />
+            <FaBluesky className='h-14 w-14 text-secondary hover:text-foreground transition-all hover:scale-105' title='Bluesky @sammahonri.com' />
           </Link>
 
           <Link href={"https://x.com/sammahonri"} className=' relative'>

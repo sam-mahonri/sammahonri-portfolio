@@ -27,6 +27,7 @@ const config: Config = {
         secondary: "rgba(var(--sam-secondary-color))",
         border: "rgba(var(--sam-border-color))",
         divider: "rgba(var(--sam-divider-color))",
+        error: "rgba(var(--sam-error-color))",
         'sam-bg-color': "rgba(var(--sam-bg-color))",
         'sam-fg-color': "rgba(var(--sam-fg-color))",
         'sam-txt-title-color': "rgba(var(--sam-txt-title-color))",

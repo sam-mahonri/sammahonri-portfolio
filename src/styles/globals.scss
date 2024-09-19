@@ -120,25 +120,27 @@ strong{
 
 .olink, article a{
   background-image: linear-gradient(to right, rgb(var(--sam-secondary-color)), rgb(var(--sam-secondary-color)));
-  background-size: 0% 2px;
+  background-size: 0% 100%;
   background-position-y: 100%;
   background-position-x: 100%;
   background-repeat: no-repeat;
   transition: background-size var(--transition-duration) ease-in-out, color var(--transition-duration);
-
+  
   &:hover,
   &:focus,
   &:active{
-    background-size: 100% 2px;
+    background-size: 100% 100%;
     background-position-x: 0%;
   }
+  
+  @apply hover:text-background px-1;
 
 }
 
 .active-link{
-  background-size: 100% 2px;
+  background-size: 100% 100%;
   background-position-x: 0%;
-  @apply text-secondary;
+  @apply text-background;
 }
 
 button svg, p svg, .alert-warning svg, .alert-success svg, .alert-error svg{
@@ -203,17 +205,22 @@ h1, h2, h3, h4, h5, h6 { word-break: break-word; }
   
   @apply inline-flex items-center justify-center rounded-sam-border-btn-radius gap-2 text-sm border-2 border-primary;
   @apply active:scale-95;
-
+  &.active {
+    @apply text-background border-secondary bg-secondary;
+  }
 }
 
 .context {
-  @apply py-2 px-4 shadow-none rounded-none hover:bg-foreground/10 flex flex-row gap-4 items-center text-sm transition-all;
-
+  @apply py-2 px-4 hover:bg-primary/25 flex flex-row gap-4 items-center text-sm transition-all;
+  &.active {
+    @apply bg-secondary text-background;
+  }
 }
 
 .btn-primary,
 .btn-secondary,
 .btn-alt-primary,
+.btn-error,
 .btn-plain{
   @apply px-3 py-2 md:px-4 md:py-3;
 }
@@ -224,6 +231,14 @@ h1, h2, h3, h4, h5, h6 { word-break: break-word; }
   @apply hover:text-background hover:border-secondary;
   &:hover{
     box-shadow: inset 0 -3.25em 0 0 rgb(var(--sam-secondary-color));
+  }
+}
+
+.btn-error {
+  @apply bg-error text-sam-light border-error;
+  @apply hover:text-background hover:border-foreground;
+  &:hover{
+    box-shadow: inset 0 -3.25em 0 0 rgb(var(--sam-fg-color));
   }
 }
 
@@ -292,7 +307,8 @@ h1, h2, h3, h4, h5, h6 { word-break: break-word; }
   }
 }
 
-.btn-alt-primary {
+.btn-alt-primary,
+.btn-selector-alt {
   @apply bg-secondary text-background border-secondary;
   @apply hover:text-sam-light hover:border-primary;
   &:hover{
@@ -301,7 +317,9 @@ h1, h2, h3, h4, h5, h6 { word-break: break-word; }
 }
 
 .btn-selector-secondary,
-.btn-selector{
+.btn-selector-alt,
+.btn-selector,
+.btn-selector-generic{
   @apply p-2 md:p-3;
 }
 

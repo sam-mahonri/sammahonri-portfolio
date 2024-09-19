@@ -1,10 +1,10 @@
 ---
-title: "Nova galeria de artes!"
+title: "Galeria de artes"
 category: "dev"
 date: "05-06-2024"
 ---
 
-# Nova galeria de artes!
+# Galeria de artes
 
 ## Pinturas, artes vetoriais e área de músicas
 

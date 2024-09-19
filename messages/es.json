@@ -16,10 +16,13 @@
         "col_in": "Colaborando en",
         "hiato": "En pausa",
         "explore":"Explorar",
-        "lang": "Idiomas"
+        "lang": "Idiomas",
+        "backhome":"Volver al inicio",
+        "try":"Intentar otra vez"
     },
     "Errors": {
-        "404": "Error 404 - Esta página no existe, verifique la URL y vuelva a intentarlo."
+        "404": "Error 404 - Esta página no existe, verifique la URL y vuelva a intentarlo.",
+        "generic":"Ups, algo salió mal!"
     },
     "Meta": {
         "description": "Portafolio de Sam Mahonri"

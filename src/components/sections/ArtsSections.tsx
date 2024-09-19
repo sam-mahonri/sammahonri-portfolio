@@ -9,7 +9,7 @@ import placeholderImage from "/public/placeholders/img.jpeg";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { XMarkIcon, HeartIcon, ShareIcon, CheckIcon, ArrowDownTrayIcon, ArrowLeftCircleIcon, ArrowRightCircleIcon, ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
-import { Link } from "@/navigation";
+import Link from 'next/link';
 import Spinner from "../ui/Spinner";
 import { Share } from "next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
@@ -189,7 +189,7 @@ export default function Gallery({ Arts }: Props) {
                         transition={{
                             duration: 0.75, ease: "circInOut"
                         }}
-                        className="fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-background/75 backdrop-blur-sm border-t-4 border-secondary"
+                        className="fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-background/75 backdrop-blur-sm border-t-2 border-secondary"
                         style={{ zIndex: 9998 }}
                     >
                         <div className="relative w-full max-w-7xl flex-grow p-8 pt-2 flex flex-col gap-2">
@@ -200,14 +200,6 @@ export default function Gallery({ Arts }: Props) {
                                 </span>
                             }
                             <div className=" flex flex-row flex-grow justify-center items-center gap-1">
-                                <span className={clsx("  transition-opacity duration-300 md:block hidden", {
-                                    "opacity-50 pointer-events-none": currentPID == 0 || sliding || !fullImageLoaded
-                                })}>
-                                    <button className="btn btn-selector" onClick={() => replaceCurrent(currentPID - 1)}>
-                                        <ArrowLeftIcon />
-                                    </button>
-                                </span>
-
                                 <div style={{
                                     position: "relative",
                                     height: "100%",
@@ -234,23 +226,15 @@ export default function Gallery({ Arts }: Props) {
                                     />
 
                                 </div>
-                                <span className={clsx("  transition-opacity duration-300 md:block hidden", {
-                                    "opacity-50 pointer-events-none": currentPID == totalArtsCount - 1 || sliding || !fullImageLoaded
-                                })}>
-                                    <button className="btn btn-selector" onClick={() => replaceCurrent(currentPID + 1)}>
-                                        <ArrowRightIcon />
-                                    </button>
-                                </span>
-
                             </div>
 
                             <div className="flex flex-row items-center justify-center gap-1">
-                                <button className={clsx(" p-2 text-secondary hover:bg-secondary hover:text-sam-dark transition-all duration-300", {
+                                <button className={clsx(" btn btn-selector-alt mx-4", {
                                     "opacity-10 pointer-events-none": currentPID == 0 || sliding || !fullImageLoaded
                                 })} onClick={() => replaceCurrent(currentPID - 1)}>
                                     <ArrowLeftIcon />
                                 </button>
-                                <button className="btn btn-selector" onClick={closeFullScreen} title="Ocultar / Close">
+                                <button className="btn btn-selector-generic btn-error" onClick={closeFullScreen} title="Ocultar / Close">
                                     <XMarkIcon />
                                 </button>
                                 <button className="btn btn-selector-secondary" onClick={handleCopyUrl} title="Copiar Link / Copy Link">
@@ -261,7 +245,7 @@ export default function Gallery({ Arts }: Props) {
                                         <ArrowDownTrayIcon />
                                     </button>
                                 </a>
-                                <button className={clsx(" p-2 text-secondary hover:bg-secondary hover:text-sam-dark transition-all duration-300", {
+                                <button className={clsx(" btn btn-selector-alt mx-4", {
                                     "opacity-10 pointer-events-none": currentPID == totalArtsCount - 1 || sliding || !fullImageLoaded
                                 })} onClick={() => replaceCurrent(currentPID + 1)}>
                                     <ArrowRightIcon />

@@ -1,4 +1,4 @@
-import { Link } from "@/navigation";
+import Link from 'next/link';
 import { Metadata } from "next";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid"
 import { getArticleData } from "@/lib/articles"

@@ -15,7 +15,6 @@ export default function Splash(){
             <div className=" max-h-28">
                 <DynamicLogo className=' text-primary -translate-x-2 animate-pulse'/>
             </div>
-            <Spinner />
         </motion.div>
 
     </>

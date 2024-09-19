@@ -2,7 +2,7 @@ import { Reveal } from "@/components/fx/Motion";
 import { GenericAlert } from "@/components/ui/alerts/GenericAlert";
 import FilterArts from "@/components/ui/FilterArts";
 import { Title } from "@/components/ui/Titles";
-import { Link } from "@/navigation";
+import Link from 'next/link';
 import { getLocale } from "next-intl/server";
 
 

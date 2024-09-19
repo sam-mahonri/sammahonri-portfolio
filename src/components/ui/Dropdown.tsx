@@ -21,7 +21,7 @@ export default function SimpleDropdown({
     const dropdownRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
     const [dropdownStyle, setDropdownStyle] = useState<React.CSSProperties>({});
-    const transition = { duration: 0.3 };
+    const transition = { duration: 0.5, ease: "circInOut" };
 
 
     useEffect(() => {
@@ -110,7 +110,7 @@ export default function SimpleDropdown({
                 {isVisible &&
                     <>
                         <motion.div
-                            className={clsx("bg-surface min-w-32 flex flex-col gap-1 shadow-lg border-y-2 border-primary z-50", {
+                            className={clsx("bg-surface min-w-32 flex flex-col gap-1 shadow-2xl shadow-primary/50 border-y-2 border-b-primary border-t-secondary z-50", {
                                 " overflow-y-auto": overflowY === "auto",
                                 " overflow-y-hidden ": overflowY === "hidden"
                             })}
@@ -132,8 +132,15 @@ export default function SimpleDropdown({
 
 
                         >
-                            <div className=" w-full flex flex-col gap-1.5 py-3 pb-2 min-w-64">
-                                {children}
+                            
+                            <div className=" py-3 pb-2 min-w-64 relative">
+                                <span className="absolute w-full top-0 bg-gradient-to-b from-secondary/20 to-transparent h-16 -z-10"/>
+                                <span className="absolute w-full bottom-0 bg-gradient-to-t from-primary/20 to-transparent h-16 -z-10"/>
+                                <div className=" h-full w-full flex flex-col gap-1.5 z-50">
+                                    {children}
+                                </div>
+                                
+                                
                             </div>
                         </motion.div>
                     </>
@@ -145,7 +152,7 @@ export default function SimpleDropdown({
 }
 
 export function DropdownButton({ children, callback = () => { }, active = false }: { children: ReactNode, callback?: Function, active?: boolean }) {
-    return <button className={clsx("context", {
+    return <button className={clsx(" context", {
         "active": active
     })} onClick={() => callback()}>
         {children}
