@@ -9,6 +9,10 @@ import { HomeIcon } from '@heroicons/react/24/solid';
 import { setUserLocale } from '@/services/locale';
 import { defaultLocale, Locale } from '@/config';
 import Spinner from '@/components/ui/Spinner';
+import { revalidatePath } from 'next/cache';
+
+const availableLanguages: string[] = ['/pt', '/en', '/es'];
+const removedLanguages: string[] = ['/ja', '/it', '/de', '/fr'];
 
 export default function NotFound() {
     const router = useRouter();
@@ -18,60 +22,50 @@ export default function NotFound() {
 
     // Tenta redirecionar usuários para a nova rota caso o link que foi compartilhado ainda contenha o antigo prefixo /[locale]
     useEffect(() => {
+        const redirectToLocale = (locale: Locale, newPath: string) => {
+            startTransition(async () => {
+                setUserLocale(locale);
+                router.replace(newPath);
+                router.refresh();
+            });
+        };
+
         const handleRedirect = () => {
             const { pathname, search } = window.location;
-            const availableLanguages = ['/pt', '/en', '/es'];
-            const removedLanguages = ['/ja', '/it', '/de', '/fr'];
-
             let hasRedirected = false;
 
-            // Verificar se o idioma disponível está presente no caminho
+            // Verificar idiomas disponíveis
             for (const prefix of availableLanguages) {
                 if (pathname.startsWith(prefix)) {
                     const pathAfterPrefix = pathname.slice(prefix.length);
-
-                    if (pathAfterPrefix) {
-                        const newPath = pathAfterPrefix + search;
-                        startTransition(() => {
-                            setUserLocale(prefix.replace("/", "") as Locale);
-                            router.replace(newPath);
-                        });
-                    } else {
-                        startTransition(() => {
-                            setUserLocale(prefix.replace("/", "") as Locale);
-                            router.replace('/');
-                        });
-                    }
+                    const newPath = pathAfterPrefix ? pathAfterPrefix + search : '/';
+                    redirectToLocale(prefix.replace("/", "") as Locale, newPath);
                     hasRedirected = true;
                     break;
                 }
             }
 
-            // Se não foi redirecionado para um idioma disponível, verificar os removidos
+            // Se não foi redirecionado, verificar idiomas removidos
             if (!hasRedirected) {
                 for (const removedPrefix of removedLanguages) {
                     if (pathname.startsWith(removedPrefix)) {
                         const pathAfterRemovedPrefix = pathname.slice(removedPrefix.length);
-
-                        const newPath = "/" + defaultLocale + pathAfterRemovedPrefix + search;
-                        startTransition(() => {
-                            setUserLocale(defaultLocale);
-                            router.replace(newPath);
-                        });
+                        const newPath = pathAfterRemovedPrefix ? pathAfterRemovedPrefix + search : '/';
+                        redirectToLocale(defaultLocale, newPath);
                         hasRedirected = true;
                         break;
                     }
                 }
             }
 
+            // Se ainda não foi redirecionado, não faça nada
             if (!hasRedirected) {
-                setNoRedirected(false)
+                setNoRedirected(false);
             }
         };
 
         handleRedirect();
-        
-    }, [router]);
+    }, [router, setNoRedirected]);
 
     return (
         <main className="main-section">
@@ -96,8 +90,8 @@ export default function NotFound() {
                 </Reveal>
                 {noRedirected &&
                     <div className='fixed top-0 left-0 w-full h-full bg-background flex flex-col items-center justify-center z-40 gap-4'>
-                            <h4> Trying to redirect...</h4>
-                            <Spinner />
+                        <h4> Trying to redirect...</h4>
+                        <Spinner />
                     </div>
                 }
 
