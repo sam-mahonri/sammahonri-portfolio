@@ -95,11 +95,9 @@ export default function NotFound() {
                     </Link>
                 </Reveal>
                 {noRedirected &&
-                    <div className='fixed top-0 left-0 w-full h-full bg-background flex flex-col items-center justify-center z-40'>
-                            <h4> Redirecting... </h4>
+                    <div className='fixed top-0 left-0 w-full h-full bg-background flex flex-col items-center justify-center z-40 gap-4'>
+                            <h4> Trying to redirect...</h4>
                             <Spinner />
-
-                        
                     </div>
                 }
 
