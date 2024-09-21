@@ -7,6 +7,7 @@ import { Reveal } from '@/components/fx/Motion';
 import { AnimatePresence, motion } from 'framer-motion';
 import { createPortal } from 'react-dom';
 import { HeartIcon } from '@heroicons/react/24/solid';
+import clsx from 'clsx';
 
 export default function TimeHSM() {
     const [showComponent, setShowComponent] = useState<boolean>(false);
@@ -107,6 +108,8 @@ export function TypingHSM() {
     const [idCounter, setIdCounter] = useState(0);
     const [isClient, setIsClient] = useState(false); // Estado para verificar se estamos no cliente
     const [showHeart, setShowHeart] = useState(false); // Controla o coração piscando
+    const [felineTheme, setFelineTheme] = useState(false);
+
     useEffect(() => {
         setIsClient(true); // Sinaliza que estamos no lado do cliente
     }, []);
@@ -142,6 +145,8 @@ export function TypingHSM() {
         if (typedLetters === 'henricco') {
             setShowHeart(true);
             document.documentElement.classList.toggle('feline');
+            setFelineTheme((prev) => !prev)
+            
             setTimeout(() => {
                 setShowHeart(false);
             }, 2000);
@@ -179,7 +184,10 @@ export function TypingHSM() {
                             exit={{ scale: 0, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "backInOut" }}
                         >
-                            <HeartIcon className=' h-32 w-32 text-orange-500' />
+                            <HeartIcon className={clsx(' h-32 w-32 ', {
+                                "text-orange-500": felineTheme,
+                                "text-primary": !felineTheme
+                            })} />
                         </motion.div>
 
                     </motion.div>
