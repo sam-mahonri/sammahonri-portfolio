@@ -47,6 +47,10 @@
   --sam-divider-color: var(--sam-border-color);
 }
 
+:root.feline {
+  --sam-secondary-color: 240, 140, 50;
+}
+
 body,
 html {
   margin: 0;

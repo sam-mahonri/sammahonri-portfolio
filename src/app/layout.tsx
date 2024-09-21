@@ -11,6 +11,7 @@ import GoUp from "@/components/all/GoUp";
 import backgroundImage from "/public/backgrounds/home.svg"
 import BackgroundImage from "@/components/all/BackgroundImage";
 import StandaloneBackground from "@/components/all/StandaloneBackground";
+import { TypingHSM } from "@/components/ui/symbols/HSM";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sammahonri.com'),
@@ -48,9 +49,11 @@ export default async function LocaleLayout({
             <NextThemeProvider>
               <Navbar />
                 <Splash />
+                  
                   <main className=" min-h-screen">
                     {children}
                   </main>
+                  <TypingHSM/>
                 <GoUp />
               <Footer />
             </NextThemeProvider>
