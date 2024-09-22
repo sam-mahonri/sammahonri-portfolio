@@ -1,13 +1,18 @@
 "use client";
 
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, startTransition } from 'react';
 import { DynamicLogo } from '../SamLogos';
 import { Reveal } from '@/components/fx/Motion';
 import { AnimatePresence, motion } from 'framer-motion';
 import { createPortal } from 'react-dom';
 import { HeartIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
+import { useTheme } from 'next-themes';
+import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { setUserLocale } from '@/services/locale';
+import { Locale } from '@/config';
 
 export default function TimeHSM() {
     const [showComponent, setShowComponent] = useState<boolean>(false);
@@ -99,37 +104,45 @@ const FloatingLetter: React.FC<FloatingLetterProps> = ({ letter, x, y, remove })
     );
 };
 
-
 export function TypingHSM() {
     const [letters, setLetters] = useState<
         { id: number; letter: string; x: number; y: number }[]
     >([]);
-    const [typedLetters, setTypedLetters] = useState<string>(''); // Armazena a sequência de letras digitadas
+    const [typedLetters, setTypedLetters] = useState<string>('');
     const [idCounter, setIdCounter] = useState(0);
-    const [isClient, setIsClient] = useState(false); // Estado para verificar se estamos no cliente
-    const [showHeart, setShowHeart] = useState(false); // Controla o coração piscando
+    const [isClient, setIsClient] = useState(false);
+    const [showHeart, setShowHeart] = useState(false);
     const [felineTheme, setFelineTheme] = useState(false);
+    const [rainbow, setRainbow] = useState(false);
+
+    const { setTheme, resolvedTheme } = useTheme();
+    const router = useRouter();
+
+    function changeLang(value: string) {
+        const locale = value as Locale;
+        startTransition(() => {
+            setUserLocale(locale);
+        });
+    }
 
     useEffect(() => {
-        setIsClient(true); // Sinaliza que estamos no lado do cliente
+        setIsClient(true);
     }, []);
 
     useEffect(() => {
         const handleKeyPress = (event: KeyboardEvent) => {
-            const letter = event.key.toLowerCase(); // Converte para minúsculas para facilitar a comparação
+            const letter = event.key.toLowerCase();
             if (letter.length === 1 && /[a-zA-Z]/.test(letter)) {
                 const x = Math.random() * window.innerWidth;
                 const y = Math.random() * window.innerHeight;
                 const id = idCounter;
 
-                // Adiciona uma nova letra com coordenadas e ID únicos
                 setLetters((prevLetters) => [
                     ...prevLetters,
                     { id, letter, x, y }
                 ]);
 
-                // Armazena as letras digitadas
-                setTypedLetters((prevTyped) => (prevTyped + letter).slice(-8)); // Mantém as últimas 4 letras digitadas
+                setTypedLetters((prevTyped) => (prevTyped + letter).slice(-10));
 
                 setIdCounter((prevId) => prevId + 1);
             }
@@ -142,16 +155,95 @@ export function TypingHSM() {
     }, [idCounter]);
 
     useEffect(() => {
-        if (typedLetters === 'henricco') {
-            setShowHeart(true);
+        if (typedLetters.includes('henricco')) {
+            setFelineTheme((prev) => !prev);
             document.documentElement.classList.toggle('feline');
-            setFelineTheme((prev) => !prev)
-            
+
+            setShowHeart(true);
             setTimeout(() => {
                 setShowHeart(false);
             }, 2000);
+
+            setTypedLetters("")
+        } else if (typedLetters.includes('hsm')) {
+            setFelineTheme((prev) => !prev);
+            document.documentElement.classList.toggle('feline');
+            setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+
+            setShowHeart(true);
+            setTimeout(() => {
+                setShowHeart(false);
+            }, 2000);
+
+            setTypedLetters("")
+        } else if (typedLetters.includes('sam') || typedLetters.includes('mahonri')) {
+            setFelineTheme(false)
+            document.documentElement.classList.remove('feline');
+            setTheme('dark');
+
+            setShowHeart(true);
+            setTimeout(() => {
+                setShowHeart(false);
+            }, 2000);
+
+            setTypedLetters("");
+        } else if (typedLetters.includes('penis')) {
+            setTypedLetters("");
+            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        } else if (typedLetters.includes('bluesky')) {
+            setTypedLetters("");
+            window.location.href = 'https://bsky.app/profile/sammahonri.com'
+        } else if (typedLetters.includes('home')) {
+            setTypedLetters("");
+            router.push("/");
+        } else if (typedLetters.includes('arts')) {
+            setTypedLetters("");
+            router.push("/arts");
+        } else if (typedLetters.includes('vectorial')) {
+            setTypedLetters("");
+            router.push("/arts/vectorial");
+        } else if (typedLetters.includes('paintings')) {
+            setTypedLetters("");
+            router.push("/arts/paintings");
+        } else if (typedLetters.includes('music')) {
+            setTypedLetters("");
+            router.push("/arts/music");
+        } else if (typedLetters.includes('blog')) {
+            setTypedLetters("");
+            router.push("/blog");
+        } else if (typedLetters.includes('about')) {
+            setTypedLetters("");
+            router.push("/about");
+        } else if (typedLetters.includes('projects')) {
+            setTypedLetters("");
+            router.push("/projects");
+        } else if (typedLetters.includes('projects')) {
+            setTypedLetters("");
+            router.push("/projects");
+        } else if (typedLetters.includes('light')) {
+            setTypedLetters("");
+            setTheme('light');
+        } else if (typedLetters.includes('dark')) {
+            setTypedLetters("");
+            setTheme('dark');
+        } else if (typedLetters.includes('portugues')) {
+            setTypedLetters("");
+            changeLang('pt');
+        } else if (typedLetters.includes('english')) {
+            setTypedLetters("");
+            changeLang('en');
+        } else if (typedLetters.includes('espanhol')) {
+            setTypedLetters("");
+            changeLang('es');
+        } else if (typedLetters.includes('sex')) {
+            setTypedLetters("");
+            setRainbow((prev) => !prev);
         }
-    }, [typedLetters]);
+
+
+
+
+    }, [resolvedTheme, router, setTheme, typedLetters]);
 
     const removeLetter = (id: number) => {
         setLetters((prevLetters) => prevLetters.filter((letter) => letter.id !== id));
@@ -185,14 +277,17 @@ export function TypingHSM() {
                             transition={{ duration: 0.5, ease: "backInOut" }}
                         >
                             <HeartIcon className={clsx(' h-32 w-32 ', {
-                                "text-orange-500": felineTheme,
-                                "text-primary": !felineTheme
+                                "text-orange-500": felineTheme && resolvedTheme != "light",
+                                "text-primary": (!felineTheme && resolvedTheme != "light") || (!felineTheme && resolvedTheme == "light"),
+                                "text-white": felineTheme && resolvedTheme == "light"
                             })} />
                         </motion.div>
 
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            
         </>,
         document.body
     );
