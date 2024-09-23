@@ -1,5 +1,9 @@
 [
     {
+        "imgUrl": "/artistic/arts/ibh.png",
+        "category": "painting"
+    },
+    {
         "imgUrl": "/artistic/arts/rover.png",
         "category": "painting"
     },
