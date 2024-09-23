@@ -10,7 +10,6 @@ import { HeartIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
 import { setUserLocale } from '@/services/locale';
 import { Locale } from '@/config';
 
@@ -68,6 +67,7 @@ export default function TimeHSM() {
         </>
     );
 };
+
 
 
 type FloatingLetterProps = {
@@ -155,93 +155,72 @@ export function TypingHSM() {
     }, [idCounter]);
 
     useEffect(() => {
-        if (typedLetters.includes('henricco')) {
+
+        const actionsMap: Partial<Record<string, Function>> = {
+            'henricco': () => toggleFelineTheme(),
+            'hsm': () => toggleFelineAndTheme(),
+            'sam': () => setDarkThemeAndRemoveFeline(),
+            'mahonri': () => setDarkThemeAndRemoveFeline(),
+            'penis': () => window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            'bluesky': () => window.location.href = 'https://bsky.app/profile/sammahonri.com',
+            'twitter': () => window.location.href = 'https://twitter.com/sammahonri',
+            'instagram': () => window.location.href = 'https://instagram.com/sammahonri',
+            'linkedin': () => window.location.href = 'https://www.linkedin.com/in/sam-mahonri-b62527226/',
+            'home': () => router.push("/"),
+            'arts': () => router.push("/arts"),
+            'vectorial': () => router.push("/arts/vectorial"),
+            'paintings': () => router.push("/arts/paintings"),
+            'music': () => router.push("/arts/music"),
+            'blog': () => router.push("/blog"),
+            'about': () => router.push("/about"),
+            'projects': () => router.push("/projects"),
+            'light': () => setTheme('light'),
+            'dark': () => setTheme('dark'),
+            'portugues': () => changeLang('pt'),
+            'english': () => changeLang('en'),
+            'espanhol': () => changeLang('es'),
+            'bubi': () => router.push("/arts?art=%252Fartistic%252Farts%252F18.png"),
+            'kegaw': () => router.push("/arts?art=%252Fartistic%252Farts%252F18.png"),
+            'inserty': () => router.push("/arts?art=%252Fartistic%252Farts%252F13.png"),
+            'mitsu': () => router.push("/arts?art=%252Fartistic%252Farts%252F30.png"),
+            'diogo': () => router.push("/arts?art=%252Fartistic%252Farts%252F38.png"),
+            'boluh': () => router.push("/arts?art=%252Fartistic%252Farts%252F21.png"),
+            'kyosa': () => router.push("/arts?art=%252Fartistic%252Farts%252F16.png"),
+            'aeternum': () => router.push("/arts?art=%252Fartistic%252Farts%252Frevelation.png"),
+            'auzy': () => window.location.href = 'https://auzysunset.com'
+        };
+
+        const action = Object.keys(actionsMap).find(key => typedLetters.includes(key));
+
+        const toggleFelineTheme = () => {
             setFelineTheme((prev) => !prev);
             document.documentElement.classList.toggle('feline');
+            showHeartEffect();
+        };
 
-            setShowHeart(true);
-            setTimeout(() => {
-                setShowHeart(false);
-            }, 2000);
-
-            setTypedLetters("")
-        } else if (typedLetters.includes('hsm')) {
-            setFelineTheme((prev) => !prev);
-            document.documentElement.classList.toggle('feline');
+        const toggleFelineAndTheme = () => {
+            toggleFelineTheme();
             setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+        };
 
-            setShowHeart(true);
-            setTimeout(() => {
-                setShowHeart(false);
-            }, 2000);
-
-            setTypedLetters("")
-        } else if (typedLetters.includes('sam') || typedLetters.includes('mahonri')) {
-            setFelineTheme(false)
+        const setDarkThemeAndRemoveFeline = () => {
+            setFelineTheme(false);
             document.documentElement.classList.remove('feline');
             setTheme('dark');
+            showHeartEffect();
+        };
 
+        const showHeartEffect = () => {
             setShowHeart(true);
-            setTimeout(() => {
-                setShowHeart(false);
-            }, 2000);
+            setTimeout(() => setShowHeart(false), 2000);
+        };
 
+        
+
+        if (action) {
+            actionsMap[action]!();
             setTypedLetters("");
-        } else if (typedLetters.includes('penis')) {
-            setTypedLetters("");
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        } else if (typedLetters.includes('bluesky')) {
-            setTypedLetters("");
-            window.location.href = 'https://bsky.app/profile/sammahonri.com'
-        } else if (typedLetters.includes('home')) {
-            setTypedLetters("");
-            router.push("/");
-        } else if (typedLetters.includes('arts')) {
-            setTypedLetters("");
-            router.push("/arts");
-        } else if (typedLetters.includes('vectorial')) {
-            setTypedLetters("");
-            router.push("/arts/vectorial");
-        } else if (typedLetters.includes('paintings')) {
-            setTypedLetters("");
-            router.push("/arts/paintings");
-        } else if (typedLetters.includes('music')) {
-            setTypedLetters("");
-            router.push("/arts/music");
-        } else if (typedLetters.includes('blog')) {
-            setTypedLetters("");
-            router.push("/blog");
-        } else if (typedLetters.includes('about')) {
-            setTypedLetters("");
-            router.push("/about");
-        } else if (typedLetters.includes('projects')) {
-            setTypedLetters("");
-            router.push("/projects");
-        } else if (typedLetters.includes('projects')) {
-            setTypedLetters("");
-            router.push("/projects");
-        } else if (typedLetters.includes('light')) {
-            setTypedLetters("");
-            setTheme('light');
-        } else if (typedLetters.includes('dark')) {
-            setTypedLetters("");
-            setTheme('dark');
-        } else if (typedLetters.includes('portugues')) {
-            setTypedLetters("");
-            changeLang('pt');
-        } else if (typedLetters.includes('english')) {
-            setTypedLetters("");
-            changeLang('en');
-        } else if (typedLetters.includes('espanhol')) {
-            setTypedLetters("");
-            changeLang('es');
-        } else if (typedLetters.includes('sex')) {
-            setTypedLetters("");
-            setRainbow((prev) => !prev);
         }
-
-
-
 
     }, [resolvedTheme, router, setTheme, typedLetters]);
 
@@ -287,7 +266,7 @@ export function TypingHSM() {
                 )}
             </AnimatePresence>
 
-            
+
         </>,
         document.body
     );

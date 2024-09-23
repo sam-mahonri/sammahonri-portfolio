@@ -117,8 +117,7 @@ export default function Gallery({ Arts }: Props) {
                 }
             }
         }, 1000);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [Arts, searchParams]);
 
     return (
         <>
@@ -151,9 +150,9 @@ export default function Gallery({ Arts }: Props) {
                                     loading="lazy"
                                     src={art.imgUrl}
                                     fill
-                                    sizes="(max-width: 640px) 100vw,
-                                    (max-width: 1280px) 75vw,
-                                    (max-width: 1536px) 50vw,
+                                    sizes="(max-width: 1280px) 100vw,
+                                    (max-width: 1536px) 75vw,
+                                    (max-width: 1920px) 50vw,
                                     25vw"
                                     onLoad={(event) => {
                                         const target = event.target as HTMLImageElement;

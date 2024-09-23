@@ -6,9 +6,10 @@ import Gallery from '@/components/sections/ArtsSections';
 export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
     const t = await getTranslations("Common")
     return {
-        title: `${t('arts')}`,
+        title: `${t('arts')}`
     };
 };
+
 export default function Arts() {
     const artsContent = getArtCategorizedRefs();
 
