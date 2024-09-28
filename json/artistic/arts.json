@@ -1,5 +1,9 @@
 [
     {
+        "imgUrl": "/artistic/arts/spikeshide.png",
+        "category": "painting"
+    },
+    {
         "imgUrl": "/artistic/arts/ibh.png",
         "category": "painting"
     },
