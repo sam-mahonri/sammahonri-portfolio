@@ -166,6 +166,7 @@ export function TypingHSM() {
             'twitter': () => window.location.href = 'https://twitter.com/sammahonri',
             'instagram': () => window.location.href = 'https://instagram.com/sammahonri',
             'linkedin': () => window.location.href = 'https://www.linkedin.com/in/sam-mahonri-b62527226/',
+            'github': () => window.location.href = 'https://github.com/sam-mahonri',
             'home': () => router.push("/"),
             'arts': () => router.push("/arts"),
             'vectorial': () => router.push("/arts/vectorial"),
@@ -187,7 +188,8 @@ export function TypingHSM() {
             'boluh': () => router.push("/arts?art=%252Fartistic%252Farts%252F21.png"),
             'kyosa': () => router.push("/arts?art=%252Fartistic%252Farts%252F16.png"),
             'aeternum': () => router.push("/arts?art=%252Fartistic%252Farts%252Frevelation.png"),
-            'auzy': () => window.location.href = 'https://auzysunset.com'
+            'auzy': () => window.location.href = 'https://auzysunset.com',
+            'kahracoles': () => window.location.href = 'https://bsky.app/profile/kahracoles.bsky.social'
         };
 
         const action = Object.keys(actionsMap).find(key => typedLetters.includes(key));

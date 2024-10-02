@@ -48,7 +48,7 @@ export function Footer() {
                         <Link className="olink font-dyslexia font-semibold" href={"https://instagram.com/sammahonri"}>Instagram</Link>
                         <Link className="olink font-dyslexia font-semibold" href={"https://x.com/SamMahonri"}>Twitter</Link>
                         <Link className="olink font-dyslexia font-semibold" href={"https://www.linkedin.com/in/sam-mahonri-b62527226/"}>LinkedIn</Link>
-
+                        <Link className="olink font-dyslexia font-semibold" href={"https://github.com/sam-mahonri"}>GitHub</Link>
                     </div>
                     <div className="flex flex-col justify-center items-center gap-1">
                         <Reveal>

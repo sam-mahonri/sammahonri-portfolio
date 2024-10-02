@@ -5,7 +5,7 @@ import { Arrow, DynamicLogo } from '@/components/ui/SamLogos';
 import Link from 'next/link';
 import { ArrowRightIcon, ExclamationTriangleIcon } from '@heroicons/react/24/solid';
 import { JumpingArrow } from '@/components/fx/JumpingArrow';
-import { FaBluesky, FaInstagram, FaTwitter } from "react-icons/fa6";
+import { FaBluesky, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import TimeHSM from '@/components/ui/symbols/HSM';
 
 
@@ -17,7 +17,7 @@ export default function Index() {
     <main className="main-section">
       <section className="main-subsection subsection-center-all">
         <TimeHSM />
-        <div className='flex flex-col items-center justify-center *:text-center'>
+        <div className='flex flex-col items-center justify-center *:text-center w-full'>
           <Reveal delay={0.2}>
             <h4>{t('toptitle')}</h4>
           </Reveal>
@@ -53,16 +53,21 @@ export default function Index() {
         </div>
         <JumpingArrow className=' h-5 mt-4' />
         <div className=' flex flex-row gap-4 m-4 items-center'>
+          <Link href={"https://www.linkedin.com/in/sam-mahonri-b62527226/"}>
+            <FaLinkedin className='h-12 w-12 text-primary hover:text-secondary transition-all hover:scale-105' title='Instagram @sammahonri' />
+          </Link>
           <Link href={"https://instagram.com/sammahonri"}>
             <FaInstagram className='h-12 w-12 text-primary hover:text-secondary transition-all hover:scale-105' title='Instagram @sammahonri' />
           </Link>
           <Link href={"https://bsky.app/profile/sammahonri.com"}>
             <FaBluesky className='h-14 w-14 text-secondary hover:text-foreground transition-all hover:scale-105' title='Bluesky @sammahonri.com' />
           </Link>
-
           <Link href={"https://x.com/sammahonri"} className=' relative'>
-            <BRDisclaimer/>
-            <FaTwitter className='h-12 w-12 text-primary hover:text-secondary transition-all hover:scale-105'  title='Twitter @SamMahonri'/>
+            <BRDisclaimer />
+            <FaTwitter className='h-12 w-12 text-primary hover:text-secondary transition-all hover:scale-105' title='Twitter @SamMahonri' />
+          </Link>
+          <Link href={"https://github.com/sam-mahonri"} className=' relative'>
+            <FaGithub className='h-12 w-12 text-primary hover:text-secondary transition-all hover:scale-105' title='Twitter @SamMahonri' />
           </Link>
         </div>
 
@@ -76,6 +81,6 @@ function BRDisclaimer() {
   "use client";
   const locale = useLocale();
   return <>
-    {locale == "pt" && <ExclamationTriangleIcon className=' text-orange-400 h-6 w-6 absolute bottom-0 -right-3' title='AVISO: Bloqueado no Brasil!'/> }
+    {locale == "pt" && <ExclamationTriangleIcon className=' text-orange-400 h-6 w-6 absolute bottom-0 -right-3' title='AVISO: Bloqueado no Brasil!' />}
   </>
 }
