@@ -1,5 +1,9 @@
 [
     {
+        "imgUrl": "/artistic/arts/fireworks.png",
+        "category": "painting"
+    },
+    {
         "imgUrl": "/artistic/arts/gettingtired.png",
         "category": "painting"
     },
