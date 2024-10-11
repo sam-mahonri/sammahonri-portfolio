@@ -63,7 +63,6 @@ export default function Index() {
             <FaBluesky className='h-14 w-14 text-secondary hover:text-foreground transition-all hover:scale-105' title='Bluesky @sammahonri.com' />
           </Link>
           <Link href={"https://x.com/sammahonri"} className=' relative'>
-            <BRDisclaimer />
             <FaTwitter className='h-12 w-12 text-primary hover:text-secondary transition-all hover:scale-105' title='Twitter @SamMahonri' />
           </Link>
           <Link href={"https://github.com/sam-mahonri"} className=' relative'>
