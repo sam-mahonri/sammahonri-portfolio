@@ -1,12 +1,11 @@
 import { useLocale, useTranslations } from 'next-intl';
-import backgroundImage from "/public/backgrounds/home.svg"
+
 import { Reveal } from '@/components/fx/Motion';
-import { Arrow, DynamicLogo } from '@/components/ui/SamLogos';
 import Link from 'next/link';
 import { ArrowRightIcon, ExclamationTriangleIcon } from '@heroicons/react/24/solid';
 import { JumpingArrow } from '@/components/fx/JumpingArrow';
 import { FaBluesky, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
-import TimeHSM from '@/components/ui/symbols/HSM';
+import TimeSM from '@/components/ui/symbols/SM';
 
 
 export default function Index() {
@@ -16,7 +15,7 @@ export default function Index() {
   return <>
     <main className="main-section">
       <section className="main-subsection subsection-center-all">
-        <TimeHSM />
+        <TimeSM />
         <div className='flex flex-col items-center justify-center *:text-center w-full'>
           <Reveal delay={0.2}>
             <h4>{t('toptitle')}</h4>

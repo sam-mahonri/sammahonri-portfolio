@@ -13,7 +13,7 @@ import { useRouter } from 'next/navigation';
 import { setUserLocale } from '@/services/locale';
 import { Locale } from '@/config';
 
-export default function TimeHSM() {
+export default function TimeSM() {
     const [showComponent, setShowComponent] = useState<boolean>(false);
 
     useEffect(() => {
@@ -23,9 +23,8 @@ export default function TimeHSM() {
             const hours = now.getHours();
             const minutes = now.getMinutes();
 
-            if (((hours === 7 || hours === 19) && minutes === 8)
-                || ((hours === 8 || hours === 20) && minutes === 5)
-                || (hours === 0 && minutes === 0)) {
+            if (((hours === 10 || hours === 22) && minutes === 15)
+                || ((hours === 8 || hours === 20) && minutes === 5)) {
                 setShowComponent(true);
             } else {
                 setShowComponent(false);
@@ -45,22 +44,13 @@ export default function TimeHSM() {
                 <Reveal delay={0.1} overflow='visible' showSlider={0}>
                     <div className=' md:h-52 h-36'>
                         <DynamicLogo className=' text-primary -translate-x-5' />
-
                     </div>
                 </Reveal>
 
             ) : (
-                <div className=' animate-pulse flex justify-center items-center flex-col' title='"Draco parvus felinum parvum invenit, ut sic in aeternum felices viverent.🌻✨"'>
-                    <Reveal delay={0.1} overflow='visible' showSlider={0}>
-                        <Image
-                            src="/icons/seven.svg"
-                            alt="Draco parvus felinum parvum invenit, ut sic in aeternum felices viverent.🌻✨"
-                            height={300}
-                            width={300}
-                            className=' hover:scale-110 transition-transform duration-500'
-                        />
-                    </Reveal>
-                    <p className='p-tag text-center'>Draco parvus felinum parvum invenit, ut sic in aeternum felices viverent.🌻✨</p>
+                <div className=' animate-pulse flex justify-center items-center flex-col' title='"The end"'>
+
+                    <p className='p-tag text-center'>08 05 23 - 15 10 24 - the end, i lost u</p>
                 </div>
 
             )}
@@ -104,7 +94,7 @@ const FloatingLetter: React.FC<FloatingLetterProps> = ({ letter, x, y, remove })
     );
 };
 
-export function TypingHSM() {
+export function TypingSM() {
     const [letters, setLetters] = useState<
         { id: number; letter: string; x: number; y: number }[]
     >([]);
@@ -157,8 +147,7 @@ export function TypingHSM() {
     useEffect(() => {
 
         const actionsMap: Partial<Record<string, Function>> = {
-            'henricco': () => toggleFelineTheme(),
-            'hsm': () => toggleFelineAndTheme(),
+            
             'sam': () => setDarkThemeAndRemoveFeline(),
             'mahonri': () => setDarkThemeAndRemoveFeline(),
             'penis': () => window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
@@ -182,6 +171,7 @@ export function TypingHSM() {
             'espanhol': () => changeLang('es'),
             'bubi': () => router.push("/arts?art=%252Fartistic%252Farts%252F18.png"),
             'kegaw': () => router.push("/arts?art=%252Fartistic%252Farts%252F18.png"),
+            'henricco': () => toggleFelineTheme(),
             'inserty': () => router.push("/arts?art=%252Fartistic%252Farts%252F13.png"),
             'mitsu': () => router.push("/arts?art=%252Fartistic%252Farts%252F30.png"),
             'diogo': () => router.push("/arts?art=%252Fartistic%252Farts%252F38.png"),
@@ -198,11 +188,6 @@ export function TypingHSM() {
             setFelineTheme((prev) => !prev);
             document.documentElement.classList.toggle('feline');
             showHeartEffect();
-        };
-
-        const toggleFelineAndTheme = () => {
-            toggleFelineTheme();
-            setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
         };
 
         const setDarkThemeAndRemoveFeline = () => {
@@ -258,7 +243,7 @@ export function TypingHSM() {
                             transition={{ duration: 0.5, ease: "backInOut" }}
                         >
                             <HeartIcon className={clsx(' h-32 w-32 ', {
-                                "text-orange-500": felineTheme && resolvedTheme != "light",
+                                "text-gray": felineTheme && resolvedTheme != "light",
                                 "text-primary": (!felineTheme && resolvedTheme != "light") || (!felineTheme && resolvedTheme == "light"),
                                 "text-white": felineTheme && resolvedTheme == "light"
                             })} />
