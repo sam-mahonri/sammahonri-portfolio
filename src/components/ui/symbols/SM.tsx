@@ -1,17 +1,17 @@
 "use client";
 
-import Image from 'next/image';
 import React, { useState, useEffect, startTransition } from 'react';
 import { DynamicLogo } from '../SamLogos';
 import { Reveal } from '@/components/fx/Motion';
 import { AnimatePresence, motion } from 'framer-motion';
 import { createPortal } from 'react-dom';
-import { HeartIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/navigation';
 import { setUserLocale } from '@/services/locale';
 import { Locale } from '@/config';
+import Image from 'next/image';
+import { FaHeartBroken } from 'react-icons/fa';
 
 export default function TimeSM() {
     const [showComponent, setShowComponent] = useState<boolean>(false);
@@ -24,7 +24,8 @@ export default function TimeSM() {
             const minutes = now.getMinutes();
 
             if (((hours === 10 || hours === 22) && minutes === 15)
-                || ((hours === 8 || hours === 20) && minutes === 5)) {
+                || ((hours === 8 || hours === 21) && minutes === 11))
+                 {
                 setShowComponent(true);
             } else {
                 setShowComponent(false);
@@ -49,8 +50,11 @@ export default function TimeSM() {
 
             ) : (
                 <div className=' animate-pulse flex justify-center items-center flex-col' title='"The end"'>
-
-                    <p className='p-tag text-center'>08 05 23 - 15 10 24 - the end, i lost u</p>
+                    <Image
+                        src = {"/icons/seven.svg"}
+                        alt = {""}
+                    />
+                    <p className='p-tag text-center'>08 05 23 - 15 10 24 - the good and bad times will be remembered forever</p>
                 </div>
 
             )}
@@ -71,9 +75,9 @@ type FloatingLetterProps = {
 const FloatingLetter: React.FC<FloatingLetterProps> = ({ letter, x, y, remove }) => {
     useEffect(() => {
         const timeout = setTimeout(() => {
-            remove(); // Remove a letra após 1 segundo
+            remove();
         }, 1500);
-        return () => clearTimeout(timeout); // Limpa o timeout quando o componente é desmontado
+        return () => clearTimeout(timeout);
     }, [remove]);
 
     return (
@@ -242,7 +246,7 @@ export function TypingSM() {
                             exit={{ scale: 0, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "backInOut" }}
                         >
-                            <HeartIcon className={clsx(' h-32 w-32 ', {
+                            <FaHeartBroken className={clsx(' h-32 w-32 ', {
                                 "text-gray": felineTheme && resolvedTheme != "light",
                                 "text-primary": (!felineTheme && resolvedTheme != "light") || (!felineTheme && resolvedTheme == "light"),
                                 "text-white": felineTheme && resolvedTheme == "light"

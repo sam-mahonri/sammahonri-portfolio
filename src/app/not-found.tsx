@@ -9,7 +9,6 @@ import { HomeIcon } from '@heroicons/react/24/solid';
 import { setUserLocale } from '@/services/locale';
 import { defaultLocale, Locale } from '@/config';
 import Spinner from '@/components/ui/Spinner';
-import { revalidatePath } from 'next/cache';
 
 const availableLanguages: string[] = ['/pt', '/en', '/es'];
 const removedLanguages: string[] = ['/ja', '/it', '/de', '/fr'];
@@ -34,7 +33,6 @@ export default function NotFound() {
             const { pathname, search } = window.location;
             let hasRedirected = false;
 
-            // Verificar idiomas disponíveis
             for (const prefix of availableLanguages) {
                 if (pathname.startsWith(prefix)) {
                     const pathAfterPrefix = pathname.slice(prefix.length);
@@ -45,7 +43,6 @@ export default function NotFound() {
                 }
             }
 
-            // Se não foi redirecionado, verificar idiomas removidos
             if (!hasRedirected) {
                 for (const removedPrefix of removedLanguages) {
                     if (pathname.startsWith(removedPrefix)) {
@@ -58,7 +55,6 @@ export default function NotFound() {
                 }
             }
 
-            // Se ainda não foi redirecionado, não faça nada
             if (!hasRedirected) {
                 setNoRedirected(false);
             }
