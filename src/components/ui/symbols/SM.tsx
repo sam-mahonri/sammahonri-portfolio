@@ -24,7 +24,7 @@ export default function TimeSM() {
             const minutes = now.getMinutes();
 
             if (((hours === 10 || hours === 22) && minutes === 15)
-                || ((hours === 8 || hours === 21) && minutes === 11))
+                || ((hours === 8 || hours === 21) && minutes === 5))
                  {
                 setShowComponent(true);
             } else {
@@ -53,8 +53,10 @@ export default function TimeSM() {
                     <Image
                         src = {"/icons/seven.svg"}
                         alt = {""}
+                        width={256}
+                        height={256}
                     />
-                    <p className='p-tag text-center'>08 05 23 - 15 10 24 - the good and bad times will be remembered forever</p>
+                    <p className='p-tag text-center'>08 05 23 - 15 10 24 - Who can say where the road goes? Only time.</p>
                 </div>
 
             )}
