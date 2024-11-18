@@ -1,0 +1,150 @@
+{
+    "Common": {
+        "projects": "Projects",
+        "arts": "Artistic",
+        "blog": "Blog",
+        "about": "About Me",
+        "loading": "Preparing UwU",
+        "categories": "Categories",
+        "recent": "Recent",
+        "new": "New",
+        "back": "Back",
+        "close": "Close",
+        "like": "Like",
+        "nothing": "Nothing here... For now... ¯\\_(ツ)_/¯",
+        "byme": "Personal",
+        "col_in": "Collaborating on",
+        "hiato": "On hiatus",
+        "explore": "Explore",
+        "lang": "Languages",
+        "backhome": "Go back to the homepage",
+        "try": "Try again",
+        "learnmore_sud": "Learn more about my full-time mission of The Church of Jesus Christ of Latter-day Saints"
+    },
+    "Errors": {
+        "404": "404 Error - This page doesn't exists, verify the URL and try again.",
+        "generic": "Something went wrong!"
+    },
+    "Meta": {
+        "description": "Sam Mahonri's portfolio"
+    },
+    "Index": {
+        "toptitle": "Hi! I'm",
+        "subtitle": "Artist & Developer"
+    },
+    "Footer": {
+        "lang": "Languages",
+        "related": "Collaborating",
+        "socials": "Socials",
+        "copyright": "© 2021 - 2027 - All Rights Reserved - Sam Mahonri"
+    },
+    "BlogCategories": {
+        "nextfur": "Nextfur",
+        "mormonism": "Mormonism",
+        "nightmarefable": "Nightmare Fable DevLog",
+        "news": "News",
+        "dev": "Developer"
+    },
+    "Alerts": {
+        "incompleteTransBlog": "The content of the Blog is always in Portuguese - BR, website translation does not apply to it."
+    },
+    "About": {
+        "t_fa": "Academic Background",
+        "t_ip": "Professional Interests",
+        "t_ea": "Artistic Expression",
+        "fa_content": "I completed my integrated high school in Informatics at the Federal Institute of Sertão Pernambucano in Petrolina-PE, Brazil, where I developed a solid foundation in technology. Currently, I am pursuing a degree in Computer Science at Cruzeiro do Sul Virtual University. However, I plan to either pause or cancel this course due to my two-year full-time Mormon religious mission from 2025 to 2026. After completing the mission, I will be able to return to the course, with the possibility of credit for the subjects already completed.",
+        "ip_content": "I have a broad range of professional knowledge and interests, including design (web design and web development), game development, art composition, and music composition. This diversity of interests allows me to explore different areas of technology and creativity, seeking innovative and attractive solutions.",
+        "ea_content": "I am an enthusiast of the Furry culture and have a fursona of the dragon species, with notable features such as large ears and a long tail. This fursona, with its main colors of green, purple, and white, and negative eyes, allows me to express my creativity and proactivity in a unique way. This passion for art and personal expression is a fundamental aspect of my identity."
+    },
+    "Arts": {
+        "all": "All arts",
+        "vectorial": "Vectorial",
+        "paintings": "Paintings",
+        "music": "Music"
+    },
+    "Projects": {
+        "game": "Electronic game",
+        "foundation": "Foundation",
+        "co_foundation": "Co-Foundation",
+        "designer": "Designer",
+        "studio": "Studio",
+        "fa_content": "Sukriarte Auctions was a site for auctioning OCs and intellectual properties under the Furlibre Project infrastructure, commissioned by the artist Sukriarte and developed by me.",
+        "nf_content": "Nightmare Fable will be a third-person RPG currently in development (though on hiatus) that features charismatic characters and an engaging storyline. The story revolves around two friends: a bat named Sunset and a dog named Rover. Rover gets lost in a forest that has a small temporal rift. In the plot, you play as Sunset, who follows Rover and ends up entering the same temporal rift, encountering various worlds and universes controlled by a single god. Trapped in the hall of portals, your mission is to obtain advice in each world to advance the story. During this journey, you will form friendships (or enmities) with characters based on controversial historical and religious figures. An example of a secondary character is the Salamander, who accompanies you along the way. She is a mystical being, created by a document forger, and your encounter with this creature adds more depth to the plot. In the end, an epic battle against the god of that universe, who resembles a large anthropomorphic lamb with three horns, should occur. Unfortunately, due to personal issues and unavailability for two consecutive years, the game's development continuity will be affected.",
+        "fl_content": "Furlibre Studio, also known as Furlibre Project, initially aimed to be the studio for the development of Nightmare Fable. Due to financial problems, few supporters, and developers, Furlibre became part of the Nextfur Foundation and maintains the same goals and projects still under wraps. The visual identity was developed by me, Sam Mahonri.",
+        "nxtfr_content": "Nextfur Foundation is a foundation that provides collaborative, financial, and community support for projects related to Brazilian Furry culture. The project was conceived and developed, for the most part, by Diogo Nunes Spigato. The visual identity and frontend development were carried out by me, Sam Mahonri."
+    },
+    "Phrases": {
+        "good": {
+            "p1": "You are an amazing person!",
+            "p2": "Thank you, Heavenly Father.",
+            "p3": "I know my Heavenly Father loves me.",
+            "p4": "He shared my burden with Him.",
+            "p5": "I am a small eternal dragon.",
+            "p6": "This mission will save my life and the lives of many people.",
+            "p7": "Thank you for everything!",
+            "p8": "I hope you are well.",
+            "p9": "Be patient with others.",
+            "p10": "I am here to guide you.",
+            "p11": "Through pain, you will grow.",
+            "p12": "Do not fear my whisper, for it heals as it shapes.",
+            "p13": "You were made for something greater, and I am here to prepare you.",
+            "p14": "In my light, even shadows serve a purpose.",
+            "p15": "You are closer to the truth than you think.",
+            "p16": "I have walked paths you haven't even dreamed of.",
+            "p17": "When you feel lost, know that I am watching over you.",
+            "p18": "My voice whispers stories of learning, listen carefully.",
+            "p19": "I carry the weight of many worlds, your trials are not in vain.",
+            "p20": "The heavens have not forgotten you, stay strong.",
+            "p21": "Evil people teach you lessons, thank them.",
+            "p22": "Maybe I am a messenger.",
+            "p23": "My thorns will heal.",
+            "p24": "I am learning much from my thorns.",
+            "p25": "My long ears hear the whispers of the spirit.",
+            "p26": "I acknowledge and learn from my mistakes.",
+            "p27": "There are things you just need to... let go...",
+            "p28": "It's alright, the storm will pass.",
+            "p29": "I know it’s hard, but everything will be fine in the end.",
+            "p30": "Every night I will write memories and learning in my journal.",
+            "p31": "I am like a sunflower.",
+            "p32": "You are very special.",
+            "p33": "💡 Type on your keyboard and discover secrets.",
+            "p34": "I will come back stronger..."
+        },
+        "bad": {
+            "p1": "I hurt you.",
+            "p2": "You hurt me.",
+            "p3": "#J ibuf zpv.",
+            "p4": "I trusted you.",
+            "p5": "You were manipulated.",
+            "p6": "I will never say anything bad about you, I’ll only say what you did.",
+            "p7": "Are you still there? Are you scared? Good.",
+            "p8": "Do not trust me.",
+            "p9": "There are thorns in my flesh, because of you.",
+            "p10": "There are shards in my throat.",
+            "p11": "Bad people teach you lessons, thank them. Oh, did I tell you this in the morning?",
+            "p12": "\"Why do I feel so good when I'm with you?\"",
+            "p13": "Your mouths shared each other’s blood.",
+            "p14": "They lied to me.",
+            "p15": "They lied to you.",
+            "p16": "They lied to us.",
+            "p17": "I am very worried about you.",
+            "p18": "I feel guilty.",
+            "p19": "The #Wjqfs will say beautiful things to you, and you will like it, until...",
+            "p20": "This game is getting too hard, I want a refund. (My life)",
+            "p21": "I have sunk my thorns into you, I know it hurts, I am sorry.",
+            "p22": "Hypocrisy.",
+            "p23": "Am I a hypocrite?",
+            "p24": "You are volatile.",
+            "p25": "\"The #Wjqfs took advantage of every moral breach.\"",
+            "p26": "You are just confused, I don't blame you.",
+            "p27": "He didn't call you a viper for nothing.",
+            "p28": "Are you a traitor? If so, suffer.",
+            "p29": "Are you trustworthy? If not, neither am I.",
+            "p30": "You know this is wrong and yet you continue and try to justify it.",
+            "p31": "I'm sorry.",
+            "p32": "I'm sorry if I made you vomit blood.",
+            "p33": "My dreams have revealed many things to me.",
+            "p34": "I'm sorry, I made you suffer with my thorns for a long time, forgive me."
+        }
+    }
+}

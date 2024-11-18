@@ -1,0 +1,151 @@
+{
+    "Common": {
+        "blog": "Blog",
+        "about": "Sobre mim",
+        "projects": "Projetos",
+        "arts": "Artístico",
+        "loading": "Preparando UwU",
+        "categories": "Categorias",
+        "recent": "Recentes",
+        "new": "Novo",
+        "back": "Voltar",
+        "close": "Fechar",
+        "like": "Curtir",
+        "nothing": "Nada por aqui... Por enquanto... ¯\\_(ツ)_/¯",
+        "byme": "Pessoais",
+        "col_in": "Colaborando em",
+        "hiato": "Em hiato",
+        "explore": "Explorar",
+        "lang": "Idiomas",
+        "backhome": "Voltar para o início",
+        "try": "Tentar novamente",
+        "learnmore_sud": "Saiba mais sobre minha missão de tempo integral de A Igreja de Jesus Cristo dos Santos dos Últimos Dias"
+    },
+    "Errors": {
+        "404": "Erro 404 - Esta página não existe, verifique a URL e tente novamente.",
+        "generic": "Ops! Algo deu errado!"
+    },
+    "Meta": {
+        "description": "Portfólio de Sam Mahonri"
+    },
+    "Index": {
+        "toptitle": "Olá! Eu sou",
+        "subtitle": "Artista & Desenvolvedor"
+    },
+    "Footer": {
+        "lang": "Idiomas",
+        "related": "Colaborando",
+        "socials": "Redes sociais",
+        "copyright": "© 2021 - 2027 - Todos os direitos reservados - Sam Mahonri"
+    },
+    "BlogCategories": {
+        "nextfur": "Nextfur",
+        "mormonism": "Mormonismo",
+        "nightmarefable": "Nightmare Fable DevLog",
+        "news": "Novidades",
+        "dev": "Desenvolvedor"
+    },
+    "Alerts": {
+        "incompleteTransBlog": "O conteúdo do Blog é sempre em Português - BR, a tradução do site não se aplica a ele.",
+        "xandao": "AVISO: A galeria de artes no Brasil pode não funcionar corretamente devido ao bloqueio do Twitter (X) no país, imposto por ordem judicial do Ministro Alexandre de Moraes em resposta às ações de Elon Musk, atual dono da plataforma. As obras podem estar disponíveis no meu Instagram ou Bluesky."
+    },
+    "About": {
+        "t_fa": "Formação Acadêmica",
+        "t_ip": "Interesses Profissionais",
+        "t_ea": "Expressão Artística",
+        "fa_content": "Cursei o ensino médio integrado em Informática no Instituto Federal do Sertão Pernambucano, em Petrolina-PE, Brasil, onde desenvolvi uma sólida base em tecnologia. Atualmente, estou cursando graduação em Ciência da Computação na Universidade Cruzeiro do Sul Virtual. No entanto, planejo trancar ou cancelar temporariamente este curso devido à minha missão religiosa Mórmon de tempo integral, que durará dois anos, de 2025 a 2026. Após o término da missão, poderei retornar ao curso, com a possibilidade de dispensa das disciplinas já pagas.",
+        "ip_content": "Tenho um amplo leque de conhecimentos e interesses profissionais, incluindo design (web design e desenvolvimento web), desenvolvimento de jogos, composição de artes e composição de músicas. Essa diversidade de interesses me permite explorar diferentes áreas da tecnologia e da criatividade, buscando soluções inovadoras e atraentes.",
+        "ea_content": "Sou um entusiasta da cultura Furry e tenho um fursona da espécie dragão, com características marcantes como orelhas grandes e uma cauda longa. Esse fursona, com suas cores principais de verde, roxo e branco, e olhos negativos, me permite expressar minha criatividade e proatividade de maneira única. Essa paixão pela arte e pela expressão pessoal é um aspecto fundamental da minha identidade."
+    },
+    "Arts": {
+        "all": "Todos",
+        "vectorial": "Vetorial",
+        "paintings": "Pinturas",
+        "music": "Músicas"
+    },
+    "Projects": {
+        "game": "Jogo eletrônico",
+        "foundation": "Fundação",
+        "co_foundation": "Co-Fundação",
+        "designer": "Designer",
+        "studio": "Estúdio",
+        "fa_content": "O Sukriarte Auctions era um site de leilão de OCs e propriedades intelectuais sob infraestrutura do Furlibre Project encomendado pela artista Sukriarte e desenvolvido por mim.",
+        "nf_content": "Nightmare Fable será um jogo RPG em terceira pessoa atualmente em desenvolvimento (embora em hiato), que apresenta personagens carismáticos e uma trama envolvente. A história gira em torno de dois amigos: um morcego chamado Sunset e um cachorro chamado Rover. Rover se perde em uma floresta que possui uma pequena fenda temporal. Na trama, você interpreta Sunset, que segue Rover e acaba entrando na mesma brecha temporal, encontrando diversos mundos e universos controlados por um único deus. Preso no salão dos portais, sua missão é obter conselhos em cada mundo para avançar na história. Durante essa jornada, você formará amizades (ou inimizades) com personagens baseados em figuras históricas e religiosas controversas. Um exemplo de personagem secundário é a Salamandra, que acompanha você ao longo do caminho. Ela é um ser místico fictício, criado por um falsificador de documentos, e seu encontro com essa criatura adiciona mais profundidade à trama. No final, deve ocorrer uma batalha épica contra o deus daquele universo, que se assemelha a um grande cordeiro antropomórfico com três chifres. Infelizmente, devido a problemas pessoais e indisponibilidade por dois anos seguidos, a continuidade do desenvolvimento do jogo será afetada.",
+        "fl_content": "O Furlibre Studio, também chamado de Furlibre Project, tinha como intensão inicial, ser o estúdio para o desenvolvimento do Nightmare Fable. Devido a problemas financeiros, poucos apoiadores e desenvolvedores, o Furlibre se tornou parte da fundação Nextfur e mantêm os mesmos objetivos e projetos ainda em sigilo. A identidade visual foi desenvolvida por mim, Sam Mahonri.",
+        "nxtfr_content": "Nextfur Foundation é uma fundação de apoio colaborativo, financeiro e comunitário para projetos relacionados à cultura Furry brasileira. O projeto foi idealizado e desenvolvido, em sua maioria, por Diogo Nunes Spigato. A identidade visual e o desenvolvimento do frontend foram realizados por mim, Sam Mahonri."
+    },
+    "Phrases": {
+        "good": {
+            "p1": "Você é uma pessoa incrível!",
+            "p2": "Obrigado, Pai Celestial.",
+            "p3": "Eu sei que meu Pai Celestial me ama.",
+            "p4": "Ele compartilhou meu fardo com Ele.",
+            "p5": "Eu sou um pequeno dragão eterno.",
+            "p6": "Esta missão salvará minha vida e a vida de muitas pessoas.",
+            "p7": "Obrigado por tudo!",
+            "p8": "Espero que estejam bem.",
+            "p9": "Seja paciente com os outros.",
+            "p10": "Eu estou aqui para te guiar.",
+            "p11": "Através da dor, você crescerá.",
+            "p12": "Não tema meu sussurro, pois ele cura enquanto molda.",
+            "p13": "Você foi feito para algo maior, e eu estou aqui para te preparar.",
+            "p14": "Em minha luz, até as sombras servem a um propósito.",
+            "p15": "Você está mais perto da verdade do que imagina.",
+            "p16": "Eu percorri caminhos que você ainda nem sonhou.",
+            "p17": "Quando você se sentir perdido, saiba que estou cuidando de você.",
+            "p18": "Minha voz sussurra histórias de aprendizado, ouça-a com atenção.",
+            "p19": "Eu carrego o peso de muitos mundos, suas provações não são em vão.",
+            "p20": "Os céus não se esqueceram de você, mantenha-se firme.",
+            "p21": "As pessoas más te ensinam lições, agradeça a elas.",
+            "p22": "Talvez eu seja um mensageiro.",
+            "p23": "Meus espinhos vão sarar.",
+            "p24": "Estou aprendendo muito com meus espinhos.",
+            "p25": "Minhas longas orelhas escutam os sussurros do espírito",
+            "p26": "Eu assumo e aprendo com meus erros.",
+            "p27": "Há coisas que você precisa apenas... deixar ir...",
+            "p28": "Está tudo bem, a tempestade vai passar.",
+            "p29": "Eu sei que é difícil, mas vai dar tudo certo no final.",
+            "p30": "Todas as noites escreverei em meu diário memórias e aprendizado.",
+            "p31": "Eu sou como um girassol.",
+            "p32": "Você é muito especial.",
+            "p33": "💡 Digite em seu teclado e descubra segredos.",
+            "p34": "Eu voltarei mais forte..."
+        },
+        "bad":{
+            "p1": "Eu te machuquei.",
+            "p2": "Você me machucou.",
+            "p3": "#Fv uf pefjp.",
+            "p4": "Eu confiei em você.",
+            "p5": "Você foi manipulado.",
+            "p6": "Nunca direi nada de ruim sobre você, só direi o que você fez.",
+            "p7": "Ainda está aí? Está assustado? Que bom.",
+            "p8": "Não confie em mim.",
+            "p9": "Há espinhos em minha carne, por sua causa.",
+            "p10": "Há cacos em minha garganta.",
+            "p11": "Pessoas ruins te ensinam lições, agradeça a elas. Ah, eu já te disse isso hoje de manhã.",
+            "p12": "\"Por que eu me sinto tão bem quando estou com você?\"",
+            "p13": "Suas bocas compartilharam de seus próprios sangues.",
+            "p14": "Eles mentiram para mim.",
+            "p15": "Eles mentiram para você.",
+            "p16": "Eles mentiram para nós.",
+            "p17": "Eu estou muito preocupado com você.",
+            "p18": "Eu me sinto culpado.",
+            "p19": "A #Wjcpsb dirá coisas lindas para você, e você vai gostar, até...",
+            "p20": "Este jogo está ficando muito difícil, quero reembolso. (Minha vida)",
+            "p21": "Eu enfiei meus espinhos em você, eu sei que dói, me desculpe.",
+            "p22": "Hipocrisia.",
+            "p23": "Eu sou um hipócrita?",
+            "p24": "Você é volátil.",
+            "p25": "\"A #Wjcpsb aproveitou-se de cada brecha moral.\"",
+            "p26": "Você está apenas confuso, eu não te culpo.",
+            "p27": "Ele não te chamou de víbora à toa.",
+            "p28": "Você é um traidor? Se sim, sofra.",
+            "p29": "Você é confiável? Se não, eu também não sou.",
+            "p30": "Você sabe que isso está errado e mesmo assim continua fazendo e ainda tenta justificar.",
+            "p31": "Não é sua culpa, calma.",
+            "p32": "Me desculpe se eu te fiz vomitar sangue.",
+            "p33": "Meus sonhos me revelaram muitas coisas.",
+            "p34": "Me desculpe, eu te fiz sofrer com meus espinhos por muito tempo, me perdoe."
+        }
+    }
+}

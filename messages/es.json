@@ -1,0 +1,150 @@
+{
+    "Common": {
+        "blog": "Blog",
+        "about": "Sobre mí",
+        "projects": "Proyectos",
+        "arts": "Artístico",
+        "loading": "Preparando UwU",
+        "categories": "Categorías",
+        "recent": "Recientes",
+        "new": "Nuevo",
+        "back": "Volver",
+        "close": "Cerrar",
+        "like": "Me gusta",
+        "nothing": "Nada por aquí... Por ahora... ¯\\_(ツ)_/¯",
+        "byme": "Personales",
+        "col_in": "Colaborando en",
+        "hiato": "En pausa",
+        "explore": "Explorar",
+        "lang": "Idiomas",
+        "backhome": "Volver al inicio",
+        "try": "Intentar otra vez",
+        "learnmore_sud": "Aprende más sobre mi misión de tiempo completo de La Iglesia de Jesucristo de los Santos de los Últimos Días"
+    },
+    "Errors": {
+        "404": "Error 404 - Esta página no existe, verifique la URL y vuelva a intentarlo.",
+        "generic": "Ups, algo salió mal!"
+    },
+    "Meta": {
+        "description": "Portafolio de Sam Mahonri"
+    },
+    "Index": {
+        "toptitle": "¡Hola! Soy",
+        "subtitle": "Artista & Desarrollador"
+    },
+    "Footer": {
+        "lang": "Idiomas",
+        "related": "Colaborando",
+        "socials": "Redes sociales",
+        "copyright": "© 2021 - 2027 - Todos los derechos reservados - Sam Mahonri"
+    },
+    "BlogCategories": {
+        "nextfur": "Nextfur",
+        "mormonism": "Mormonismo",
+        "nightmarefable": "Nightmare Fable DevLog",
+        "news": "Novedades",
+        "dev": "Desarrollador"
+    },
+    "Alerts": {
+        "incompleteTransBlog": "El contenido del Blog siempre está en Portugués - BR, la traducción del sitio no se aplica a él."
+    },
+    "About": {
+        "t_fa": "Formación Académica",
+        "t_ip": "Intereses Profesionales",
+        "t_ea": "Expresión Artística",
+        "fa_content": "Cursé la escuela secundaria integrada en Informática en el Instituto Federal del Sertão Pernambucano, en Petrolina-PE, Brasil, donde desarrollé una sólida base en tecnología. Actualmente, estoy cursando la licenciatura en Ciencias de la Computación en la Universidad Cruzeiro do Sul Virtual. Sin embargo, planeo suspender o cancelar temporalmente este curso debido a mi misión religiosa Mormona de tiempo completo, que durará dos años, de 2025 a 2026. Después de la misión, podré retomar el curso, con la posibilidad de convalidar las asignaturas ya pagadas.",
+        "ip_content": "Tengo un amplio abanico de conocimientos e intereses profesionales, incluyendo diseño (diseño web y desarrollo web), desarrollo de videojuegos, composición de artes y composición de música. Esta diversidad de intereses me permite explorar diferentes áreas de la tecnología y la creatividad, buscando soluciones innovadoras y atractivas.",
+        "ea_content": "Soy un entusiasta de la cultura Furry y tengo un fursona de la especie dragón, con características distintivas como grandes orejas y una larga cola. Este fursona, con sus colores principales verde, morado y blanco, y ojos negativos, me permite expresar mi creatividad y proactividad de una manera única. Esta pasión por el arte y la expresión personal es un aspecto fundamental de mi identidad."
+    },
+    "Arts": {
+        "all": "Todos",
+        "vectorial": "Vectorial",
+        "paintings": "Pinturas",
+        "music": "Música"
+    },
+    "Projects": {
+        "game": "Videojuego",
+        "foundation": "Fundación",
+        "co_foundation": "Co-Fundación",
+        "designer": "Diseñador",
+        "studio": "Estudio",
+        "fa_content": "Sukriarte Auctions es un sitio para subastar OCs y propiedades intelectuales bajo la infraestructura del Proyecto Furlibre, encargado por la artista Sukriarte y desarrollado por mí.",
+        "nf_content": "Nightmare Fable será juego RPG en tercera persona actualmente en desarrollo (aunque en pausa), que presenta personajes carismáticos y una trama envolvente. La historia gira en torno a dos amigos: un murciélago llamado Sunset y un perro llamado Rover. Rover se pierde en un bosque que tiene una pequeña grieta temporal. En la trama, juegas como Sunset, quien sigue a Rover y termina entrando en la misma grieta temporal, encontrando varios mundos y universos controlados por un único dios. Atrapado en el salón de los portales, tu misión es obtener consejos en cada mundo para avanzar en la historia. Durante este viaje, formarás amistades (o enemistades) con personajes basados en figuras históricas y religiosas controvertidas. Un ejemplo de un personaje secundario es la Salamandra, que te acompaña a lo largo del camino. Es un ser místico ficticio, creado por un falsificador de documentos, y tu encuentro con esta criatura agrega más profundidad a la trama. Al final, debe ocurrir una batalla épica contra el dios de ese universo, que se asemeja a un gran cordero antropomórfico con tres cuernos. Desafortunadamente, debido a problemas personales y la falta de disponibilidad durante dos años consecutivos, la continuidad del desarrollo del juego se verá afectada.",
+        "fl_content": "Furlibre Studio, también conocido como Furlibre Project, tenía como intención inicial ser el estudio para el desarrollo de Nightmare Fable. Debido a problemas financieros, pocos seguidores y desarrolladores, Furlibre se convirtió en parte de la fundación Nextfur y mantiene los mismos objetivos y proyectos aún en secreto. La identidad visual fue desarrollada por mí, Sam Mahonri.",
+        "nxtfr_content": "Nextfur Foundation es una fundación de apoyo colaborativo, financiero y comunitario para proyectos relacionados con la cultura Furry brasileña. El proyecto fue concebido y desarrollado, en su mayoría, por Diogo Nunes Spigato. La identidad visual y el desarrollo del frontend fueron realizados por mí, Sam Mahonri."
+    },
+    "Phrases": {
+        "good": {
+            "p1": "¡Eres una persona increíble!",
+            "p2": "Gracias, Padre Celestial.",
+            "p3": "Sé que mi Padre Celestial me ama.",
+            "p4": "Él compartió mi carga con Él.",
+            "p5": "Soy un pequeño dragón eterno.",
+            "p6": "Esta misión salvará mi vida y la vida de muchas personas.",
+            "p7": "¡Gracias por todo!",
+            "p8": "Espero que estén bien.",
+            "p9": "Sé paciente con los demás.",
+            "p10": "Estoy aquí para guiarte.",
+            "p11": "A través del dolor, crecerás.",
+            "p12": "No temas mi susurro, pues cura mientras moldea.",
+            "p13": "Fuiste hecho para algo más grande, y estoy aquí para prepararte.",
+            "p14": "En mi luz, hasta las sombras sirven a un propósito.",
+            "p15": "Estás más cerca de la verdad de lo que piensas.",
+            "p16": "He recorrido caminos que aún no has soñado.",
+            "p17": "Cuando te sientas perdido, sabe que te estoy cuidando.",
+            "p18": "Mi voz susurra historias de aprendizaje, escúchala con atención.",
+            "p19": "Llevo el peso de muchos mundos, tus pruebas no son en vano.",
+            "p20": "Los cielos no se han olvidado de ti, mantente firme.",
+            "p21": "Las personas malas te enseñan lecciones, agradéceles.",
+            "p22": "Tal vez soy un mensajero.",
+            "p23": "Mis espinas sanarán.",
+            "p24": "Estoy aprendiendo mucho de mis espinas.",
+            "p25": "Mis largas orejas escuchan los susurros del espíritu.",
+            "p26": "Reconozco y aprendo de mis errores.",
+            "p27": "Hay cosas que solo necesitas... dejar ir...",
+            "p28": "Está bien, la tormenta pasará.",
+            "p29": "Sé que es difícil, pero todo estará bien al final.",
+            "p30": "Cada noche escribiré en mi diario memorias y aprendizajes.",
+            "p31": "Soy como un girasol.",
+            "p32": "Eres muy especial.",
+            "p33": "💡 Escribe en tu teclado y descubre secretos.",
+            "p34": "Volveré más fuerte..."
+        },
+        "bad": {
+            "p1": "Te lastimé.",
+            "p2": "Me lastimaste.",
+            "p3": "#Uf pfjp.",
+            "p4": "Confié en ti.",
+            "p5": "Fuiste manipulado.",
+            "p6": "Nunca diré nada malo sobre ti, solo diré lo que hiciste.",
+            "p7": "¿Sigues ahí? ¿Estás asustado? Bien.",
+            "p8": "No confíes en mí.",
+            "p9": "Hay espinas en mi carne, por tu causa.",
+            "p10": "Hay fragmentos en mi garganta.",
+            "p11": "Las personas malas te enseñan lecciones, agradéceles. Oh, ¿te lo dije esta mañana?",
+            "p12": "\"¿Por qué me siento tan bien cuando estoy contigo?\"",
+            "p13": "Sus bocas compartieron su propia sangre.",
+            "p14": "Me mintieron.",
+            "p15": "Te mintieron.",
+            "p16": "Nos mintieron.",
+            "p17": "Estoy muy preocupado por ti.",
+            "p18": "Me siento culpable.",
+            "p19": "La #Wjcpsb te dirá cosas hermosas, y te gustarán, hasta que...",
+            "p20": "Este juego se está volviendo demasiado difícil, quiero un reembolso. (Mi vida)",
+            "p21": "He hundido mis espinas en ti, sé que duele, lo siento.",
+            "p22": "Hipocresía.",
+            "p23": "¿Soy un hipócrita?",
+            "p24": "Eres volátil.",
+            "p25": "\"La #Wjcpsb aprovechó cada brecha moral.\"",
+            "p26": "Solo estás confundido, no te culpo.",
+            "p27": "Él no te llamó víbora por nada.",
+            "p28": "¿Eres un traidor? Si es así, sufre.",
+            "p29": "¿Eres confiable? Si no, yo tampoco lo soy.",
+            "p30": "Sabes que esto está mal y, sin embargo, continúas e intentas justificarlo.",
+            "p31": "Lo siento.",
+            "p32": "Lo siento si te hice vomitar sangre.",
+            "p33": "Mis sueños me han revelado muchas cosas.",
+            "p34": "Lo siento, te hice sufrir con mis espinas por mucho tiempo, perdóname."
+        }
+    }
+}

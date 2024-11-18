@@ -1,0 +1,406 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GUIDELINES: Estas definições SCSS + Tailwind seguem os padrões Nextfur, desenvolvido por Sam Mahonri */
+
+:root {
+  --transition-duration: 0.4s;
+
+  --sam-light-def-color: 230, 230, 235;
+  --sam-dark-def-color: 30, 30, 35;
+
+  --sam-bg-color: 25, 25, 30;
+  --sam-fg-color: 240, 240, 240;
+  --sam-surface-color: 30, 30, 35;
+
+  --sam-txt-pybtn-color: var(--sam-txt-title-color);
+  --sam-txt-sybtn-color: var(--sam-txt-content-color);
+
+  --sam-orange-color: 251, 146, 60;
+  --sam-pink-color: 236, 72, 153;
+
+  --sam-error-color: 230, 33, 105;
+  --sam-primary-color: 130, 100, 230;
+  --sam-bro-primary-color: 7, 155, 171;
+  --sam-secondary-color: 80, 240, 150;
+
+  --sam-border-btn-radius: 0;
+  --sam-border-panels-radius: 0;
+  --sam-border-color: 70, 70, 80;
+
+  --sam-divider-color: var(--sam-border-color);
+}
+
+:root.light {
+  --sam-bg-color: 220, 220, 230;
+  --sam-fg-color: 50, 70, 90;
+  --sam-surface-color: 250, 250, 250;
+
+  --sam-error-color: 230, 33, 105;
+  --sam-primary-color: 130, 100, 230;
+  --sam-bro-primary-color: 190, 100, 220;
+  --sam-secondary-color: 60, 150, 110;
+
+  --sam-border-color: 255, 255, 255;
+
+  --sam-divider-color: var(--sam-border-color);
+}
+
+:root.bad {
+  --sam-secondary-color: 250, 140, 60;
+  --sam-primary-color: 230, 33, 105;
+}
+
+body,
+html {
+  margin: 0;
+  @apply transition-colors duration-300;
+  overflow-x: hidden !important;
+}
+
+.main-top {
+  @apply bg-cover bg-center bg-fixed;
+}
+
+.main-section {
+  @apply flex flex-col items-center justify-center bg-cover bg-center bg-fixed;
+}
+
+.main-subsection {
+  @apply max-w-7xl w-full flex flex-col gap-4 min-h-screen p-5 pt-24;
+}
+
+.subsection-center-all {
+  @apply items-center place-items-center place-content-center;
+}
+
+.background-degrade {
+  background-image: linear-gradient(to bottom, transparent, rgba(var(--sam-bg-color)));
+  @apply bg-fixed bg-center bg-cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-dyslexia text-foreground uppercase;
+}
+
+p,
+p *,
+a,
+li,
+li *,
+div {
+  @apply font-lexend text-foreground text-base transition-colors font-light;
+}
+
+a {
+  @apply hover:text-secondary;
+}
+
+li {
+  @apply list-disc ml-8
+}
+
+.elink, article a {
+  @apply text-secondary;
+}
+
+.slink {
+  @apply py-1;
+}
+
+pre {
+  @apply bg-secondary/10 p-4 border border-dashed border-secondary break-all;
+
+  code {
+    white-space: pre-wrap;
+    word-break: break-word;
+    @apply font-ibmmono text-secondary;
+  }
+}
+
+hr {
+  border-style: dashed;
+  @apply border-secondary;
+}
+
+article img {
+  width: 100%;
+  max-height: 50vh;
+  object-fit: cover;
+  object-position: center;
+  margin: auto;
+}
+
+strong {
+  @apply font-bold;
+}
+
+.olink,
+article a {
+  background-image: linear-gradient(to right, rgb(var(--sam-secondary-color)), rgb(var(--sam-secondary-color)));
+  background-size: 0% 100%;
+  background-position-y: 100%;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--transition-duration) ease-in-out, color var(--transition-duration);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-size: 100% 100%;
+    background-position-x: 0%;
+  }
+
+  @apply hover:text-background px-1;
+
+}
+
+.active-link {
+  background-size: 100% 100%;
+  background-position-x: 0%;
+  @apply text-background;
+}
+
+button svg,
+p svg,
+.alert-warning svg,
+.alert-success svg,
+.alert-error svg {
+  @apply h-5 min-w-5;
+}
+
+button {
+  @apply font-unbounded uppercase font-bold;
+}
+
+.alert-warning {
+  @apply flex p-3 bg-orange-300/20 items-center justify-center border border-dashed border-orange-300 gap-3;
+}
+
+h1 {
+  @apply md:text-5xl text-4xl;
+}
+
+h2 {
+  @apply md:text-3xl text-2xl font-bold text-secondary;
+}
+
+h3 {
+  @apply md:text-2xl text-xl font-semibold text-secondary;
+}
+
+h4 {
+  @apply md:text-xl text-lg text-secondary font-semibold;
+}
+
+h5 {
+  @apply text-lg text-secondary;
+}
+
+h6 {
+  @apply text-base text-secondary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-break: break-word;
+}
+
+.text-theme-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-sam-bro-primary-color via-secondary to-primary;
+}
+
+.p-tag {
+  @apply flex flex-row bg-primary/20 border border-primary border-dashed py-1 px-3 text-sm text-foreground shadow-xl shadow-primary/50 font-bold;
+}
+
+.p-tag-orange {
+  @apply flex flex-row bg-sam-orange-color/20 border border-sam-orange-color border-dashed py-1 px-3 text-sm text-foreground shadow-xl shadow-sam-orange-color/50 font-bold;
+}
+
+.p-new-tag {
+  @apply flex flex-row bg-secondary border border-secondary py-1 px-3 text-sm text-background shadow-xl shadow-secondary/50 font-bold;
+}
+
+.p-new-tag-ns {
+  @apply flex flex-row bg-secondary border border-secondary py-1 px-3 text-sm text-background font-bold;
+}
+
+.article {
+  * {
+    @apply my-6;
+  }
+}
+
+/* Botões */
+.btn {
+  transition: color 0.2s, scale var(--transition-duration), transform var(--transition-duration), background-color var(--transition-duration), border-color var(--transition-duration), box-shadow var(--transition-duration);
+
+  @apply inline-flex items-center justify-center rounded-sam-border-btn-radius gap-2 text-sm border-2 border-primary;
+  @apply active:scale-95;
+
+  &.active {
+    @apply text-background border-secondary bg-secondary;
+  }
+}
+
+.context {
+  @apply py-2 px-4 hover:bg-primary/25 flex flex-row gap-4 items-center text-sm transition-all;
+
+  &.active {
+    @apply bg-secondary text-background;
+  }
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-alt-primary,
+.btn-error,
+.btn-plain {
+  @apply px-3 py-2 md:px-4 md:py-3;
+}
+
+.btn-primary,
+.btn-selector {
+  @apply bg-primary text-sam-light;
+  @apply hover:text-background hover:border-secondary;
+
+  &:hover {
+    box-shadow: inset 0 -3.25em 0 0 rgb(var(--sam-secondary-color));
+  }
+}
+
+.btn-error {
+  @apply bg-error text-sam-light border-error;
+  @apply hover:text-background hover:border-foreground;
+
+  &:hover {
+    box-shadow: inset 0 -3.25em 0 0 rgb(var(--sam-fg-color));
+  }
+}
+
+.btn-primary-fx-secondary,
+.btn-primary-fx-primary,
+.btn-primary-fx-orange,
+.btn-primary-fx-pink {
+  svg {
+    @apply h-7;
+  }
+
+  @apply transition-all duration-500 font-dyslexia flex justify-center items-center text-center uppercase text-xl font-bold gap-3;
+  @apply active:scale-95;
+}
+
+.btn-primary-fx-secondary {
+
+  &:hover,
+  &.active-fx,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -4em 0 0 rgb(var(--sam-secondary-color));
+    @apply text-background;
+  }
+}
+
+.btn-primary-fx-primary {
+
+  &:hover,
+  &.active-fx,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -4em 0 0 rgb(var(--sam-primary-color));
+    @apply text-sam-light;
+  }
+}
+
+.btn-primary-fx-orange {
+
+  &:hover,
+  &.active-fx,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -4em 0 0 rgb(var(--sam-orange-color));
+    @apply text-sam-light;
+  }
+}
+
+.btn-primary-fx-pink {
+
+  &:hover,
+  &.active-fx,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -4em 0 0 rgb(var(--sam-pink-color));
+    @apply text-sam-light;
+  }
+}
+
+.btn-plain {
+  @apply border-transparent px-0 transition-all duration-300;
+  @apply hover:border-primary hover:px-4;
+}
+
+.btn-secondary,
+.btn-selector-secondary,
+.btn-plain {
+  @apply bg-transparent text-primary;
+  @apply hover:text-sam-light;
+
+  &:hover {
+    box-shadow: inset 0 -3.25em 0 0 rgb(var(--sam-primary-color));
+  }
+}
+
+.btn-alt-primary,
+.btn-selector-alt {
+  @apply bg-secondary text-background border-secondary;
+  @apply hover:text-sam-light hover:border-primary;
+
+  &:hover {
+    box-shadow: inset 0 -3.25em 0 0 rgb(var(--sam-primary-color));
+  }
+}
+
+.btn-selector-secondary,
+.btn-selector-alt,
+.btn-selector,
+.btn-selector-generic {
+  @apply p-2 md:p-3;
+}
+
+.dyslexia {
+  @apply font-dyslexia;
+}
+
+@-moz-document url-prefix() {
+  * {
+    scrollbar-color: rgb(var(--sam-secondary-color)) rgb(var(--sam-bg-color));
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary;
+}
