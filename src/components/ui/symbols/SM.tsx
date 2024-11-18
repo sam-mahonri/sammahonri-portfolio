@@ -166,18 +166,13 @@ export function TypingSM() {
             'auzy': () => window.location.href = 'https://auzysunset.com',
             'kahracoles': () => window.location.href = 'https://bsky.app/profile/kahracoles.bsky.social',
             'penis': () => window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-            "nightmare": () => setBadHour((prev) => {
-                const hour = new Date().getHours() 
-                return prev == defaultBadHour ? hour : defaultBadHour
-            }),
-            "thorns": () => setBadHour((prev) => {
-                const hour = new Date().getHours() 
-                return prev == defaultBadHour ? hour : defaultBadHour
-            }),
-            "shards": () => setBadHour((prev) => {
-                const hour = new Date().getHours() 
-                return prev == defaultBadHour ? hour : defaultBadHour
-            }),
+            "nightmare": () => setBadHour((prev) => { const hour = new Date().getHours(); return prev == defaultBadHour ? hour : defaultBadHour }),
+            "thorns": () => setBadHour((prev) => { const hour = new Date().getHours(); return prev == defaultBadHour ? hour : defaultBadHour }),
+            "shards": () => setBadHour((prev) => { const hour = new Date().getHours(); return prev == defaultBadHour ? hour : defaultBadHour }),
+            "viper": () => setBadHour((prev) => { const hour = new Date().getHours(); return prev == defaultBadHour ? hour : defaultBadHour }),
+            "lies": () => setBadHour((prev) => { const hour = new Date().getHours(); return prev == defaultBadHour ? hour : defaultBadHour }),
+            "sorry":  () => setBadHour((prev) => { const hour = new Date().getHours(); return prev == defaultBadHour ? hour : defaultBadHour }),
+            "email": () => window.location.href = 'mailto:sam.de.sa@missionary.org',
             "zphyr": () => window.location.href = 'https://www.youtube.com/@Z%C3%A9Pinh0w0',
             "zephyr": () => window.location.href = 'https://www.youtube.com/@Z%C3%A9Pinh0w0'
         };
