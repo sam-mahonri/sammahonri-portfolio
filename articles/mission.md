@@ -18,7 +18,7 @@ Durante a missão, seguimos uma rotina estruturada, focada em estudo, visitas e 
 
 **Neste período de dois anos, não terei mais nenhum contato com minhas redes sociais, com enfoque 24h na missão.**
 
-_Você ainda pode entrar em contato comigo por e-mail, mais abaixo neste artigo há algumas informações detalhadas sobre este tipo de contato e recomendações._
+_Neste período, apenas amigos selecionados e familiares podem entrar em contato comigo._
 
 ## Minha carta do chamado missionário recebida em 5 de Novembro de 2024 (English - Português)
 
@@ -52,17 +52,7 @@ Nosso Pai Celestial o recompensará pela bondade de sua vida. Maiores bênçãos
 
 ---
 
-## Como entrar em contato comigo neste período?
 
-Você pode me contatar pelo e-mail **[sam.de.sa@missionary.org](mailto:sam.de.sa@missionary.org)**. No entanto, tenha em mente as seguintes orientações:
-
-- As mensagens são lidas apenas uma vez por semana, durante o P-Day, em um horário limitado.
-- Alguns e-mails podem ser revisados antes de serem lidos por mim, então evite compartilhar qualquer conteúdo pessoal ou impróprio, pois ele pode não ser lido e muito menos respondido.
-- Por favor, envie apenas mensagens **relevantes e respeitosas, alinhadas com o propósito da minha missão.** Pode ser mensagens de atualizações de vida, trabalho, perguntas de como estou e incentivos para continuar o trabalho missionário.
-- **Jamais** inclua temas sexuais de qualquer natureza, palavrões e piadas, evite constrangimento de ambas as partes.
-- Além de ler, eu poderei responder ao e-mail, mantendo o mesmo respeito.
-- Evite contato constante, uma ou duas vezes ao mês já é suficiente, lembre-se que o meu foco será sempre a missão.
-
 ## O que esperar desses 24 meses
 
 Durante esses dois anos, a rotina será preenchida com atividades voltadas ao crescimento espiritual e ao auxílio ao próximo. Entre os principais elementos da missão estão:
