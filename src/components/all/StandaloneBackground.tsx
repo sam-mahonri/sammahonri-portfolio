@@ -69,11 +69,11 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
                 {isShow && (
                     <motion.div
                         key={selectedBackground}
-                        initial={{ opacity: 0, scale: "125%" }}
+                        initial={{ opacity: 0, scale: "145%" }}
                         animate={{ opacity: 1, scale: "100%" }}
-                        exit={{ opacity: 0 }}
+                        exit={{ opacity: 0, scale: "105%" }}
                         transition={{ duration: 2, ease: "circInOut" }}
-                        className="fixed w-full h-full"
+                        className="fixed w-full h-full overflow-hidden"
                     >
                         {selectedBackground ? (
                             <BackgroundImage source={selectedBackground} />

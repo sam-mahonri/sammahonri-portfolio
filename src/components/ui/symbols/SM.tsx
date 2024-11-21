@@ -132,9 +132,9 @@ export function TypingSM() {
 
         const actionsMap: Partial<Record<string, Function>> = {
             'sam': () => router.push("/arts?art=%252Fartistic%252Farts%252Frainymissionary.png"),
-            'mormon': () => router.push("/blog/lds-mission"),
-            'mission': () => router.push("/blog/lds-mission"),
-            'lds': () => router.push("/blog/lds-mission"),
+            'mormon': () => router.push("/blog/mission"),
+            'mission': () => router.push("/blog/mission"),
+            'lds': () => router.push("/blog/mission"),
             'mahonri': () => router.push("/arts?art=%252Fartistic%252Farts%252Frainymissionary.png"),
             'bluesky': () => window.location.href = 'https://bsky.app/profile/sammahonri.com',
             'twitter': () => window.location.href = 'https://twitter.com/sammahonri',
