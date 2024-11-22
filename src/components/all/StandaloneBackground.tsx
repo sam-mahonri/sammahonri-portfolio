@@ -29,6 +29,7 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
                 "/backgrounds/gettingtired.png",
                 "/backgrounds/spikeshide.png",
                 "/backgrounds/end.png",
+                "/backgrounds/angel.png"
             ];
 
             if (customImage) {
