@@ -1,5 +1,9 @@
 [   
     {
+        "imgUrl": "/artistic/arts/fragility.png",
+        "category": "painting"
+    },
+    {
         "imgUrl": "/artistic/arts/angel.png",
         "category": "painting"
     },

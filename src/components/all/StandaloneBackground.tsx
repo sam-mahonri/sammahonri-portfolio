@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import BackgroundImage from './BackgroundImage';
 import { useBadHour } from '@/providers/BadHourProvider';
@@ -8,7 +9,8 @@ import { useBadHour } from '@/providers/BadHourProvider';
 export default function StandaloneBackground({ customImage = null, defaultImg = false }: { customImage?: string | null, defaultImg?: boolean }) {
     const [selectedBackground, setSelectedBackground] = useState<string>('');
     const [isShow, setIsShow] = useState(true);
-    const { badHour, setBadHour } = useBadHour();
+    const { badHour } = useBadHour();
+    const pathname = usePathname();
 
     useEffect(() => {
         const determineBackground = () => {
@@ -29,7 +31,8 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
                 "/backgrounds/gettingtired.png",
                 "/backgrounds/spikeshide.png",
                 "/backgrounds/end.png",
-                "/backgrounds/angel.png"
+                "/backgrounds/angel.png",
+                "/backgrounds/fragility.png"
             ];
 
             if (customImage) {
@@ -48,8 +51,8 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
 
             setTimeout(() => {
                 setSelectedBackground((prev) => {
-                    let newbg = determineBackground()
-                    while (newbg == prev) {
+                    let newbg = determineBackground();
+                    while (newbg === prev) {
                         newbg = determineBackground();
                     }
                     return newbg;
@@ -59,10 +62,11 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
         };
 
         changeBackground();
-        const intervalId = setInterval(changeBackground, 20000);
 
-        return () => clearInterval(intervalId);
-    }, [badHour, customImage, defaultImg]);
+        const handleRouteChange = () => changeBackground();
+        handleRouteChange();
+
+    }, [badHour, customImage, defaultImg, pathname]);
 
     return (
         <div className='-z-10 absolute w-full h-full overflow-x-hidden'>
@@ -83,6 +87,5 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
                 )}
             </AnimatePresence>
         </div>
-
     );
 }
