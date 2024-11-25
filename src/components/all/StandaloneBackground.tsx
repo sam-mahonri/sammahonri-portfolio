@@ -23,7 +23,8 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
                 "/backgrounds/5am.png",
                 "/backgrounds/4immortals.png",
                 "/backgrounds/twoyears.png",
-                "/backgrounds/rainymissionary.png"
+                "/backgrounds/rainymissionary.png",
+                "/backgrounds/sundays.png"
             ];
 
             const badBackgrounds = [
