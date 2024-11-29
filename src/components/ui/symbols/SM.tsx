@@ -154,7 +154,7 @@ export function TypingSM() {
             'portugues': () => changeLang('pt'),
             'english': () => changeLang('en'),
             'espanhol': () => changeLang('es'),
-            'bubi': () => router.push("/arts?art=%252Fartistic%252Farts%252Fend.png"),
+            'bubi': () => window.location.href = 'https://bubiwolf.com',
             'kegaw': () => router.push("/arts?art=%252Fartistic%252Farts%252Fend.png"),
             'henricco': () => router.push("/arts?art=%252Fartistic%252Farts%252Fend.png"),
             'inserty': () => router.push("/arts?art=%252Fartistic%252Farts%252F13.png"),
