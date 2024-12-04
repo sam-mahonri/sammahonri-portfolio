@@ -12,8 +12,6 @@ import { defaultBadHour, Locale } from '@/config';
 import { useBadHour } from '@/providers/BadHourProvider';
 
 export default function TimeSM() {
-
-
     return (
         <Reveal delay={0.1} overflow='visible' showSlider={0}>
             <div className='md:h-52 h-36'>

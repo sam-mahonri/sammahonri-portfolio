@@ -43,7 +43,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${unbounded.variable} ${dyslexia.variable} ${mono.variable} ${lexend.variable} dark`} suppressHydrationWarning={true}>
-      <body className="main-top">
+      <body className="main-top bg-background">
         <BadHourProvider>
           <StandaloneBackground />
           <NextIntlClientProvider messages={messages}>

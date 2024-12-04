@@ -8,6 +8,10 @@ import { getTranslations } from 'next-intl/server';
 import { CodeArtist, Grad, MeSona } from '@/components/ui/SamLogos';
 import Image from 'next/image';
 
+import sundays from "../../../public/icons/sundays.png";
+import angel from "../../../public/icons/angel.png";
+import rain from  "../../../public/icons/rain.png";
+
 export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
     const t = await getTranslations("Common")
     return {
@@ -30,9 +34,10 @@ export default function About() {
                         <span className='transition-all duration-700 relative w-full max-w-[8rem] aspect-square overflow-hidden rounded-full md:blur-none md:group-hover:blur-sm blur-sm'>
                             <Image
                                 alt=""
+                                placeholder='blur'
                                 className="object-cover"
                                 loading="lazy"
-                                src={"/icons/angel.png"}
+                                src={angel}
                                 fill
                                 sizes="(max-width: 1280px) 100vw,
                    (max-width: 1536px) 75vw,
@@ -43,9 +48,10 @@ export default function About() {
                         <span className='transition-all duration-500 group-hover:scale-105 group-hover:border-4 group-hover:ring-4 self-center relative w-full max-w-[12rem] aspect-square overflow-hidden rounded-full border-8 border-secondary ring-8 ring-secondary/20'>
                             <Image
                                 alt=""
+                                placeholder='blur'
                                 className="object-cover"
                                 loading="lazy"
-                                src={"/icons/sundays.png"}
+                                src={sundays}
                                 fill
                                 sizes="(max-width: 1280px) 100vw,
                    (max-width: 1536px) 75vw,
@@ -56,9 +62,10 @@ export default function About() {
                         <span className='transition-all duration-700 relative w-full max-w-[8rem] aspect-square overflow-hidden rounded-full md:blur-none md:group-hover:blur-sm blur-sm'>
                             <Image
                                 alt=""
+                                placeholder='blur'
                                 className="object-cover"
                                 loading="lazy"
-                                src={"/icons/rain.png"}
+                                src={rain}
                                 fill
                                 sizes="(max-width: 1280px) 100vw,
                    (max-width: 1536px) 75vw,

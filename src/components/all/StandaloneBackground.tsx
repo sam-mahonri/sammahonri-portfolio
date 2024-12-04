@@ -18,13 +18,13 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
             const isBadHour = currentHour == badHour;
 
             const godBackgrounds = [
-                "/backgrounds/home.svg",
                 "/backgrounds/lastfer.png",
                 "/backgrounds/5am.png",
                 "/backgrounds/4immortals.png",
                 "/backgrounds/twoyears.png",
                 "/backgrounds/rainymissionary.png",
-                "/backgrounds/sundays.png"
+                "/backgrounds/sundays.png",
+                "/backgrounds/veilsoflives.png",
             ];
 
             const badBackgrounds = [
@@ -64,22 +64,23 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
 
         changeBackground();
 
-        const handleRouteChange = () => changeBackground();
-        handleRouteChange();
+        const interval = setInterval(changeBackground, 15000);
+
+        return () => clearInterval(interval);
 
     }, [badHour, customImage, defaultImg, pathname]);
 
     return (
-        <div className='-z-10 absolute w-full h-full overflow-x-hidden'>
+        <div className='-z-10 absolute w-full h-full overflow-x-hidden bg-background'>
             <AnimatePresence>
                 {isShow && (
                     <motion.div
                         key={selectedBackground}
-                        initial={{ opacity: 0, scale: "145%" }}
+                        initial={{ opacity: 0, scale: "125%" }}
                         animate={{ opacity: 1, scale: "100%" }}
-                        exit={{ opacity: 0, scale: "105%" }}
+                        exit={{ opacity: 0, transition: { duration: 2, ease: "easeInOut" }}}
                         transition={{ duration: 2, ease: "circInOut" }}
-                        className="fixed w-full h-full overflow-hidden"
+                        className="fixed w-full h-full overflow-hidden bg-background"
                     >
                         {selectedBackground ? (
                             <BackgroundImage source={selectedBackground} />

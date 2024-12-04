@@ -1,5 +1,13 @@
 [   
     {
+        "imgUrl": "/artistic/arts/veilsoflives.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/illhelpu.png",
+        "category": "painting"
+    },
+    {
         "imgUrl": "/artistic/arts/sundays.png",
         "category": "painting"
     },

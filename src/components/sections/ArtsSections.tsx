@@ -126,9 +126,7 @@ export default function Gallery({ Arts }: Props) {
                 {visibleArts.map((art, index) => (
                     <div
                         key={index}
-                        className={clsx("border-2 border-secondary/20 hover:border-secondary w-full transition-all duration-500 cursor-pointer ring-secondary/75 hover:ring-8", {
-
-                        })}
+                        className="border-2 border-secondary/20 hover:border-secondary w-full transition-all duration-500 cursor-pointer ring-secondary/75 hover:ring-8 overflow-hidden"
                         onClick={() => handleImageClick(art, index)}
                     >
                         <Reveal width="100%">

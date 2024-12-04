@@ -246,8 +246,8 @@ h6 {
 .btn {
   transition: color 0.2s, scale var(--transition-duration), transform var(--transition-duration), background-color var(--transition-duration), border-color var(--transition-duration), box-shadow var(--transition-duration);
 
-  @apply inline-flex items-center justify-center rounded-sam-border-btn-radius gap-2 text-sm border-2 border-primary;
-  @apply active:scale-95;
+  @apply inline-flex items-center justify-center rounded-sam-border-btn-radius hover:scale-95 gap-2 text-sm border-2 border-primary;
+  @apply active:scale-75;
 
   &.active {
     @apply text-background border-secondary bg-secondary;

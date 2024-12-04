@@ -30,7 +30,7 @@ export default function Splash() {
         };
 
         updatePhrase();
-        const intervalId = setInterval(updatePhrase, 15000);
+        const intervalId = setInterval(updatePhrase, 25000);
         return () => clearInterval(intervalId);
     }, [badHour]);
 
