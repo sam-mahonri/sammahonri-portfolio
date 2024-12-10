@@ -1,5 +1,13 @@
 [   
     {
+        "imgUrl": "/artistic/arts/pipflank.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/2027tt.png",
+        "category": "painting"
+    },
+    {
         "imgUrl": "/artistic/arts/veilsoflives.png",
         "category": "painting"
     },
