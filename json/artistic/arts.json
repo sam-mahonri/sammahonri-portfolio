@@ -1,5 +1,9 @@
 [   
     {
+        "imgUrl": "/artistic/arts/kassius.png",
+        "category": "painting"
+    },
+    {
         "imgUrl": "/artistic/arts/pipflank.png",
         "category": "painting"
     },
