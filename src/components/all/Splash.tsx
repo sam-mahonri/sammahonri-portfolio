@@ -12,21 +12,24 @@ export default function Splash() {
     const [randomIndex, setRandomIndex] = useState(1);
     const [bad, setBad] = useState(false);
     const [showPhrase, setShowPhrase] = useState(true);
-    const { badHour, setBadHour } = useBadHour();
+    const { badHour } = useBadHour();
     const pb = useTranslations("Phrases.bad");
-    const pg = useTranslations("Phrases.good");
 
     useEffect(() => {
         const updatePhrase = () => {
             const currentHour = new Date().getHours();
             const isBadHour = currentHour === badHour;
             setBad(isBadHour);
-            const phrases = 34;
-            setRandomIndex(Math.floor(Math.random() * phrases) + 1);
-            setShowPhrase(true);
-            setTimeout(() => {
-                setShowPhrase(false);
-            }, 7000);
+            if (isBadHour) {
+                const phrases = 34;
+                setRandomIndex(Math.floor(Math.random() * phrases) + 1);
+                setShowPhrase(true);
+                setTimeout(() => {
+                    setShowPhrase(false);
+                }, 7000);
+            } else {
+                setShowPhrase(false); // Garantir que não mostra fora de badHour
+            }
         };
 
         updatePhrase();
@@ -46,7 +49,7 @@ export default function Splash() {
             </motion.div>
 
             <AnimatePresence>
-                {showPhrase && (
+                {showPhrase && bad && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -57,14 +60,11 @@ export default function Splash() {
                         }}
                         className="fixed bottom-0 left-0 w-full flex items-center justify-end flex-col gap-5 p-10 z-50 pointer-events-none bg-gradient-to-b from-transparent via-background/75 to-background"
                     >
-                        <Reveal duration={2} initial={-64} sliderColor={bad ? "rgba(var(--sam-error-color))" : "rgba(var(--sam-secondary-color))"}>
-                            <h5 className={clsx("text-center", {
-                                "text-error": bad
-                            })}>
-                                {bad ? pb(`p${randomIndex}`) : pg(`p${randomIndex}`)}
+                        <Reveal duration={2} initial={-64} sliderColor="rgba(var(--sam-error-color))">
+                            <h5 className="text-center text-error">
+                                {pb(`p${randomIndex}`)}
                             </h5>
                         </Reveal>
-
                     </motion.div>
                 )}
             </AnimatePresence>

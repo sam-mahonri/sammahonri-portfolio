@@ -1,5 +1,9 @@
 [   
     {
+        "imgUrl": "/artistic/arts/kyosaref.png",
+        "category": "painting"
+    },
+    {
         "imgUrl": "/artistic/arts/diogomika.png",
         "category": "painting"
     },

@@ -15,7 +15,7 @@ export default function TimeSM() {
     return (
         <Reveal delay={0.1} overflow='visible' showSlider={0}>
             <div className='md:h-52 h-36'>
-                <DynamicLogo className='text-primary -translate-x-5' />
+                <DynamicLogo className='text-primary -translate-x-3.5' />
             </div>
         </Reveal>
     );

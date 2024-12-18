@@ -37,31 +37,31 @@ export function Footer() {
                         <Reveal>
                             <h3>{t('related')}</h3>
                         </Reveal>
-                        <Link className="olink font-dyslexia font-semibold" href={"https://nextfur.net"}>Nextfur</Link>
-                        <Link className="olink font-dyslexia font-semibold" href={"https://furlibre.nextfur.net"}>Furlibre</Link>
+                        <Link className="olink font-unbounded font-semibold" href={"https://nextfur.net"}>Nextfur</Link>
+                        <Link className="olink font-unbounded font-semibold" href={"https://furlibre.nextfur.net"}>Furlibre</Link>
                     </div>
                     <div className="flex flex-col justify-center items-center gap-1">
                         <Reveal>
                             <h3>{t('socials')}</h3>
                         </Reveal>
-                        <Link className="olink font-dyslexia font-semibold" href={"https://bsky.app/profile/sammahonri.com"}>Bluesky</Link>
-                        <Link className="olink font-dyslexia font-semibold" href={"https://instagram.com/sammahonri"}>Instagram</Link>
-                        <Link className="olink font-dyslexia font-semibold" href={"https://x.com/SamMahonri"}>Twitter</Link>
-                        <Link className="olink font-dyslexia font-semibold" href={"https://www.linkedin.com/in/sam-mahonri-b62527226/"}>LinkedIn</Link>
-                        <Link className="olink font-dyslexia font-semibold" href={"https://github.com/sam-mahonri"}>GitHub</Link>
+                        <Link className="olink font-unbounded font-semibold" href={"https://bsky.app/profile/sammahonri.com"}>Bluesky</Link>
+                        <Link className="olink font-unbounded font-semibold" href={"https://instagram.com/sammahonri"}>Instagram</Link>
+                        <Link className="olink font-unbounded font-semibold" href={"https://x.com/SamMahonri"}>Twitter</Link>
+                        <Link className="olink font-unbounded font-semibold" href={"https://www.linkedin.com/in/sam-mahonri-b62527226/"}>LinkedIn</Link>
+                        <Link className="olink font-unbounded font-semibold" href={"https://github.com/sam-mahonri"}>GitHub</Link>
                     </div>
                     <div className="flex flex-col justify-center items-center gap-1">
                         <Reveal>
                             <h3>{t('lang')}</h3>
                         </Reveal>
-                        <p className={clsx("olink font-dyslexia font-semibold cursor-pointer", { "active-link": cl == "pt" })} onClick={() => changeLang("pt")}>Português - BR</p>
-                        <p className={clsx("olink font-dyslexia font-semibold cursor-pointer", { "active-link": cl == "en" })} onClick={() => changeLang("en")}>English - US</p>
-                        <p className={clsx("olink font-dyslexia font-semibold cursor-pointer", { "active-link": cl == "es" })} onClick={() => changeLang("es")}>Español - EN</p>
+                        <p className={clsx("olink font-unbounded font-semibold cursor-pointer", { "active-link": cl == "pt" })} onClick={() => changeLang("pt")}>Português - BR</p>
+                        <p className={clsx("olink font-unbounded font-semibold cursor-pointer", { "active-link": cl == "en" })} onClick={() => changeLang("en")}>English - US</p>
+                        <p className={clsx("olink font-unbounded font-semibold cursor-pointer", { "active-link": cl == "es" })} onClick={() => changeLang("es")}>Español - EN</p>
                     </div>
                     
                 </div>
                 <div className=' bg-foreground/10 w-full p-8 flex items-center justify-center'>
-                    <p className=" text-center font-dyslexia font-bold" >{t('copyright')}</p>
+                    <p className=" text-center font-unbounded font-bold" >{t('copyright')}</p>
                 </div>
 
             </div>

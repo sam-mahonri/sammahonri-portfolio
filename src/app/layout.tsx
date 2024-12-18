@@ -50,7 +50,6 @@ export default async function LocaleLayout({
             <NextThemeProvider>
               <Navbar />
               <Splash />
-              <FadeScroll/>
               <main className=" min-h-screen">
                 {children}
               </main>
