@@ -31,7 +31,7 @@ export default function FilterArts() {
             <div ref={ref} className={clsx("w-full", { "h-16": isSticky })}></div>
             <Reveal width="100%" delay={0.5}>
                 
-                <div className={clsx("w-full flex items-center justify-center", { "fixed left-0 top-20": isSticky})}>
+                <div className={clsx("w-full flex items-center justify-center", { "fixed left-0 top-20 bg-surface/75": isSticky})}>
                     <div className={clsx("w-full max-w-7xl", { "px-5": isSticky })}>
                         <div className={clsx("flex flex-wrap w-full transition-all", { " shadow-md": isSticky, "shadow-none": !isSticky })}>
                             <Link href={"/arts"} className="flex-grow">

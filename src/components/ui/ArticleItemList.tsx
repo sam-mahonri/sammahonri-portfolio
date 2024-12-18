@@ -28,7 +28,7 @@ export const CategorizedArticleItemList = ({
                 Object.keys(articles).map((category) => (
                     <div key={category} className="flex flex-col gap-5 items-center text-center justify-center">
                         <Reveal>
-                            <h3 className="font-dyslexia">{tc(category)}</h3>
+                            <h3>{tc(category)}</h3>
                         </Reveal>
                         <div className="flex flex-col gap-2.5 font-unbounded text-lg text-center items-center justify-center">
                             {articles[category].slice().reverse().map((article, index) => (

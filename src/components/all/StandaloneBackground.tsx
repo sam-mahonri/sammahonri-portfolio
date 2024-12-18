@@ -17,7 +17,7 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
             const currentHour = new Date().getHours();
             const isBadHour = currentHour == badHour;
 
-            const godBackgrounds = [
+            const goodBackgrounds = [
                 "/backgrounds/lastfer.png",
                 "/backgrounds/5am.png",
                 "/backgrounds/4immortals.png",
@@ -25,6 +25,7 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
                 "/backgrounds/rainymissionary.png",
                 "/backgrounds/sundays.png",
                 "/backgrounds/veilsoflives.png",
+                "/backgrounds/2027tt.png"
             ];
 
             const badBackgrounds = [
@@ -41,9 +42,9 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
             } else if (defaultImg) {
                 return "/backgrounds/home.svg";
             } else {
-                const length = isBadHour ? badBackgrounds.length : godBackgrounds.length;
+                const length = isBadHour ? badBackgrounds.length : goodBackgrounds.length;
                 const randomBackground = Math.floor(Math.random() * length);
-                return isBadHour ? badBackgrounds[randomBackground] : godBackgrounds[randomBackground];
+                return isBadHour ? badBackgrounds[randomBackground] : goodBackgrounds[randomBackground];
             }
         };
 

@@ -7,6 +7,7 @@ import { JumpingArrow } from '@/components/fx/JumpingArrow';
 import { FaBluesky, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import TimeSM from '@/components/ui/symbols/SM';
 import { DynamicLogo } from '@/components/ui/SamLogos';
+import Spinner from '@/components/ui/Spinner';
 
 export default function Index() {
 	const t = useTranslations('Index');
@@ -21,11 +22,11 @@ export default function Index() {
 						<h4>{t('toptitle')}</h4>
 					</Reveal>
 					<div className='flex flex-row gap-2 items-center w-full'>
-						<span className=' border-t-2 border-dashed border-secondary flex-grow'></span>
+						<span className=' bg-gradient-to-r from-transparent to-secondary pt-0.5 flex-grow'/>
 						<Reveal delay={0.4}>
 							<h1>Sam Mahonri</h1>
 						</Reveal>
-						<span className=' border-t-2 border-dashed border-secondary flex-grow'></span>
+						<span className=' bg-gradient-to-l from-transparent to-secondary pt-0.5 flex-grow'/>
 					</div>
 
 					<Reveal delay={0.6}>
@@ -51,7 +52,6 @@ export default function Index() {
 					</Reveal>
 				</div>
 				<JumpingArrow className=' h-5 mt-4' />
-
 				<div className=' flex flex-row gap-4 m-4 items-center'>
 					<Link href={"https://www.linkedin.com/in/sam-mahonri-b62527226/"}>
 						<FaLinkedin className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Instagram @sammahonri' />
@@ -70,7 +70,7 @@ export default function Index() {
 					</Link>
 				</div>
 				<Reveal delay={2} showSlider={0}>
-					<div className="mt-2 bg-primary/10 backdrop-blur-sm border-2 border-primary flex flex-wrap md:flex-row flex-row">
+					<div className="mt-2 bg-primary/10 backdrop-blur-sm flex flex-wrap md:flex-row flex-row">
 						<Link href={"/blog/mission"}>
 							<div className=' p-4 px-5 w-full h-full hover:bg-background hover:text-foreground  flex flex-row items-center justify-center gap-2'>
 								<span className=' font-unbounded uppercase text-xs font-light text-center'>{tc("learnmore_sud")}</span>

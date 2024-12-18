@@ -99,19 +99,7 @@ function Navbar() {
                                 }}
 
                                 className=' relative h-full w-full flex flex-col justify-center items-center scale-110'>
-                                <Image
-                                    src={"/backgrounds/menu.svg"}
-                                    fill={true}
-                                    alt="background"
-                                    className="object-cover opacity-0 transition-all duration-1000 scale-125"
-                                    quality={75}
-                                    priority={true}
-                                    onLoad={(event) => {
-                                        const target = event.target as HTMLImageElement;
-                                        target.classList.remove("opacity-0", "scale-125");
-                                    }}
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-                                />
+                                <DynamicLogo className=' scale-125 text-primary/25 -scale-x-125 translate-x-7 -translate-y-8 -rotate-12'/>
 
                             </motion.div>
                         </motion.div>
