@@ -1,5 +1,9 @@
 [   
     {
+        "imgUrl": "/artistic/arts/sushi.png",
+        "category": "painting"
+    },
+    {
         "imgUrl": "/artistic/arts/kyosaref.png",
         "category": "painting"
     },
