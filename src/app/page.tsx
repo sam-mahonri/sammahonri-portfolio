@@ -22,7 +22,7 @@ export default function Index() {
 					</Reveal>
 					<div className='flex flex-row gap-2 items-center w-full'>
 						<span className=' bg-gradient-to-r from-transparent to-secondary pt-0.5 flex-grow' />
-						<Reveal delay={2.6} showSlider={0}>
+						<Reveal delay={1.6} showSlider={0}>
 							<DynamicInlineLogo className='md:block hidden md:h-44 w-full md:w-fit -translate-x-1' />
 							<DynamicLogo className='md:hidden block max-h-44 -translate-x-1'/>
 						</Reveal>
