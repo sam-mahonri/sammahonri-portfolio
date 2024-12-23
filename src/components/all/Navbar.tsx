@@ -83,25 +83,10 @@ function Navbar() {
                                 ease: "circInOut"
                             }}
                             className=" absolute w-full h-full bg-gradient-to-b from-transparent to-primary/40">
-                            <motion.div
-                                initial={{
-                                    opacity: 0,
-                                    scale: 2
-                                }}
-                                animate={{
-                                    opacity: 1,
-                                    scale: 1
-                                }}
-                                transition={{
-                                    duration: 1.5,
-                                    delay: 1.75,
-                                    ease: "circInOut"
-                                }}
-
-                                className=' relative h-full w-full flex flex-col justify-center items-center scale-110'>
-                                <DynamicLogo className=' scale-150 text-primary/25 -translate-x-12 -translate-y-10 -rotate-12'/>
-
-                            </motion.div>
+                            <div
+                                className=' relative h-full w-full flex flex-col justify-end items-end scale-110'>
+                                <DynamicLogo className=' scale-125 text-background/50 -translate-x-8 -translate-y-8'/>
+                            </div>
                         </motion.div>
                         <div className='max-w-7xl w-full h-full flex flex-col items-center gap-1'>
                             <span className=' flex-grow' />

@@ -24,7 +24,7 @@ export default function Index() {
 						<span className=' bg-gradient-to-r from-transparent to-secondary pt-0.5 flex-grow' />
 						<Reveal delay={2.6} showSlider={0}>
 							<DynamicInlineLogo className='md:block hidden md:h-44 w-full md:w-fit -translate-x-1' />
-							<DynamicLogo className='md:hidden block h-40 -translate-x-1'/>
+							<DynamicLogo className='md:hidden block max-h-44 -translate-x-1'/>
 						</Reveal>
 						
 						<span className=' bg-gradient-to-l from-transparent to-secondary pt-0.5 flex-grow' />
