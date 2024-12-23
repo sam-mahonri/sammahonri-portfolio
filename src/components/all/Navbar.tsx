@@ -99,7 +99,7 @@ function Navbar() {
                                 }}
 
                                 className=' relative h-full w-full flex flex-col justify-center items-center scale-110'>
-                                <DynamicLogo className=' scale-125 text-primary/25 -scale-x-125 translate-x-7 -translate-y-8 -rotate-12'/>
+                                <DynamicLogo className=' scale-150 text-primary/25 -translate-x-12 -translate-y-10 -rotate-12'/>
 
                             </motion.div>
                         </motion.div>

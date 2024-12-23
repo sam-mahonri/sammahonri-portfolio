@@ -6,7 +6,7 @@ import { ArrowRightIcon, BookOpenIcon, ExclamationTriangleIcon, UserCircleIcon, 
 import { JumpingArrow } from '@/components/fx/JumpingArrow';
 import { FaBluesky, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import TimeSM from '@/components/ui/symbols/SM';
-import { DynamicLogo } from '@/components/ui/SamLogos';
+import { DynamicInlineLogo, DynamicLogo } from '@/components/ui/SamLogos';
 import Spinner from '@/components/ui/Spinner';
 
 export default function Index() {
@@ -16,36 +16,37 @@ export default function Index() {
 	return <>
 		<main className="main-section">
 			<section className="main-subsection subsection-center-all">
-				<TimeSM />
-				<div className='flex flex-col items-center justify-center *:text-center w-full'>
-					<Reveal delay={1.2}>
+				<div className='flex flex-col items-center justify-center *:text-center w-full md:gap-0 gap-2'>
+					<Reveal delay={2.5}>
 						<h4>{t('toptitle')}</h4>
 					</Reveal>
 					<div className='flex flex-row gap-2 items-center w-full'>
-						<span className=' bg-gradient-to-r from-transparent to-secondary pt-0.5 flex-grow'/>
-						<Reveal delay={1.4}>
-							<h1>Sam Mahonri</h1>
+						<span className=' bg-gradient-to-r from-transparent to-secondary pt-0.5 flex-grow' />
+						<Reveal delay={2.6} showSlider={0}>
+							<DynamicInlineLogo className='md:block hidden md:h-44 w-full md:w-fit -translate-x-1' />
+							<DynamicLogo className='md:hidden block h-40 -translate-x-1'/>
 						</Reveal>
-						<span className=' bg-gradient-to-l from-transparent to-secondary pt-0.5 flex-grow'/>
+						
+						<span className=' bg-gradient-to-l from-transparent to-secondary pt-0.5 flex-grow' />
 					</div>
-
-					<Reveal delay={1.6}>
+					<h1 className=' md:hidden block'>Sam Mahonri</h1>
+					<Reveal delay={2.7}>
 						<h4>{t('subtitle')}</h4>
 					</Reveal>
 
 				</div>
 				<div className='flex flex-wrap gap-3 items-center justify-center'>
-					<Reveal delay={1.8} sliderColor='rgb(var(--sam-primary-color))'>
+					<Reveal delay={2.8} sliderColor='rgb(var(--sam-primary-color))'>
 						<Link href={"/arts"}>
 							<button className='btn btn-primary'>{tc('arts')}<ArrowRightIcon /></button>
 						</Link>
 					</Reveal>
-					<Reveal delay={2.0} sliderColor='rgb(var(--sam-primary-color))'>
+					<Reveal delay={3.0} sliderColor='rgb(var(--sam-primary-color))'>
 						<Link href={"/blog"}>
 							<button className='btn btn-secondary'>{tc('blog')} <BookOpenIcon /> </button>
 						</Link>
 					</Reveal>
-					<Reveal delay={2.2} sliderColor='rgb(var(--sam-primary-color))'>
+					<Reveal delay={3.2} sliderColor='rgb(var(--sam-primary-color))'>
 						<Link href={"/about"}>
 							<button className='btn btn-secondary'>{tc('about')} <span><DynamicLogo className=' min-h-5 min-w-5 max-h-5 max-w-5 ' /></span> </button>
 						</Link>
