@@ -128,7 +128,7 @@ function Navbar() {
                 <div className="flex flex-row items-center container max-w-7xl box-border gap-7 h-20 min-h-20">
                     <Reveal width='100%' showSlider={0} initial={64} final={0} delay={1.5} ease='backOut' endNoOverflow={true}>
                         <div className="flex flex-row items-center container px-5 py-2 max-w-7xl box-border gap-2 h-fit">
-                            <Reveal initial={-64} final={0} delay={1}>
+                            <Reveal initial={-64} final={0} delay={2}>
                                 <div className='h-10 min-w-8'>
                                     <Link href={"/"} className='text-primary' onClick={() => setMenuOpened(false)}>
                                         <span className=' hidden md:block h-full'> <DynamicInlineLogo className={clsx("min-w-fit", { "text-secondary": pathname === "/" })} /> </span>
@@ -162,17 +162,17 @@ function Navbar() {
                             </span>
 
                             <span className=' flex-row gap-2 md:flex hidden mr-4'>
-                                <Reveal delay={0.2}><Link href={"/arts"} className={clsx('olink slink capitalize font-unbounded font-semibold flex flex-row gap-2 items-center justify-center group !px-3', { "active-link": pathname.startsWith("/arts") })}> {tc('arts')} <PaintBrushIcon className={clsx(' min-h-5 min-w-5 max-h-5 max-w-5 lg:block hidden group-hover:text-background transition-colors', { "text-background ": pathname.startsWith("/arts"), "text-secondary": !pathname.startsWith("/arts") })}/> </Link></Reveal>
-                                <Reveal delay={0.4}><Link href={"/blog"} className={clsx('olink slink capitalize font-unbounded font-semibold flex flex-row gap-2 items-center justify-center group !px-3', { "active-link": pathname.startsWith("/blog") })}> {tc('blog')} <BookOpenIcon className={clsx(' min-h-5 min-w-5 max-h-5 max-w-5 lg:block hidden group-hover:text-background transition-colors', { "text-background ": pathname.startsWith("/blog"), "text-secondary": !pathname.startsWith("/blog") })}/> </Link></Reveal>
-                                <Reveal delay={0.6}><Link href={"/about"} className={clsx('olink slink capitalize font-unbounded font-semibold flex flex-row gap-2 items-center justify-center group !px-3', { "active-link": pathname.startsWith("/about") })}> {tc('about')} <DynamicLogo className={clsx(' min-h-5 min-w-5 max-h-5 max-w-5 lg:block hidden group-hover:text-background transition-colors', { "text-background ": pathname.startsWith("/about"), "text-secondary": !pathname.startsWith("/about") })}/> </Link></Reveal>
-                                <Reveal delay={0.8} className=' lg:block hidden'><Link href={"/projects"} className={clsx('olink slink capitalize font-unbounded font-semibold flex flex-row gap-2 items-center justify-center group !px-3', { "active-link": pathname.startsWith("/projects") })}> {tc('projects')} <RocketLaunchIcon className={clsx(' min-h-5 min-w-5 max-h-5 max-w-5 lg:block hidden group-hover:text-background transition-colors', { "text-background ": pathname.startsWith("/projects"), "text-secondary": !pathname.startsWith("/projects") })}/> </Link></Reveal>
+                                <Reveal delay={1.2}><Link href={"/arts"} className={clsx('olink slink capitalize font-unbounded font-semibold flex flex-row gap-2 items-center justify-center group !px-3', { "active-link": pathname.startsWith("/arts") })}> {tc('arts')} <PaintBrushIcon className={clsx(' min-h-5 min-w-5 max-h-5 max-w-5 lg:block hidden group-hover:text-background transition-colors', { "text-background ": pathname.startsWith("/arts"), "text-secondary": !pathname.startsWith("/arts") })}/> </Link></Reveal>
+                                <Reveal delay={1.4}><Link href={"/blog"} className={clsx('olink slink capitalize font-unbounded font-semibold flex flex-row gap-2 items-center justify-center group !px-3', { "active-link": pathname.startsWith("/blog") })}> {tc('blog')} <BookOpenIcon className={clsx(' min-h-5 min-w-5 max-h-5 max-w-5 lg:block hidden group-hover:text-background transition-colors', { "text-background ": pathname.startsWith("/blog"), "text-secondary": !pathname.startsWith("/blog") })}/> </Link></Reveal>
+                                <Reveal delay={1.6}><Link href={"/about"} className={clsx('olink slink capitalize font-unbounded font-semibold flex flex-row gap-2 items-center justify-center group !px-3', { "active-link": pathname.startsWith("/about") })}> {tc('about')} <DynamicLogo className={clsx(' min-h-5 min-w-5 max-h-5 max-w-5 lg:block hidden group-hover:text-background transition-colors', { "text-background ": pathname.startsWith("/about"), "text-secondary": !pathname.startsWith("/about") })}/> </Link></Reveal>
+                                <Reveal delay={1.8} className=' lg:block hidden'><Link href={"/projects"} className={clsx('olink slink capitalize font-unbounded font-semibold flex flex-row gap-2 items-center justify-center group !px-3', { "active-link": pathname.startsWith("/projects") })}> {tc('projects')} <RocketLaunchIcon className={clsx(' min-h-5 min-w-5 max-h-5 max-w-5 lg:block hidden group-hover:text-background transition-colors', { "text-background ": pathname.startsWith("/projects"), "text-secondary": !pathname.startsWith("/projects") })}/> </Link></Reveal>
                             </span>
 
-                            <Reveal initial={-64} final={0} delay={1.4} showSlider={0}>
+                            <Reveal initial={-64} final={0} delay={2.4} showSlider={0}>
                                 <ThemeSwitch />
                             </Reveal>
 
-                            <Reveal initial={-64} final={0} delay={1.6} showSlider={0} endNoOverflow={true}>
+                            <Reveal initial={-64} final={0} delay={2.6} showSlider={0} endNoOverflow={true}>
                                 <DropdownLangSelector />
                             </Reveal>
 

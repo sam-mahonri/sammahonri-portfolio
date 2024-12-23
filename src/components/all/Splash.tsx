@@ -1,9 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Spinner from "../ui/Spinner";
-import clsx from "clsx";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Reveal } from "../fx/Motion";
 import { useBadHour } from "@/providers/BadHourProvider";
@@ -12,8 +10,16 @@ export default function Splash() {
     const [randomIndex, setRandomIndex] = useState(1);
     const [bad, setBad] = useState(false);
     const [showPhrase, setShowPhrase] = useState(true);
+    const videoRef = useRef<HTMLVideoElement>(null); // Referência ao vídeo
     const { badHour } = useBadHour();
     const pb = useTranslations("Phrases.bad");
+
+    useEffect(() => {
+        // Configura a velocidade do vídeo quando o componente monta
+        if (videoRef.current) {
+            videoRef.current.playbackRate = 1.55; // Altere o valor para ajustar a velocidade
+        }
+    }, []);
 
     useEffect(() => {
         const updatePhrase = () => {
@@ -42,10 +48,25 @@ export default function Splash() {
             <motion.div
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 0, visibility: "hidden" }}
-                transition={{ ease: "easeInOut", duration: 0.75 }}
-                className="fixed top-0 left-0 w-full h-full bg-background flex items-center justify-center flex-col gap-5 p-5"
+                transition={{ ease: "easeInOut", delay: 2.75, duration: 0.75 }}
+                className="fixed top-0 left-0 w-full h-full bg-black flex items-center justify-center flex-col gap-5 p-5 z-50"
+                style={{
+                    zIndex: 9999
+                }}
             >
-                <Spinner />
+                <div className="relative w-full h-full max-h-64 z-50">
+                    <video
+                        ref={videoRef} // Referência ao vídeo
+                        className="object-contain z-50"
+                        src="/splash.webm"
+                        autoPlay
+                        loop={false}
+                        playsInline
+                        muted
+                        style={{ width: "100%", height: "100%" }}
+                    />
+                </div>
+                
             </motion.div>
 
             <AnimatePresence>

@@ -11,7 +11,7 @@ import GoUp from "@/components/all/GoUp";
 import StandaloneBackground from "@/components/all/StandaloneBackground";
 import { TypingSM } from "@/components/ui/symbols/SM";
 import { BadHourProvider } from "@/providers/BadHourProvider";
-import FadeScroll from "@/components/fx/FadeScrollFX";
+import { NewMusic } from "@/components/ui/alerts/MusicAlerts";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sammahonri.com'),
@@ -49,13 +49,14 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <NextThemeProvider>
               <Navbar />
-              <Splash />
               <main className=" min-h-screen">
                 {children}
               </main>
               <TypingSM />
               <GoUp />
+              <NewMusic/>
               <Footer />
+              <Splash />
             </NextThemeProvider>
           </NextIntlClientProvider>
         </BadHourProvider>
