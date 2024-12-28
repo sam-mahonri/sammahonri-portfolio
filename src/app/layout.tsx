@@ -55,7 +55,6 @@ export default async function LocaleLayout({
               <TypingSM />
               <GoUp />
               <Footer />
-              <Splash />
             </NextThemeProvider>
           </NextIntlClientProvider>
         </BadHourProvider>

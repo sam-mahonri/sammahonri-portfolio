@@ -17,12 +17,12 @@ export default async function Index() {
 		<main className="main-section">
 			<section className="main-subsection subsection-center-all">
 				<div className='flex flex-col items-center justify-center *:text-center w-full md:gap-0 gap-2'>
-					<Reveal delay={2.5}>
+					<Reveal delay={0.5}>
 						<h4>{t('toptitle')}</h4>
 					</Reveal>
 					<div className='flex flex-row gap-2 items-center w-full'>
 						<span className=' bg-gradient-to-r from-transparent to-secondary pt-0.5 flex-grow' />
-						<Reveal delay={1.6} showSlider={0}>
+						<Reveal delay={0.6} showSlider={0}>
 							<DynamicInlineLogo className='md:block hidden md:h-44 w-full md:w-fit -translate-x-1' />
 							<DynamicLogo className='md:hidden block max-h-44 -translate-x-1'/>
 						</Reveal>
@@ -30,28 +30,28 @@ export default async function Index() {
 						<span className=' bg-gradient-to-l from-transparent to-secondary pt-0.5 flex-grow' />
 					</div>
 					<h1 className=' md:hidden block'>Sam Mahonri</h1>
-					<Reveal delay={2.7}>
+					<Reveal delay={0.7}>
 						<h4>{t('subtitle')}</h4>
 					</Reveal>
 
 				</div>
 				<div className='flex flex-wrap gap-3 items-center justify-center'>
-					<Reveal delay={2.8} sliderColor='rgb(var(--sam-primary-color))'>
+					<Reveal delay={0.8} sliderColor='rgb(var(--sam-primary-color))'>
 						<Link href={"/arts"}>
 							<button className='btn btn-primary'>{tc('arts')}<ArrowRightIcon /></button>
 						</Link>
 					</Reveal>
-					<Reveal delay={3.0} sliderColor='rgb(var(--sam-primary-color))'>
+					<Reveal delay={1.0} sliderColor='rgb(var(--sam-primary-color))'>
 						<Link href={"/arts/music"}>
 							<button className='btn btn-secondary'>{ta('music')} <MusicalNoteIcon /> </button>
 						</Link>
 					</Reveal>
-					<Reveal delay={3.2} sliderColor='rgb(var(--sam-primary-color))'>
+					<Reveal delay={1.2} sliderColor='rgb(var(--sam-primary-color))'>
 						<Link href={"/blog"}>
 							<button className='btn btn-secondary'>{tc('blog')} <BookOpenIcon /> </button>
 						</Link>
 					</Reveal>
-					<Reveal delay={3.4} sliderColor='rgb(var(--sam-primary-color))'>
+					<Reveal delay={1.4} sliderColor='rgb(var(--sam-primary-color))'>
 						<Link href={"/about"}>
 							<button className='btn btn-secondary'>{tc('about')} <span><DynamicLogo className=' min-h-5 min-w-5 max-h-5 max-w-5 ' /></span> </button>
 						</Link>
@@ -75,7 +75,7 @@ export default async function Index() {
 						<FaGithub className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Twitter @SamMahonri' />
 					</Link>
 				</div>
-				<Reveal delay={3} showSlider={0}>
+				<Reveal delay={2} showSlider={0}>
 					<div className="mt-2 bg-primary/10 backdrop-blur-sm flex flex-wrap md:flex-row flex-row">
 						<Link href={"/blog/mission"}>
 							<div className=' p-4 px-5 w-full h-full hover:bg-background hover:text-foreground  flex flex-row items-center justify-center gap-2'>
