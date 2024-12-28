@@ -24,7 +24,7 @@ export function Footer() {
     }
 
     return <>
-        <div className="flex items-center justify-center border-t-2 border-secondary/50 bg-surface">
+        <footer className="flex items-center justify-center border-t-2 border-secondary/50 bg-surface">
             <div className=" w-full pt-10  flex flex-col gap-4 justify-center items-center">
                 <Divider />
                 <div className="flex md:flex-wrap md:flex-row flex-col md:gap-16 gap-10 md:items-start justify-center w-full my-4 p-6">
@@ -69,6 +69,6 @@ export function Footer() {
                 </div>
 
             </div>
-        </div>
+        </footer>
     </>
 }
