@@ -10,6 +10,7 @@ import { Divider } from "../ui/Divider";
 import { Locale } from '@/config';
 import { startTransition } from 'react';
 import { setUserLocale } from '@/services/locale';
+import { EnvelopeIcon } from '@heroicons/react/24/solid';
 
 export function Footer() {
     const t = useTranslations('Footer');
@@ -62,7 +63,9 @@ export function Footer() {
                 </div>
                 <div className=' bg-foreground/10 w-full p-8 flex items-center justify-center flex-col'>
                     <p className=" text-center font-unbounded font-bold" >{t('copyright')}</p>
-                    <p>E-mail | <a href={"mailto:sammahonri@gmail.com"} className='olink'>sammahonri@gmail.com</a></p>
+                    <EnvelopeIcon className=' h-5 w-5 mt-4'/>
+                    <p className=' text-sm'>{t("contact")}</p>
+                    <a href={"mailto:sammahonri@gmail.com"} className='text-secondary olink'>  sammahonri@gmail.com</a>
                 </div>
 
             </div>

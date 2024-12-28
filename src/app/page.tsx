@@ -1,17 +1,17 @@
-import { useLocale, useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 import { Reveal } from '@/components/fx/Motion';
 import Link from 'next/link';
-import { ArrowRightIcon, BookOpenIcon, ExclamationTriangleIcon, UserCircleIcon, UserIcon } from '@heroicons/react/24/solid';
+import { ArrowRightIcon, BookOpenIcon, ExclamationTriangleIcon, MusicalNoteIcon} from '@heroicons/react/24/solid';
 import { JumpingArrow } from '@/components/fx/JumpingArrow';
 import { FaBluesky, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
-import TimeSM from '@/components/ui/symbols/SM';
 import { DynamicInlineLogo, DynamicLogo } from '@/components/ui/SamLogos';
-import Spinner from '@/components/ui/Spinner';
 
-export default function Index() {
-	const t = useTranslations('Index');
-	const tc = useTranslations('Common');
+
+export default async function Index() {
+	const t = await getTranslations('Index');
+	const tc = await getTranslations('Common');
+	const ta = await getTranslations('Arts');
 
 	return <>
 		<main className="main-section">
@@ -42,11 +42,16 @@ export default function Index() {
 						</Link>
 					</Reveal>
 					<Reveal delay={3.0} sliderColor='rgb(var(--sam-primary-color))'>
+						<Link href={"/arts/music"}>
+							<button className='btn btn-secondary'>{ta('music')} <MusicalNoteIcon /> </button>
+						</Link>
+					</Reveal>
+					<Reveal delay={3.2} sliderColor='rgb(var(--sam-primary-color))'>
 						<Link href={"/blog"}>
 							<button className='btn btn-secondary'>{tc('blog')} <BookOpenIcon /> </button>
 						</Link>
 					</Reveal>
-					<Reveal delay={3.2} sliderColor='rgb(var(--sam-primary-color))'>
+					<Reveal delay={3.4} sliderColor='rgb(var(--sam-primary-color))'>
 						<Link href={"/about"}>
 							<button className='btn btn-secondary'>{tc('about')} <span><DynamicLogo className=' min-h-5 min-w-5 max-h-5 max-w-5 ' /></span> </button>
 						</Link>
@@ -83,12 +88,4 @@ export default function Index() {
 			</section>
 		</main>
 	</>;
-}
-
-function BRDisclaimer() {
-	"use client";
-	const locale = useLocale();
-	return <>
-		{locale == "pt" && <ExclamationTriangleIcon className=' text-orange-400 h-6 w-6 absolute bottom-0 -right-3' title='AVISO: Bloqueado no Brasil!' />}
-	</>
 }

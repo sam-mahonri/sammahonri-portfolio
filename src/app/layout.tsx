@@ -54,7 +54,6 @@ export default async function LocaleLayout({
               </main>
               <TypingSM />
               <GoUp />
-              <NewMusic/>
               <Footer />
               <Splash />
             </NextThemeProvider>
