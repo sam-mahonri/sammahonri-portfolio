@@ -60,8 +60,9 @@ export function Footer() {
                     </div>
                     
                 </div>
-                <div className=' bg-foreground/10 w-full p-8 flex items-center justify-center'>
+                <div className=' bg-foreground/10 w-full p-8 flex items-center justify-center flex-col'>
                     <p className=" text-center font-unbounded font-bold" >{t('copyright')}</p>
+                    <p>E-mail | <a href={"mailto:sammahonri@gmail.com"} className='olink'>sammahonri@gmail.com</a></p>
                 </div>
 
             </div>
