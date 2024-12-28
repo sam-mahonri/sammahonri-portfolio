@@ -25,8 +25,7 @@ export function Footer() {
 
     return <>
         <footer className="flex items-center justify-center border-t-2 border-secondary/50 bg-surface">
-            <div className=" w-full pt-10  flex flex-col gap-4 justify-center items-center">
-                <Divider />
+            <div className=" w-full flex flex-col gap-4 justify-center items-center">
                 <div className="flex md:flex-wrap md:flex-row flex-col md:gap-16 gap-10 md:items-start justify-center w-full my-4 p-6">
                     <div className=" h-14 w-fit self-center">
                         <Reveal>
@@ -34,14 +33,8 @@ export function Footer() {
                         </Reveal>
                     </div>
 
-                    <div className="flex flex-col justify-center items-center gap-1">
-                        <Reveal>
-                            <h3>{t('related')}</h3>
-                        </Reveal>
-                        <Link className="olink font-unbounded " href={"https://nextfur.net"}>Nextfur</Link>
-                        <Link className="olink font-unbounded opacity-25 pointer-events-none " href={"https://furlibre.nextfur.net"}>Furlibre</Link>
-                    </div>
-                    <div className="flex flex-col justify-center items-center gap-1">
+                    
+                    <div className="flex flex-col justify-center items-center gap-1 md:mt-0 mt-6">
                         <Reveal>
                             <h3>{t('socials')}</h3>
                         </Reveal>
@@ -59,12 +52,18 @@ export function Footer() {
                         <p className={clsx("olink font-unbounded  cursor-pointer", { "active-link": cl == "en" })} onClick={() => changeLang("en")}>English - US</p>
                         <p className={clsx("olink font-unbounded  cursor-pointer", { "active-link": cl == "es" })} onClick={() => changeLang("es")}>Español - EN</p>
                     </div>
-                    
+                    <div className="flex flex-col justify-center items-center gap-1">
+                        <Reveal>
+                            <h3>{t('related')}</h3>
+                        </Reveal>
+                        <Link className="olink font-unbounded " href={"https://nextfur.net"}>Nextfur</Link>
+                        <Link className="olink font-unbounded opacity-25 pointer-events-none " href={"https://furlibre.nextfur.net"}>Furlibre</Link>
+                    </div>
                 </div>
                 <div className=' bg-foreground/10 w-full p-8 flex items-center justify-center flex-col'>
                     <p className=" text-center font-unbounded font-bold" >{t('copyright')}</p>
                     <EnvelopeIcon className=' h-5 w-5 mt-4'/>
-                    <p className=' text-sm'>{t("contact")}</p>
+                    <p className=' text-sm text-center'>{t("contact")}</p>
                     <a href={"mailto:sammahonri@gmail.com"} className='text-secondary olink'>  sammahonri@gmail.com</a>
                 </div>
 
