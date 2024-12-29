@@ -85,6 +85,7 @@ export default async function Index() {
 						</Link>
 					</div>
 				</Reveal>
+				<JumpingArrow className=' h-5 mt-2' />
 			</section>
 		</main>
 	</>;
