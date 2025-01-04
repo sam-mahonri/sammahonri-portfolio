@@ -67,6 +67,7 @@
         "music": "Music"
     },
     "Projects": {
+        "legacy": "Legacy Projects",
         "game": "Electronic game",
         "foundation": "Foundation",
         "co_foundation": "Co-Foundation",
@@ -75,7 +76,10 @@
         "fa_content": "Sukriarte Auctions was a site for auctioning OCs and intellectual properties under the Furlibre Project infrastructure, commissioned by the artist Sukriarte and developed by me.",
         "nf_content": "\"The Nightmare Fable: Veils of Lives\" is an RPG and ARG third-person game currently in development (though on hiatus), with a planned release in 2027. It features charismatic characters and an engaging storyline that explores delicate social, ethical, moral, and psychological issues. The story revolves around two friends: a bat named Sunset and a dog named Rover. Sunset has strange dreams that reveal the path they must follow. After some time, Rover gets lost in a forest that hides a small time rift. You take on the role of Sunset (using your own name and a \"special\" random name revealed during the game), who follows Rover and ends up entering the same rift, encountering various worlds and universes controlled by a single god. Trapped in the Hall of the Veils of Lives, your mission is to cross the six available veils, each leading to a unique world, to gain advice and advance the story. However, a seventh veil remains mysteriously blocked, fueling theories and secrets that may be revealed by solving riddles both in the game and in the associated ARG. During your journey, you form friendships (or enmities) with characters inspired by controversial historical and religious figures. In the end, an epic battle takes place against the god of that universe, resembling a large anthropomorphic lamb with three horns. Unfortunately, due to personal issues and unavailability for two consecutive years, the development of the game has been affected.",
         "fl_content": "Furlibre Studio, also known as Furlibre Project, initially aimed to be the studio for the development of Nightmare Fable. Due to financial problems, few supporters, and developers, Furlibre became part of the Nextfur Foundation and maintains the same goals and projects still under wraps. The visual identity was developed by me, Sam Mahonri.",
-        "nxtfr_content": "Nextfur Foundation is a foundation that provides collaborative, financial, and community support for projects related to Brazilian Furry culture. The project was conceived and developed, for the most part, by Diogo Nunes Spigato. The visual identity and frontend development were carried out by me, Sam Mahonri."
+        "nxtfr_content": "Nextfur Foundation is a foundation that provides collaborative, financial, and community support for projects related to Brazilian Furry culture. The project was conceived and developed, for the most part, by Diogo Nunes Spigato. The visual identity and frontend development were carried out by me, Sam Mahonri.",
+        "nf_22": "Nightmare Fable is not related to The Nightmare Fable: Veils Of Lives. It was a game developed in 2022 for a school project on environmental management. Created just one day before the presentation, it is short and minimally interactive. All the music, sprites, and other assets were made in a single day.",
+        "cs_22": "Constars was a simple naval battle game with stars, created in 2022 with high school friends. The entire development took only one day.",
+        "ss_22": "Savestruct was developed during my scholarship at the HackTown Academy of the Federal Institute of Sertão Pernambucano. The characters and base stories were created in collaboration with other scholars. As the project was discontinued due to a lack of institutional support, I kept only the mentions of the original creators. The name and associations were changed to Savestruct to dissociate it from the institution, given the lack of expected support."
     },
     "Phrases": {
         "good": {
