@@ -5,7 +5,7 @@ date: "15-11-2024"
 banner: "/articles/rainymissionary.png"
 ---
 
-# Sobre A minha missão SUD(Mórmon) nos próximos 2 anos - Agradecimentos E Perspectivas
+# Sobre A minha missão SUD (Mórmon) nos próximos 2 anos - Agradecimentos E Perspectivas
 
 ![Meu fursona como missionário SUD](/articles/rainymissionary.png)
 [Ver arte na galeira - Artista: Sam Mahonri](/arts?art=%252Fartistic%252Farts%252Frainymissionary.png)

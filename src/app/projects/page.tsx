@@ -65,6 +65,17 @@ export default function Projects() {
                             </Reveal>
                             <Reveal delay={0.6}><h2>{tp('legacy')}</h2></Reveal>
                             <Reveal delay={0.4} showSlider={0}>
+                                <Link href={"/games/PetrolinaARG.zip"}>
+                                    <div className='w-full flex flex-col justify-start items-start border-2 border-transparent border-t-secondary/20 hover:border-secondary p-4 gap-2 hover:bg-secondary/10'>
+                                        <h3>Pedro e Lina: The Game - 2023</h3>
+                                        <span className='flex flex-wrap'> 
+                                            <p className='p-tag'>{tp('game')}</p>
+                                        </span>
+                                        <p>{tp('pt_23')}</p>
+                                    </div>
+                                </Link>
+                            </Reveal>
+                            <Reveal delay={0.4} showSlider={0}>
                                 <Link href={"https://gamejolt.com/games/savestruct/771377"}>
                                     <div className='w-full flex flex-col justify-start items-start border-2 border-transparent border-t-secondary/20 hover:border-secondary p-4 gap-2 hover:bg-secondary/10'>
                                         <h3>Savestruct - 2022</h3>
