@@ -57,7 +57,6 @@ export default async function Index() {
 						</Link>
 					</Reveal>
 				</div>
-				<JumpingArrow className=' h-5 mt-2' />
 				<div className=' flex flex-row gap-4 m-2 items-center'>
 					<Link href={"https://www.linkedin.com/in/sam-mahonri-b62527226/"}>
 						<FaLinkedin className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Instagram @sammahonri' />
