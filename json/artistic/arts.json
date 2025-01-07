@@ -288,6 +288,10 @@
         "category": "painting"
     },
     {
+        "imgUrl": "/artistic/vectorial/oli_1.png",
+        "category": "vectorial"
+    },
+    {
         "imgUrl": "/artistic/vectorial/bubi.png",
         "category": "vectorial"
     },
