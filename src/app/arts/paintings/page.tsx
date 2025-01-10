@@ -6,14 +6,15 @@ import Gallery from '@/components/sections/ArtsSections';
 export const generateMetadata = async ({ params, searchParams }: { params: { slug: string }, searchParams: any }): Promise<Metadata> => {
     const t = await getTranslations("Common");
     const urlParams = new URLSearchParams(searchParams);
-    const artParam = urlParams.get('art'); 
+    const artsContent = getArtCategorizedRefs();
+    const artParam = urlParams.get('art') as unknown as number; 
 
     const openGraph = artParam
         ? {
             title: `${t('arts')}`,
             images: [
                 {
-                    url: artParam,
+                    url: artsContent[artParam].imgUrl,
                     alt: t('arts'),
                 },
             ],

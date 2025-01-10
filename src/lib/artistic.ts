@@ -1,4 +1,5 @@
 import fs from "fs"
+import { StaticImageData } from "next/image";
 import path from "path"
 
 const artsDictPath = path.join(process.cwd(), "json/artistic/arts.json")
@@ -15,6 +16,12 @@ function readJSON(caminho: string): any {
 
 export interface ArtItem {
     imgUrl: string;
+    category: string;
+    contentWarning?: boolean;
+}
+
+export interface ArtStaticItem {
+    imgUrl: StaticImageData;
     category: string;
     contentWarning?: boolean;
 }

@@ -1,5 +1,9 @@
 [   
     {
+        "imgUrl": "/artistic/arts/balloonsfinal.png",
+        "category": "painting"
+    },
+    {
         "imgUrl": "/artistic/arts/paintingfinal.png",
         "category": "painting"
     },

@@ -48,7 +48,7 @@ const FloatingLetter: React.FC<FloatingLetterProps> = ({ letter, x, y, remove })
                 top: y,
                 left: x,
             }}
-            className=' bg-secondary text-background z-50'
+            className=' bg-secondary p-3 text-background z-50'
         >
             {letter}
         </motion.h1>

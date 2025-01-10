@@ -7,8 +7,7 @@ banner: "/articles/rainymissionary.png"
 
 # Sobre A minha missão SUD (Mórmon) nos próximos 2 anos - Agradecimentos E Perspectivas
 
-![Meu fursona como missionário SUD](/articles/rainymissionary.png)
-[Ver arte na galeira - Artista: Sam Mahonri](/arts?art=%252Fartistic%252Farts%252Frainymissionary.png)
+[Ver arte do banner completa na galeria - Artista: Sam Mahonri](/arts?art=%252Fartistic%252Farts%252Frainymissionary.png)
 
 Como alguns amigos mais próximos já devem ter conhecimento da minha religião, sou membro de **A Igreja de Jesus Cristo dos Santos dos Últimos Dias,** também conhecida como Igreja **Mórmon,** embora esse termo deva ser evitado. Na igreja, é comum que jovens, ao completar 18 anos no caso dos homens, e 19 no caso das mulheres, se preparem para servir como missionários de tempo integral.
 

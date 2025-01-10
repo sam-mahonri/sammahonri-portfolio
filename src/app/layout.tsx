@@ -12,6 +12,7 @@ import StandaloneBackground from "@/components/all/StandaloneBackground";
 import { TypingSM } from "@/components/ui/symbols/SM";
 import { BadHourProvider } from "@/providers/BadHourProvider";
 import { NewMusic } from "@/components/ui/alerts/MusicAlerts";
+import { BackgroundProvider } from "@/providers/BackgroundProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sammahonri.com'),
@@ -45,21 +46,23 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${unbounded.variable} ${dyslexia.variable} ${mono.variable} ${lexend.variable} dark`} suppressHydrationWarning={true}>
       <body className="main-top bg-background">
         <BadHourProvider>
-          <StandaloneBackground />
-          <NextIntlClientProvider messages={messages}>
-            <NextThemeProvider>
-              <Navbar />
-              <main className=" min-h-screen">
-                {children}
-              </main>
-              <TypingSM />
-              <GoUp />
-              <Footer />
+          <BackgroundProvider>
+            <StandaloneBackground />
+            <NextIntlClientProvider messages={messages}>
+              <NextThemeProvider>
+                <Navbar />
+                <main className=" min-h-screen">
+                  {children}
+                </main>
+                <TypingSM />
+                <GoUp />
+                <Footer />
             </NextThemeProvider>
           </NextIntlClientProvider>
-        </BadHourProvider>
+        </BackgroundProvider>
+      </BadHourProvider>
 
-      </body>
-    </html>
+    </body>
+    </html >
   );
 }

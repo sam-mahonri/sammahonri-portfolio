@@ -4,6 +4,8 @@ import { ArrowLeftIcon } from "@heroicons/react/24/solid"
 import { getArticleData } from "@/lib/articles"
 import { getLocale, getTranslations } from "next-intl/server";
 import { GenericAlert } from '@/components/ui/alerts/GenericAlert';
+import BackgroundManager from '@/components/fx/BackgroundManager';
+import Image from 'next/image';
 
 export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
     const articleData = await getArticleData(params.slug);
@@ -35,17 +37,32 @@ const Article = async ({ params }: { params: { slug: string } }) => {
     const locale = await getLocale();
     return (
         <main className="main-section pt-0 md:p-8">
-
+            <BackgroundManager banner={articleData.banner} />
             <section className="main-subsection place-content-center items-center pt-4">
                 {locale !== "pt" ? <GenericAlert transMessageKey="incompleteTransBlog" alertType="warning" /> : <> </>}
+
                 <div className="flex justify-between font-poppins max-w-7xl w-full items-center">
                     <Link href={"/blog"} className="flex flex-row gap-1 place-items-center">
                         <button className="btn btn-plain"><ArrowLeftIcon width={20} />{tc("blog")}</button>
                     </Link>
-                    <p className="font-dyslexia font-bold">{articleData.date.toString()}</p>
+                    <p className="font-ibmmono font-bold">{articleData.date.toString()}</p>
                 </div>
+                {articleData.banner &&
+                    <div className='max-w-4xl'>
+                        <Image
+                            src={articleData.banner}
+                            alt={articleData.title}
+                            width={1200}
+                            height={630}
+                            layout="responsive"
+                            className="object-cover"
+                        />
+                    </div>
+                }
+
+
                 <article
-                    className="article max-w-7xl w-full flex-grow"
+                    className="article max-w-4xl w-full flex-grow"
                     dangerouslySetInnerHTML={{ __html: articleData.contentHtml }}
                 />
             </section>

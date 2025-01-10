@@ -5,14 +5,18 @@ import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import BackgroundImage from './BackgroundImage';
 import { useBadHour } from '@/providers/BadHourProvider';
+import { useBackground } from '@/providers/BackgroundProvider';
 
-export default function StandaloneBackground({ customImage = null, defaultImg = false }: { customImage?: string | null, defaultImg?: boolean }) {
+export default function StandaloneBackground({ defaultImg = false }: { defaultImg?: boolean }) {
     const [selectedBackground, setSelectedBackground] = useState<string>('');
     const [isShow, setIsShow] = useState(true);
     const { badHour } = useBadHour();
+    const { customImage, setCustomBackground } = useBackground();
     const pathname = usePathname();
 
     useEffect(() => {
+        
+
         const determineBackground = () => {
             const currentHour = new Date().getHours();
             const isBadHour = currentHour == badHour;
@@ -25,7 +29,9 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
                 "/backgrounds/rainymissionary.png",
                 "/backgrounds/sundays.png",
                 "/backgrounds/veilsoflives.png",
-                "/backgrounds/2027tt.png"
+                "/backgrounds/2027tt.png",
+                "/backgrounds/balloonsfinal.png",
+                "/backgrounds/paintingfinal.png",
             ];
 
             const badBackgrounds = [
@@ -49,18 +55,24 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
         };
 
         const changeBackground = () => {
-            setIsShow(false);
+            if (!customImage) { setIsShow(false); }
 
             setTimeout(() => {
+
                 setSelectedBackground((prev) => {
                     let newbg = determineBackground();
-                    while (newbg === prev) {
-                        newbg = determineBackground();
+                    if (!customImage) {
+                        while (newbg === prev) {
+                            newbg = determineBackground();
+                        }
                     }
                     return newbg;
                 });
+
                 setIsShow(true);
-            }, 2000);
+
+
+            }, 1000);
         };
 
         changeBackground();
@@ -71,6 +83,13 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
 
     }, [badHour, customImage, defaultImg, pathname]);
 
+    useEffect(() => {
+        if (customImage && !pathname.includes("blog/") ) {
+            setCustomBackground(null)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pathname, setCustomBackground])
+
     return (
         <div className='-z-10 absolute w-full h-full overflow-x-hidden bg-background'>
             <AnimatePresence>
@@ -79,8 +98,8 @@ export default function StandaloneBackground({ customImage = null, defaultImg = 
                         key={selectedBackground}
                         initial={{ opacity: 0, scale: "125%" }}
                         animate={{ opacity: 1, scale: "100%" }}
-                        exit={{ opacity: 0, transition: { duration: 2, ease: "easeInOut" }}}
-                        transition={{ duration: 2, ease: "circInOut" }}
+                        exit={{ opacity: 0, scale: "110%" }}
+                        transition={{ duration: 1, ease: "circInOut" }}
                         className="fixed w-full h-full overflow-hidden bg-background"
                     >
                         {selectedBackground ? (

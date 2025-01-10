@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { ArtItem } from "@/lib/artistic";
 import Image from "next/image";
@@ -8,10 +8,8 @@ import { Reveal } from "../fx/Motion";
 import placeholderImage from "/public/placeholders/img.jpeg";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
-import { XMarkIcon, HeartIcon, ShareIcon, CheckIcon, ArrowDownTrayIcon, ArrowLeftCircleIcon, ArrowRightCircleIcon, ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
-import Link from 'next/link';
+import { XMarkIcon, ShareIcon, CheckIcon, ArrowDownTrayIcon, ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import Spinner from "../ui/Spinner";
-import { Share } from "next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
 
 interface Props {
@@ -33,7 +31,7 @@ export default function Gallery({ Arts }: Props) {
     const tc = useTranslations("Common");
 
     useEffect(() => {
-        setVisibleArts(Arts.slice(0, 9));
+        setVisibleArts(Arts.slice(0, 6));
     }, [Arts]);
 
     const handleCopyUrl = () => {
@@ -78,7 +76,7 @@ export default function Gallery({ Arts }: Props) {
     const handleImageClick = (art: ArtItem, index: number) => {
         setPID(index)
         const params = new URLSearchParams(window.location.search);
-        params.set("art", encodeURIComponent(art.imgUrl));
+        params.set("art", index.toString());
         const newUrl = `${window.location.pathname}?${params.toString()}`;
         window.history.pushState(null, '', newUrl);
     };
@@ -92,27 +90,34 @@ export default function Gallery({ Arts }: Props) {
         window.history.pushState(null, '', newUrl);
     };
 
-    const replaceCurrent = (newIndex: number) => {
+    const updateUrlWithIndex = useCallback((index: number) => {
+        const params = new URLSearchParams(window.location.search);
+        params.set("art", index.toString());
+        const newUrl = `${window.location.pathname}?${params.toString()}`;
+        window.history.pushState(null, '', newUrl);
+    }, []);
+
+    const replaceCurrent = useCallback((newIndex: number) => {
         setSliding(true);
         setTimeout(() => {
             setSliding(false);
             setFILoaded(false);
             setFullScreenImage(null);
-            handleImageClick(Arts[newIndex], newIndex)
+            handleImageClick(Arts[newIndex], newIndex);
+            updateUrlWithIndex(newIndex); // Atualiza a URL com o novo índice
         }, 250);
-    }
+    }, [Arts, updateUrlWithIndex]);
 
     // Abrir a arte caso tenha sido compartilhada avulsa :3
     useEffect(() => {
-        const artImgUrl = searchParams.get("art");
+        const artIndex = searchParams.get("art");
 
-        if (artImgUrl && Arts) {
-            const artIndex = Arts.findIndex(a => a.imgUrl === decodeURIComponent(artImgUrl));
-
-            if (artIndex !== -1) {
-                const art = Arts[artIndex];
+        if (artIndex !== null && Arts) {
+            const index = parseInt(artIndex, 10);
+            if (!isNaN(index) && index >= 0 && index < Arts.length) {
+                const art = Arts[index];
                 setFullScreenImage(art);
-                setPID(artIndex)
+                setPID(index);
             }
         } else {
             closeFullScreen();
@@ -126,40 +131,41 @@ export default function Gallery({ Arts }: Props) {
                 {visibleArts.map((art, index) => (
                     <div
                         key={index}
-                        className="border-2 border-secondary/20 hover:border-secondary w-full transition-all duration-500 cursor-pointer ring-secondary/75 hover:ring-8 overflow-hidden"
+                        className="border-2 border-secondary/20 hover:border-secondary w-full transition-all opacity-0 duration-500 cursor-pointer ring-secondary/75 hover:ring-8 overflow-hidden"
                         onClick={() => handleImageClick(art, index)}
                     >
-                        <Reveal width="100%">
-                            <div style={{
+                        <div
+                            style={{
                                 position: "relative",
                                 height: "60vh",
                                 width: "100%",
-                                maxWidth: "700px"
+                                maxWidth: "700px",
                             }}
-                                className="transition-transform duration-300 hover:scale-105"
-                            >
-                                <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                                    <Spinner />
-                                </span>
-                                <Image
-                                    alt=""
-                                    placeholder="blur"
-                                    blurDataURL={placeholderImage.src}
-                                    className="object-cover opacity-0 transition-all duration-500"
-                                    loading="lazy"
-                                    src={art.imgUrl}
-                                    fill
-                                    sizes="(max-width: 1280px) 100vw,
-                                    (max-width: 1536px) 75vw,
-                                    (max-width: 1920px) 50vw,
-                                    25vw"
-                                    onLoad={(event) => {
-                                        const target = event.target as HTMLImageElement;
-                                        target.classList.remove("opacity-0");
-                                    }}
-                                />
-                            </div>
-                        </Reveal>
+                            className="transition-all duration-500 hover:scale-110"
+                        >
+                            <Image
+                                alt=""
+                                placeholder="blur"
+                                blurDataURL={placeholderImage.src}
+                                className="object-cover"
+                                loading="lazy"
+                                src={art.imgUrl}
+                                fill
+                                sizes="(max-width: 1280px) 100vw,
+                            (max-width: 1536px) 75vw,
+                            (max-width: 1920px) 50vw,
+                            25vw"
+                                onLoad={(event) => {
+                                    const target = event.target as HTMLImageElement;
+                                    const grandparent = target.closest(
+                                        ".border-2.border-secondary\\/20"
+                                    );
+                                    if (grandparent) {
+                                        grandparent.classList.remove("opacity-0");
+                                    }
+                                }}
+                            />
+                        </div>
                     </div>
                 ))}
             </div>
@@ -173,7 +179,6 @@ export default function Gallery({ Arts }: Props) {
                 {fullScreenImage && (
                     <motion.div
                         initial={{
-                            translateY: "100vw",
                             opacity: 0
                         }}
                         animate={{
@@ -181,13 +186,12 @@ export default function Gallery({ Arts }: Props) {
                             opacity: 1
                         }}
                         exit={{
-                            translateY: "100vw",
                             opacity: 0
                         }}
                         transition={{
                             duration: 0.75, ease: "circInOut"
                         }}
-                        className="fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-background/95 border-t-2 border-secondary backdrop-blur-sm"
+                        className="fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-background"
                         style={{ zIndex: 9998 }}
                     >
                         <div className="relative w-full max-w-7xl flex-grow p-8 pt-2 flex flex-col gap-2">
@@ -210,14 +214,14 @@ export default function Gallery({ Arts }: Props) {
                                         alt=""
                                         placeholder="blur"
                                         blurDataURL={placeholderImage.src}
-                                        className=" object-contain opacity-0 transition-all duration-500 scale-90"
+                                        className=" object-contain opacity-0 transition-all duration-500"
                                         loading="lazy"
                                         src={fullScreenImage.imgUrl}
                                         fill
                                         sizes="(max-width: 100%) 100vw"
                                         onLoad={(event) => {
                                             const target = event.target as HTMLImageElement;
-                                            target.classList.remove("opacity-0", "scale-90");
+                                            target.classList.remove("opacity-0");
                                             setFILoaded(true)
                                         }}
                                         unoptimized
@@ -257,4 +261,3 @@ export default function Gallery({ Arts }: Props) {
         </>
     );
 };
-

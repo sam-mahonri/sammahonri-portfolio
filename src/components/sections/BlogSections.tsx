@@ -61,7 +61,7 @@ export function BlogSections({
             </span>
         </Reveal>
         {locale !== "pt" ? <GenericAlert transMessageKey="incompleteTransBlog" alertType="warning" /> : <> </>}
-        <section className="md:grid md:grid-cols-3 flex flex-col gap-4 items-center justify-center flex-grow">
+        <section className="md:grid md:grid-cols-3 flex flex-col gap-4 items-start justify-center flex-grow">
             {layout == "sorted" ? <>
                 {sortedArticles !== null && <DatedArticleItemList articles={sortedArticles} />}
             </> : <>
