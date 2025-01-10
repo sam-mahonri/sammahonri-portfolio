@@ -1,5 +1,5 @@
 import fs from "fs"
-import { StaticImageData } from "next/image";
+import { StaticImageData } from "next/legacy/image";
 import path from "path"
 
 const artsDictPath = path.join(process.cwd(), "json/artistic/arts.json")

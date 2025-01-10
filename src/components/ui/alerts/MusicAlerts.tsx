@@ -2,7 +2,7 @@
 
 import { PlayCircleIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import veils from "../../../../public/artistic/arts/veilsoflives.png";
 import { useState } from "react";
 import { useTranslations } from "next-intl";

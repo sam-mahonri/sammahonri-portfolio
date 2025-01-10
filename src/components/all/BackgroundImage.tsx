@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { motion, useMotionValue } from "framer-motion";
 import { useScroll } from "framer-motion";
 
@@ -35,7 +35,7 @@ export default function BackgroundImage({ source, fixed = false, wBack = false }
             >
                 <Image 
                     src={source}
-                    fill={true}
+                    layout="fill"
                     alt="background"
                     className="object-cover opacity-0 transition-all duration-1000 scale-105"
                     quality={75}

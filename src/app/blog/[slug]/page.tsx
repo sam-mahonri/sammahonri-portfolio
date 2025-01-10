@@ -5,7 +5,7 @@ import { getArticleData } from "@/lib/articles"
 import { getLocale, getTranslations } from "next-intl/server";
 import { GenericAlert } from '@/components/ui/alerts/GenericAlert';
 import BackgroundManager from '@/components/fx/BackgroundManager';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
     const articleData = await getArticleData(params.slug);

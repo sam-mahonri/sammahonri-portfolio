@@ -13,7 +13,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { BiCompass } from 'react-icons/bi';
 import { JumpingArrow } from '../fx/JumpingArrow';
 import { DropdownLangSelector } from '../ui/menus/Language';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 function Navbar() {
 

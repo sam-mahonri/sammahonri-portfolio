@@ -3,145 +3,120 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { ArtItem } from "@/lib/artistic";
-import Image from "next/image";
-import { Reveal } from "../fx/Motion";
-import placeholderImage from "/public/placeholders/img.jpeg";
+import Image from "next/legacy/image";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { XMarkIcon, ShareIcon, CheckIcon, ArrowDownTrayIcon, ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import Spinner from "../ui/Spinner";
 import { AnimatePresence, motion } from "framer-motion";
+import placeholderImage from "/public/placeholders/img.jpeg";
 
 interface Props {
     Arts: ArtItem[];
 }
 
+const INITIAL_ARTS_COUNT = 6;
+const LOAD_MORE_COUNT = 9;
+const ANIMATION_DURATION = 250;
+
 export default function Gallery({ Arts }: Props) {
     const totalArtsCount = Arts.length;
     const [fullScreenImage, setFullScreenImage] = useState<ArtItem | null>(null);
     const [currentPID, setPID] = useState(0);
-    const [visibleArts, setVisibleArts] = useState<ArtItem[]>([]);
-    const [hasMore, setHasMore] = useState(true);
+    const [visibleArts, setVisibleArts] = useState<ArtItem[]>(Arts.slice(0, INITIAL_ARTS_COUNT));
+    const [hasMore, setHasMore] = useState(Arts.length > INITIAL_ARTS_COUNT);
     const [loadingMore, setLoadingMore] = useState(false);
     const [fullImageLoaded, setFILoaded] = useState(false);
     const [sliding, setSliding] = useState(false);
+    const [copied, setCopied] = useState(false);
+
     const loadMoreRef = useRef<HTMLDivElement>(null);
     const searchParams = useSearchParams();
-    const [copied, setCopied] = useState(false);
     const tc = useTranslations("Common");
 
-    useEffect(() => {
-        setVisibleArts(Arts.slice(0, 6));
-    }, [Arts]);
-
-    const handleCopyUrl = () => {
-        const url = window.location.href;
-        navigator.clipboard.writeText(url).then(() => {
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-        });
-    };
-
     const loadMore = useCallback(() => {
+        if (!hasMore || loadingMore) return;
         setLoadingMore(true);
         setTimeout(() => {
-            if (visibleArts.length < Arts.length) {
-                setVisibleArts(prev => [
-                    ...prev,
-                    ...Arts.slice(prev.length, prev.length + 9),
-                ]);
-            } else {
-                setHasMore(false);
-            }
+            const newVisibleArts = Arts.slice(0, visibleArts.length + LOAD_MORE_COUNT);
+            setVisibleArts(newVisibleArts);
+            setHasMore(newVisibleArts.length < Arts.length);
             setLoadingMore(false);
-        }, 250); // Pequeno delay para evitar carregamento total de uma vez só. E também pq eu gosto de fazer as pessoas esperarem :3
-    }, [Arts, visibleArts.length])
+        }, ANIMATION_DURATION);
+    }, [Arts, visibleArts.length, hasMore, loadingMore]);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (loadMoreRef.current) {
-                const rect = loadMoreRef.current.getBoundingClientRect();
-                if (rect.top <= window.innerHeight + 64 && !loadingMore) {
-                    loadMore();
-                }
+            if (loadMoreRef.current && loadMoreRef.current.getBoundingClientRect().top <= window.innerHeight + 64 && !loadingMore) {
+                loadMore();
             }
         };
 
         window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [visibleArts, loadingMore, loadMore]);
-
-    const handleImageClick = (art: ArtItem, index: number) => {
-        setPID(index)
-        const params = new URLSearchParams(window.location.search);
-        params.set("art", index.toString());
-        const newUrl = `${window.location.pathname}?${params.toString()}`;
-        window.history.pushState(null, '', newUrl);
-    };
-
-    const closeFullScreen = () => {
-        setFILoaded(false);
-        setFullScreenImage(null);
-        const params = new URLSearchParams(window.location.search);
-        params.delete("art");
-        const newUrl = `${window.location.pathname}?${params.toString()}`;
-        window.history.pushState(null, '', newUrl);
-    };
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [loadMore, loadingMore]);
 
     const updateUrlWithIndex = useCallback((index: number) => {
         const params = new URLSearchParams(window.location.search);
         params.set("art", index.toString());
-        const newUrl = `${window.location.pathname}?${params.toString()}`;
-        window.history.pushState(null, '', newUrl);
+        window.history.pushState(null, "", `${window.location.pathname}?${params.toString()}`);
+    }, []);
+
+    const handleImageClick = useCallback((art: ArtItem, index: number) => {
+        setPID(index);
+        setFullScreenImage(art);
+        updateUrlWithIndex(index);
+    }, [updateUrlWithIndex]);
+
+    const closeFullScreen = useCallback(() => {
+        setFILoaded(false);
+        setFullScreenImage(null);
+        const params = new URLSearchParams(window.location.search);
+        params.delete("art");
+        window.history.pushState(null, "", `${window.location.pathname}?${params.toString()}`);
     }, []);
 
     const replaceCurrent = useCallback((newIndex: number) => {
+        if (newIndex < 0 || newIndex >= totalArtsCount || sliding) return;
         setSliding(true);
         setTimeout(() => {
             setSliding(false);
             setFILoaded(false);
-            setFullScreenImage(null);
             handleImageClick(Arts[newIndex], newIndex);
-            updateUrlWithIndex(newIndex); // Atualiza a URL com o novo índice
-        }, 250);
-    }, [Arts, updateUrlWithIndex]);
+        }, ANIMATION_DURATION);
+    }, [Arts, totalArtsCount, sliding, handleImageClick]);
 
-    // Abrir a arte caso tenha sido compartilhada avulsa :3
     useEffect(() => {
         const artIndex = searchParams.get("art");
-
-        if (artIndex !== null && Arts) {
+        if (artIndex) {
             const index = parseInt(artIndex, 10);
             if (!isNaN(index) && index >= 0 && index < Arts.length) {
-                const art = Arts[index];
-                setFullScreenImage(art);
                 setPID(index);
+                setFullScreenImage(Arts[index]);
             }
         } else {
             closeFullScreen();
         }
+    }, [Arts, searchParams, closeFullScreen]);
 
-    }, [Arts, searchParams]);
+    const handleCopyUrl = useCallback(() => {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        });
+    }, []);
 
     return (
         <>
-            <div className="md:grid md:grid-cols-3 flex flex-col items-center justify-center flex-grow w-full gap-3">
+            <div className="md:grid md:grid-cols-3 flex flex-col items-center gap-3">
                 {visibleArts.map((art, index) => (
                     <div
                         key={index}
-                        className="border-2 border-secondary/20 hover:border-secondary w-full transition-all opacity-0 duration-500 cursor-pointer ring-secondary/75 hover:ring-8 overflow-hidden"
+                        className="border-2 border-secondary/20 hover:border-secondary w-full transition-all opacity-0 duration-500 cursor-pointer overflow-hidden"
                         onClick={() => handleImageClick(art, index)}
                     >
                         <div
-                            style={{
-                                position: "relative",
-                                height: "60vh",
-                                width: "100%",
-                                maxWidth: "700px",
-                            }}
-                            className="transition-all duration-500 hover:scale-110"
+                            className="relative h-[60vh] w-full max-w-[700px] transition-all duration-500 hover:scale-110"
                         >
                             <Image
                                 alt=""
@@ -150,19 +125,11 @@ export default function Gallery({ Arts }: Props) {
                                 className="object-cover"
                                 loading="lazy"
                                 src={art.imgUrl}
-                                fill
-                                sizes="(max-width: 1280px) 100vw,
-                            (max-width: 1536px) 75vw,
-                            (max-width: 1920px) 50vw,
-                            25vw"
+                                layout="fill"
+                                sizes="(max-width: 1280px) 100vw, 25vw"
                                 onLoad={(event) => {
                                     const target = event.target as HTMLImageElement;
-                                    const grandparent = target.closest(
-                                        ".border-2.border-secondary\\/20"
-                                    );
-                                    if (grandparent) {
-                                        grandparent.classList.remove("opacity-0");
-                                    }
+                                    target.closest(".border-2")?.classList.remove("opacity-0");
                                 }}
                             />
                         </div>
@@ -175,6 +142,7 @@ export default function Gallery({ Arts }: Props) {
                     <Spinner />
                 </div>
             )}
+
             <AnimatePresence>
                 {fullScreenImage && (
                     <motion.div
@@ -217,7 +185,7 @@ export default function Gallery({ Arts }: Props) {
                                         className=" object-contain opacity-0 transition-all duration-500"
                                         loading="lazy"
                                         src={fullScreenImage.imgUrl}
-                                        fill
+                                        layout="fill"
                                         sizes="(max-width: 100%) 100vw"
                                         onLoad={(event) => {
                                             const target = event.target as HTMLImageElement;
@@ -257,7 +225,6 @@ export default function Gallery({ Arts }: Props) {
                     </motion.div>
                 )}
             </AnimatePresence>
-
         </>
     );
-};
+}

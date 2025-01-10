@@ -72,7 +72,7 @@ export default function StandaloneBackground({ defaultImg = false }: { defaultIm
                 setIsShow(true);
 
 
-            }, 1000);
+            }, 750);
         };
 
         changeBackground();
@@ -99,7 +99,7 @@ export default function StandaloneBackground({ defaultImg = false }: { defaultIm
                         initial={{ opacity: 0, scale: "125%" }}
                         animate={{ opacity: 1, scale: "100%" }}
                         exit={{ opacity: 0, scale: "110%" }}
-                        transition={{ duration: 1, ease: "circInOut" }}
+                        transition={{ duration: 0.75, ease: "circInOut" }}
                         className="fixed w-full h-full overflow-hidden bg-background"
                     >
                         {selectedBackground ? (
