@@ -133,8 +133,8 @@ _Trechos do sistema de diálogo._
 
 # Conclusão
 
-Estas últimas capturas rápidas de tela podem não refletir o resultado final do jogo, seu desenvolvimento ficará em hiato por 2 anos devido à minha [Missão de tempo integral de A Igreja de Jesus Cristo dos Santos dos Últimos Dias]("/blog/mission").
+Estas últimas capturas rápidas de tela podem não refletir o resultado final do jogo, seu desenvolvimento ficará em hiato por 2 anos devido à minha [Missão de tempo integral de A Igreja de Jesus Cristo dos Santos dos Últimos Dias](/blog/mission).
 
-Você pode apoiar meus projetos com simples gestos, como seguir em minhas redes sociais, mesmo que eu esteja inativo por todo esse período, eu voltarei com grandes novidades.
+Você pode apoiar meus projetos com simples gestos, como seguir minhas redes sociais, mesmo que eu esteja inativo por todo esse período, eu voltarei com grandes novidades.
 
 ### Muito obrigado por ler até aqui!
