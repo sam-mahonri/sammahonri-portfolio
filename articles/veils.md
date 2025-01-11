@@ -137,4 +137,4 @@ Estas últimas capturas rápidas de tela podem não refletir o resultado final d
 
 Você pode apoiar meus projetos com simples gestos, como seguir minhas redes sociais, mesmo que eu esteja inativo por todo esse período, eu voltarei com grandes novidades.
 
-### Muito obrigado por ler até aqui!
+### Até 2027...

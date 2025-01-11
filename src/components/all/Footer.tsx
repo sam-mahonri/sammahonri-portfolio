@@ -15,7 +15,7 @@ import { EnvelopeIcon } from '@heroicons/react/24/solid';
 export function Footer() {
     const t = useTranslations('Footer');
     const cl = useLocale();
-
+    const currentYear = new Date().getFullYear();
     function changeLang(value: string) {
         const locale = value as Locale;
         startTransition(() => {
@@ -61,9 +61,9 @@ export function Footer() {
                     </div>
                 </div>
                 <div className=' bg-foreground/10 w-full p-8 flex items-center justify-center flex-col'>
-                    <p className=" text-center font-unbounded font-bold" >{t('copyright')}</p>
+                    <p className=" text-center font-unbounded font-bold" >{t('copyright', {current: currentYear})}</p>
                     <EnvelopeIcon className=' h-5 w-5 mt-4'/>
-                    <p className=' text-sm text-center'>{t("contact")}</p>
+                    <p className=' text-xs text-center'>{t("contact")}</p>
                     <a href={"mailto:sammahonri@gmail.com"} className='text-secondary olink'>  sammahonri@gmail.com</a>
                 </div>
 
