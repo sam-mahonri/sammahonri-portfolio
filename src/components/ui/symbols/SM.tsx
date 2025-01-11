@@ -48,7 +48,7 @@ const FloatingLetter: React.FC<FloatingLetterProps> = ({ letter, x, y, remove })
                 top: y,
                 left: x,
             }}
-            className=' bg-secondary p-3 text-background z-50'
+            className=' bg-secondary p-3 text-background z-50 uppercase'
         >
             {letter}
         </motion.h1>
@@ -161,6 +161,7 @@ export function TypingSM() {
             'boluh': () => router.push("/arts?art=%252Fartistic%252Farts%252F21.png"),
             'kyosa': () => router.push("/arts?art=%252Fartistic%252Farts%252Fkassius.png"),
             'kassio': () => router.push("/arts?art=%252Fartistic%252Farts%252Fkassius.png"),
+            'morian': () => router.push("https://morian.sammahonri.com"),
             'aeternum': () => router.push("/arts?art=%252Fartistic%252Farts%252Frainymissionary.png"),
             'auzy': () => window.location.href = 'https://auzysunset.com',
             'kahracoles': () => window.location.href = 'https://bsky.app/profile/kahracoles.bsky.social',
