@@ -167,7 +167,7 @@ export function TypingSM() {
             'penis': () => window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
             "nightmare": () => router.push("/blog/veils"),
             "veils": () => router.push("/blog/veils"),
-            "fable": () => router.push("/blog/mission"),
+            "fable": () => router.push("/blog/veils"),
             "thorns": () => setBadHour((prev) => { const hour = new Date().getHours(); return prev == defaultBadHour ? hour : defaultBadHour }),
             "shards": () => setBadHour((prev) => { const hour = new Date().getHours(); return prev == defaultBadHour ? hour : defaultBadHour }),
             "viper": () => setBadHour((prev) => { const hour = new Date().getHours(); return prev == defaultBadHour ? hour : defaultBadHour }),
