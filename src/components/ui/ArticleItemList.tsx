@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { ArticleItem } from "@/types";
 import { Reveal } from "../fx/Motion";
 import { useTranslations } from "next-intl";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import clsx from 'clsx';
 import { DynamicLogo } from './SamLogos';
 
@@ -81,7 +81,7 @@ export const DatedArticleItemList = ({
                                 {article?.banner ?
                                     <div className=' relative w-full h-64 overflow-hidden'>
                                         <Image
-                                            layout='fill'
+                                            fill
                                             src={article?.banner || "/placeholders/blog.png"}
                                             alt={article.title}
                                             sizes='(max-width: 1280px) 100vw,

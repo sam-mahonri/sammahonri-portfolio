@@ -86,7 +86,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-unbounded text-foreground font-black capitalize;
+  @apply font-unbounded text-foreground font-black;
 }
 
 p,
@@ -131,8 +131,8 @@ hr {
 
 article img {
   width: 100%;
-  max-height: 50vh;
-  object-fit: cover;
+  max-height: 100vh;
+  object-fit: contain;
   object-position: center;
   margin: auto;
 }

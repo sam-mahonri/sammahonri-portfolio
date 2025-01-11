@@ -83,7 +83,7 @@ import vec8 from "../../public/artistic/vectorial/8.png";
 import vec9 from "../../public/artistic/vectorial/9.png";
 import vec10 from "../../public/artistic/vectorial/10.png";
 import vec11 from "../../public/artistic/vectorial/11.png";
-import { StaticImageData } from "next/legacy/image";
+import { StaticImageData } from "next/image";
 
 export interface ArtItem {
     imgUrl: StaticImageData; // Alterando para StaticImageData

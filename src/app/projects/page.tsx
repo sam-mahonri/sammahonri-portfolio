@@ -52,7 +52,7 @@ export default function Projects() {
                         <div className=' flex flex-col flex-grow border-2 border-dashed border-transparent hover:border-secondary/30 gap-2'>
                             <Reveal delay={0.2}><h2>{tc('byme')}</h2></Reveal>
                             <Reveal delay={0.4} showSlider={0}>
-                                <Link href={""}>
+                                <Link href={"/blog/veils"}>
                                     <div className='w-full flex flex-col justify-start items-start border-2 border-transparent border-t-secondary/20 hover:border-secondary p-4 gap-2 hover:bg-secondary/10'>
                                         <h3>The Nightmare Fable: Veils Of Lives</h3>
                                         <span className='flex flex-wrap'> 

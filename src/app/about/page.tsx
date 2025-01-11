@@ -6,7 +6,7 @@ import { AcademicCapIcon } from '@heroicons/react/24/solid';
 import { Title } from '@/components/ui/Titles';
 import { getTranslations } from 'next-intl/server';
 import { CodeArtist, Grad, MeSona } from '@/components/ui/SamLogos';
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import sundays from "../../../public/icons/sundays.png";
 import angel from "../../../public/icons/angel.png";
@@ -38,7 +38,7 @@ export default function About() {
                                 className="object-cover"
                                 loading="lazy"
                                 src={angel}
-                                layout="fill"
+                                fill
                                 sizes="(max-width: 1280px) 100vw,
                    (max-width: 1536px) 75vw,
                    (max-width: 1920px) 50vw,
@@ -52,7 +52,7 @@ export default function About() {
                                 className="object-cover"
                                 loading="lazy"
                                 src={sundays}
-                                layout="fill"
+                                fill
                                 sizes="(max-width: 1280px) 100vw,
                    (max-width: 1536px) 75vw,
                    (max-width: 1920px) 50vw,
@@ -66,7 +66,7 @@ export default function About() {
                                 className="object-cover"
                                 loading="lazy"
                                 src={rain}
-                                layout="fill"
+                                fill
                                 sizes="(max-width: 1280px) 100vw,
                    (max-width: 1536px) 75vw,
                    (max-width: 1920px) 50vw,

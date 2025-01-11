@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { ArtItem } from "@/lib/artistic";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { XMarkIcon, ShareIcon, CheckIcon, ArrowDownTrayIcon, ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
@@ -120,12 +120,10 @@ export default function Gallery({ Arts }: Props) {
                         >
                             <Image
                                 alt=""
-                                placeholder="blur"
-                                blurDataURL={placeholderImage.src}
                                 className="object-cover"
                                 loading="lazy"
                                 src={art.imgUrl}
-                                layout="fill"
+                                fill
                                 sizes="(max-width: 1280px) 100vw, 25vw"
                                 onLoad={(event) => {
                                     const target = event.target as HTMLImageElement;
@@ -174,25 +172,21 @@ export default function Gallery({ Arts }: Props) {
                                     position: "relative",
                                     height: "100%",
                                 }} className={clsx(" transition-all duration-500 flex-grow", {
-                                    "opacity-25 scale-90": !fullImageLoaded || sliding
+                                    "opacity-0 scale-90": !fullImageLoaded || sliding
                                 })}
                                 >
                                     <Image
-
                                         alt=""
-                                        placeholder="blur"
-                                        blurDataURL={placeholderImage.src}
                                         className=" object-contain opacity-0 transition-all duration-500"
                                         loading="lazy"
                                         src={fullScreenImage.imgUrl}
-                                        layout="fill"
+                                        fill
                                         sizes="(max-width: 100%) 100vw"
                                         onLoad={(event) => {
                                             const target = event.target as HTMLImageElement;
                                             target.classList.remove("opacity-0");
                                             setFILoaded(true)
                                         }}
-                                        unoptimized
                                     />
 
                                 </div>

@@ -1,326 +1,11 @@
 [   
     {
-        "imgUrl": "/artistic/arts/balloonsfinal.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/paintingfinal.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/sushi.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/kyosaref.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/diogomika.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/kassius.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/pipflank.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/2027tt.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/veilsoflives.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/illhelpu.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/sundays.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/fragility.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/angel.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/railway.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/rainymissionary.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/twoyears.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/end.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/4immortals.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/eudepois.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/cycles.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/fireworks.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/breaksoul.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/gettingtired.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/spikeshide.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/ibh.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/rover.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/revelation.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/1.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/2.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/3.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/4.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/5.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/6.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/7.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/8.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/9.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/10.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/11.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/12.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/13.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/14.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/15.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/16.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/17.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/18.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/19.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/20.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/21.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/22.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/23.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/24.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/25.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/26.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/27.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/28.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/29.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/30.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/31.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/32.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/33.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/34.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/35.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/36.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/37.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/38.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/39.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/40.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/41.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/42.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/43.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/44.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/45.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/arts/46.png",
-        "category": "painting"
-    },
-    {
-        "imgUrl": "/artistic/vectorial/oli_1.png",
+        "imgUrl": "/artistic/vectorial/10.png",
         "category": "vectorial"
     },
+    
     {
-        "imgUrl": "/artistic/vectorial/bubi.png",
-        "category": "vectorial"
-    },
-    {
-        "imgUrl": "/artistic/vectorial/2.png",
-        "category": "vectorial"
-    },
-    {
-        "imgUrl": "/artistic/vectorial/3.png",
-        "category": "vectorial"
-    },
-    {
-        "imgUrl": "/artistic/vectorial/4.png",
-        "category": "vectorial"
-    },
-    {
-        "imgUrl": "/artistic/vectorial/5.png",
-        "category": "vectorial"
-    },
-    {
-        "imgUrl": "/artistic/vectorial/6.png",
-        "category": "vectorial"
-    },
-    {
-        "imgUrl": "/artistic/vectorial/7.png",
+        "imgUrl": "/artistic/vectorial/9.png",
         "category": "vectorial"
     },
     {
@@ -328,15 +13,327 @@
         "category": "vectorial"
     },
     {
-        "imgUrl": "/artistic/vectorial/9.png",
+        "imgUrl": "/artistic/vectorial/7.png",
         "category": "vectorial"
     },
     {
-        "imgUrl": "/artistic/vectorial/10.png",
+        "imgUrl": "/artistic/vectorial/6.png",
         "category": "vectorial"
     },
     {
-        "imgUrl": "/artistic/vectorial/11.png",
+        "imgUrl": "/artistic/vectorial/5.png",
         "category": "vectorial"
+    },
+    {
+        "imgUrl": "/artistic/vectorial/4.png",
+        "category": "vectorial"
+    },
+    {
+        "imgUrl": "/artistic/vectorial/3.png",
+        "category": "vectorial"
+    },
+    {
+        "imgUrl": "/artistic/vectorial/2.png",
+        "category": "vectorial"
+    },
+    {
+        "imgUrl": "/artistic/vectorial/bubi.png",
+        "category": "vectorial"
+    },
+    {
+        "imgUrl": "/artistic/vectorial/oli_1.png",
+        "category": "vectorial"
+    },
+    {
+        "imgUrl": "/artistic/arts/46.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/45.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/44.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/43.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/42.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/41.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/40.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/39.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/38.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/37.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/36.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/35.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/34.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/33.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/32.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/31.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/30.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/29.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/28.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/27.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/26.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/25.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/24.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/23.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/22.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/21.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/20.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/19.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/18.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/17.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/16.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/15.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/14.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/13.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/12.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/11.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/10.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/9.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/8.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/7.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/6.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/5.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/4.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/3.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/2.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/1.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/revelation.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/rover.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/ibh.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/spikeshide.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/gettingtired.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/breaksoul.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/fireworks.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/cycles.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/eudepois.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/4immortals.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/end.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/twoyears.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/rainymissionary.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/railway.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/angel.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/fragility.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/sundays.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/illhelpu.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/veilsoflives.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/2027tt.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/pipflank.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/kassius.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/diogomika.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/kyosaref.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/sushi.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/paintingfinal.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/balloonsfinal.png",
+        "category": "painting"
     }
 ]

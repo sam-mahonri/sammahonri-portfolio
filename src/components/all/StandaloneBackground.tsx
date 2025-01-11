@@ -72,10 +72,12 @@ export default function StandaloneBackground({ defaultImg = false }: { defaultIm
                 setIsShow(true);
 
 
-            }, 750);
+            }, 1000);
         };
 
-        changeBackground();
+        console.log(pathname);
+        if (!pathname.includes("/blog/") || customImage) changeBackground();
+        else if (pathname.includes("/blog/")) setIsShow(false)
 
         const interval = setInterval(changeBackground, 15000);
 
@@ -84,10 +86,8 @@ export default function StandaloneBackground({ defaultImg = false }: { defaultIm
     }, [badHour, customImage, defaultImg, pathname]);
 
     useEffect(() => {
-        if (customImage && !pathname.includes("blog/") ) {
-            setCustomBackground(null)
-        }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        setCustomBackground(null)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pathname, setCustomBackground])
 
     return (
@@ -96,10 +96,10 @@ export default function StandaloneBackground({ defaultImg = false }: { defaultIm
                 {isShow && (
                     <motion.div
                         key={selectedBackground}
-                        initial={{ opacity: 0, scale: "125%" }}
+                        initial={{ opacity: 0, scale: "110%" }}
                         animate={{ opacity: 1, scale: "100%" }}
                         exit={{ opacity: 0, scale: "110%" }}
-                        transition={{ duration: 0.75, ease: "circInOut" }}
+                        transition={{ duration: 1, ease: "circInOut" }}
                         className="fixed w-full h-full overflow-hidden bg-background"
                     >
                         {selectedBackground ? (

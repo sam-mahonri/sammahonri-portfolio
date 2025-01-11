@@ -1,5 +1,5 @@
 import fs from "fs"
-import { StaticImageData } from "next/legacy/image";
+import { StaticImageData } from "next/image";
 import path from "path"
 
 const artsDictPath = path.join(process.cwd(), "json/artistic/arts.json")
@@ -37,8 +37,8 @@ export function getArtCategorizedRefs(category: ArtCategory = 'all'): ArtItem[] 
     }
 
     if (category === 'all') {
-        return content;
+        return content.reverse();
     } else {
-        return content.filter((art: ArtItem) => art.category === category);
+        return content.filter((art: ArtItem) => art.category === category).reverse();
     }
 }

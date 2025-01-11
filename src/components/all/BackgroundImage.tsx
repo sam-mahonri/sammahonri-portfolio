@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { motion, useMotionValue } from "framer-motion";
 import { useScroll } from "framer-motion";
 
@@ -35,16 +35,14 @@ export default function BackgroundImage({ source, fixed = false, wBack = false }
             >
                 <Image 
                     src={source}
-                    layout="fill"
+                    fill
                     alt="background"
                     className="object-cover opacity-0 transition-all duration-1000 scale-105"
-                    quality={75}
-                    priority={true}
                     onLoad={(event) => {
                         const target = event.target as HTMLImageElement;
                         target.classList.remove("opacity-0", "scale-105");
                     }}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                    sizes="(max-width: 100%) 100vw"
                 />
                 <span className="absolute bg-background/60 background-degrade w-full h-full transition-colors duration-500" />
             </motion.div>
