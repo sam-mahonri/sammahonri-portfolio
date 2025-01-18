@@ -163,6 +163,8 @@ export function TypingSM() {
             'kassio': () => router.push("/arts?art=3"),
             'morian': () => router.push("https://morian.sammahonri.com"),
             'auzy': () => window.location.href = 'https://auzysunset.com',
+            'boyfriend': () => router.push("https://morian.sammahonri.com/kassio"),
+            'lobinho': () => router.push("https://morian.sammahonri.com/kassio"),
             'kahracoles': () => window.location.href = 'https://bsky.app/profile/kahracoles.bsky.social',
             'penis': () => window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
             "nightmare": () => router.push("/blog/veils"),
