@@ -335,5 +335,9 @@
     {
         "imgUrl": "/artistic/arts/balloonsfinal.png",
         "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/until2027.png",
+        "category": "painting"
     }
 ]
