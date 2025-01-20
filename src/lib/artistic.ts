@@ -37,8 +37,8 @@ export function getArtCategorizedRefs(category: ArtCategory = 'all'): ArtItem[] 
     }
 
     if (category === 'all') {
-        return content.reverse();
+        return content;
     } else {
-        return content.filter((art: ArtItem) => art.category === category).reverse();
+        return content.filter((art: ArtItem) => art.category === category);
     }
 }

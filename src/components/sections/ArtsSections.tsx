@@ -21,9 +21,10 @@ const ANIMATION_DURATION = 250;
 
 export default function Gallery({ Arts }: Props) {
     const totalArtsCount = Arts.length;
+    const ArtsInv = useMemo(() => Arts.slice().reverse(), [Arts]);
     const [fullScreenImage, setFullScreenImage] = useState<ArtItem | null>(null);
     const [currentPID, setPID] = useState(0);
-    const [visibleArts, setVisibleArts] = useState<ArtItem[]>(Arts.slice(0, INITIAL_ARTS_COUNT));
+    const [visibleArts, setVisibleArts] = useState<ArtItem[]>(ArtsInv.slice(0, INITIAL_ARTS_COUNT));
     const [hasMore, setHasMore] = useState(Arts.length > INITIAL_ARTS_COUNT);
     const [loadingMore, setLoadingMore] = useState(false);
     const [fullImageLoaded, setFILoaded] = useState(false);
@@ -38,12 +39,12 @@ export default function Gallery({ Arts }: Props) {
         if (!hasMore || loadingMore) return;
         setLoadingMore(true);
         setTimeout(() => {
-            const newVisibleArts = Arts.slice(0, visibleArts.length + LOAD_MORE_COUNT);
+            const newVisibleArts = ArtsInv.slice(0, visibleArts.length + LOAD_MORE_COUNT);
             setVisibleArts(newVisibleArts);
-            setHasMore(newVisibleArts.length < Arts.length);
+            setHasMore(newVisibleArts.length < ArtsInv.length);
             setLoadingMore(false);
         }, ANIMATION_DURATION);
-    }, [Arts, visibleArts.length, hasMore, loadingMore]);
+    }, [ArtsInv, visibleArts.length, hasMore, loadingMore]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -111,9 +112,9 @@ export default function Gallery({ Arts }: Props) {
             <div className="md:grid md:grid-cols-3 flex flex-col items-center gap-3">
                 {visibleArts.map((art, index) => (
                     <div
-                        key={index}
+                        key={totalArtsCount - index -1}
                         className="border-2 border-secondary/20 hover:border-secondary w-full transition-all opacity-0 duration-500 cursor-pointer overflow-hidden"
-                        onClick={() => handleImageClick(art, index)}
+                        onClick={() => handleImageClick(art, totalArtsCount - index -1)}
                     >
                         <div
                             className="relative h-[60vh] w-full max-w-[700px] transition-all duration-500 hover:scale-110"
@@ -161,7 +162,7 @@ export default function Gallery({ Arts }: Props) {
                         style={{ zIndex: 9998 }}
                     >
                         <div className="relative w-full max-w-7xl flex-grow p-8 pt-2 flex flex-col gap-2">
-                            <h4 className=" self-center">{currentPID + 1} / {totalArtsCount}</h4>
+                            <h4 className=" self-center">{totalArtsCount - currentPID} / {totalArtsCount}</h4>
                             {!fullImageLoaded &&
                                 <span className=" flex w-full items-center justify-center absolute top-2/4 left-0 -translate-y-12">
                                     <Spinner />
@@ -194,7 +195,7 @@ export default function Gallery({ Arts }: Props) {
 
                             <div className="flex flex-row items-center justify-center gap-1">
                                 <button className={clsx(" btn btn-selector-alt mx-4", {
-                                    "opacity-10 pointer-events-none": currentPID == 0 || sliding || !fullImageLoaded
+                                    "opacity-10 pointer-events-none": currentPID == totalArtsCount - 1 || sliding || !fullImageLoaded
                                 })} onClick={() => replaceCurrent(currentPID - 1)}>
                                     <ArrowLeftIcon />
                                 </button>
@@ -210,7 +211,7 @@ export default function Gallery({ Arts }: Props) {
                                     </button>
                                 </a>
                                 <button className={clsx(" btn btn-selector-alt mx-4", {
-                                    "opacity-10 pointer-events-none": currentPID == totalArtsCount - 1 || sliding || !fullImageLoaded
+                                    "opacity-10 pointer-events-none": currentPID == 0 || sliding || !fullImageLoaded
                                 })} onClick={() => replaceCurrent(currentPID + 1)}>
                                     <ArrowRightIcon />
                                 </button>
