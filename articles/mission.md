@@ -9,17 +9,22 @@ banner: "/articles/rainymissionary.png"
 
 [Ver arte do banner completa na galeria - Artista: Sam Mahonri](/arts?art=14)
 
+
+```
+Algumas informações foram omitidas por questões de privacidade.
+```
+
 Como alguns amigos mais próximos já devem ter conhecimento da minha religião, sou membro de **A Igreja de Jesus Cristo dos Santos dos Últimos Dias,** também conhecida como Igreja **Mórmon,** embora esse termo deva ser evitado. Na igreja, é comum que jovens, ao completar 18 anos no caso dos homens, e 19 no caso das mulheres, se preparem para servir como missionários de tempo integral.
 
-Esse serviço dura dois anos para os homens e 18 meses para as mulheres, período em que nos dedicamos exclusivamente a ensinar sobre a fé, ajudar comunidades e apoiar pessoas de diversas culturas e contextos. Os missionários podem ser enviados para qualquer lugar do mundo e, antes disso, recebem treinamento, que pode incluir o aprendizado de novos idiomas. Eu fui chamado para servir na Missão Brasil Campinas.
+Esse serviço dura dois anos para os homens e 18 meses para as mulheres, período em que nos dedicamos exclusivamente a ensinar sobre a fé, ajudar comunidades e apoiar pessoas de diversas culturas e contextos. Os missionários podem ser enviados para qualquer lugar do mundo e, antes disso, recebem treinamento, que pode incluir o aprendizado de novos idiomas. Eu fui chamado para servir na Missão [Redigido].
 
 Durante a missão, seguimos uma rotina estruturada, focada em estudo, visitas e atividades de serviço. É uma experiência desafiadora e transformadora, que nos ajuda a crescer como indivíduos e a contribuir de forma positiva para a sociedade.
 
-**Neste período de dois anos, não terei mais nenhum contato com minhas redes sociais, com enfoque 24h na missão.**
+**Neste período de dois anos, não terei mais nenhum contato com minhas redes sociais, com foco 24h na missão.**
 
 _Neste período, apenas amigos selecionados e familiares podem entrar em contato comigo._
 
-## Minha carta do chamado missionário recebida em 5 de Novembro de 2024 (English - Português)
+## Minha carta do chamado missionário recebida em 5 de Novembro de 2024 (English|Original - Português)
 
 ---
 
@@ -31,7 +36,7 @@ You have been recommended as one worthy to represent the Lord as a minister of t
 
 Your purpose will be to invite others to come unto Christ by helping them receive the restored gospel through faith in Jesus Christ and His Atonement, repentance, baptism, receiving the gift of the Holy Ghost, and enduring to the end. As you serve with all your heart, might, mind, and strength, the Lord will lead you to those who will hear His message. They, too, can then have the opportunity to receive sacred ordinances and make covenants with Heavenly Father.  
 
-You are assigned to labor in the **Brazil Campinas Mission** and will prepare to preach the gospel in the Portuguese language. **You will begin your missionary training on Monday, January 20, 2025**, after being set apart by your stake president. It is anticipated that you will serve for a period of **24 months**.  
+You are assigned to labor in the **Brazil [Redacted]** and will prepare to preach the gospel in the Portuguese language. **You will begin your missionary training on Monday, January 20, 2025**, after being set apart by your stake president. It is anticipated that you will serve for a period of **24 months**.  
 
 Our Heavenly Father will reward you for the goodness of your life. Greater blessings and more joy than you have yet experienced await you as you humbly and prayerfully serve the Lord in this labor of love among His children. We place our confidence in you and pray that the Lord will help you become an effective missionary.
 
@@ -45,12 +50,11 @@ Você foi recomendado como digno para representar o Senhor como um ministro do e
 
 Seu propósito será convidar outras pessoas a se achegarem a Cristo, ajudando-as a receber o evangelho restaurado por meio da fé em Jesus Cristo e em Sua Expiação, do arrependimento, do batismo, de receberem o dom do Espírito Santo e de perseverarem até o fim. Ao servir com todo o seu coração, força, mente e vigor, o Senhor o guiará até aqueles que ouvirão Sua mensagem. Eles também poderão ter a oportunidade de receber ordenanças sagradas e fazer convênios com o Pai Celestial.  
 
-Você foi designado para trabalhar na **Missão Brasil Campinas** e se preparará para pregar o evangelho em português. **Seu treinamento missionário começará na segunda-feira, 20 de janeiro de 2025**, após ser designado pelo presidente de estaca. Está previsto que você sirva por um período de **24 meses**.  
+Você foi designado para trabalhar na **Missão [Redigido]** e se preparará para pregar o evangelho em português. **Seu treinamento missionário começará na segunda-feira, 20 de janeiro de 2025**, após ser designado pelo presidente de estaca. Está previsto que você sirva por um período de **24 meses**.  
 
 Nosso Pai Celestial o recompensará pela bondade de sua vida. Maiores bênçãos e mais alegria do que você já experimentou o aguardam enquanto servir humildemente e em oração ao Senhor nesta obra de amor entre Seus filhos. Depositamos nossa confiança em você e oramos para que o Senhor o ajude a se tornar um missionário eficaz.
 
 ---
-
 
 ## O que esperar desses 24 meses
 
