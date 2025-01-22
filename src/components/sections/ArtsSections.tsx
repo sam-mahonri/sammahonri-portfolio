@@ -196,7 +196,7 @@ export default function Gallery({ Arts }: Props) {
                             <div className="flex flex-row items-center justify-center gap-1">
                                 <button className={clsx(" btn btn-selector-alt mx-4", {
                                     "opacity-10 pointer-events-none": currentPID == totalArtsCount - 1 || sliding || !fullImageLoaded
-                                })} onClick={() => replaceCurrent(currentPID - 1)}>
+                                })} onClick={() => replaceCurrent(currentPID + 1)}>
                                     <ArrowLeftIcon />
                                 </button>
                                 <button className="btn btn-selector-generic btn-error" onClick={closeFullScreen} title="Ocultar / Close">
@@ -212,7 +212,7 @@ export default function Gallery({ Arts }: Props) {
                                 </a>
                                 <button className={clsx(" btn btn-selector-alt mx-4", {
                                     "opacity-10 pointer-events-none": currentPID == 0 || sliding || !fullImageLoaded
-                                })} onClick={() => replaceCurrent(currentPID + 1)}>
+                                })} onClick={() => replaceCurrent(currentPID - 1)}>
                                     <ArrowRightIcon />
                                 </button>
                             </div>
