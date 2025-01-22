@@ -4,7 +4,7 @@ import { Reveal } from '@/components/fx/Motion';
 import Link from 'next/link';
 import { ArrowRightIcon, BookOpenIcon, ExclamationTriangleIcon, MusicalNoteIcon} from '@heroicons/react/24/solid';
 import { JumpingArrow } from '@/components/fx/JumpingArrow';
-import { FaBluesky, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { FaBluesky, FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaTwitter } from "react-icons/fa6";
 import { DynamicInlineLogo, DynamicLogo } from '@/components/ui/SamLogos';
 
 
@@ -69,6 +69,9 @@ export default async function Index() {
 					</Link>
 					<Link href={"https://x.com/sammahonri"} className=' relative'>
 						<FaTwitter className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Twitter @SamMahonri' />
+					</Link>
+					<Link href={"https://open.spotify.com/intl-pt/artist/2E51QaIVG0zooDl9u1EN0B?si=g8Mk2_htQKqjIMvx9UzhKg"}>
+						<FaSpotify className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Spotify Sam Mahonri' />
 					</Link>
 					<Link href={"https://github.com/sam-mahonri"} className=' relative'>
 						<FaGithub className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Twitter @SamMahonri' />

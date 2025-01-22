@@ -175,7 +175,8 @@ export function TypingSM() {
             "sorry":  () => setBadHour((prev) => { const hour = new Date().getHours(); return prev == defaultBadHour ? hour : defaultBadHour }),
             "email": () => window.location.href = 'mailto:sam.de.sa@missionary.org',
             "zphyr": () => window.location.href = 'https://www.youtube.com/@Z%C3%A9Pinh0w0',
-            "zephyr": () => window.location.href = 'https://www.youtube.com/@Z%C3%A9Pinh0w0'
+            "zephyr": () => window.location.href = 'https://www.youtube.com/@Z%C3%A9Pinh0w0',
+            "spotify": () => window.location.href = "https://open.spotify.com/intl-pt/artist/2E51QaIVG0zooDl9u1EN0B?si=g8Mk2_htQKqjIMvx9UzhKg"
         };
 
         const action = Object.keys(actionsMap).find(key => typedLetters.includes(key));

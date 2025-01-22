@@ -38,9 +38,10 @@ export function Footer() {
                         <Reveal>
                             <h3>{t('socials')}</h3>
                         </Reveal>
+                        <Link className="olink font-unbounded " href={"https://x.com/SamMahonri"}>Twitter</Link>
+                        <Link className="olink font-unbounded " href={"https://open.spotify.com/intl-pt/artist/2E51QaIVG0zooDl9u1EN0B?si=-MKDBpkbTcanT_fgyEmjeQ"}>Spotify</Link>
                         <Link className="olink font-unbounded " href={"https://bsky.app/profile/sammahonri.com"}>Bluesky</Link>
                         <Link className="olink font-unbounded " href={"https://instagram.com/sammahonri"}>Instagram</Link>
-                        <Link className="olink font-unbounded " href={"https://x.com/SamMahonri"}>Twitter</Link>
                         <Link className="olink font-unbounded " href={"https://www.linkedin.com/in/sam-mahonri-b62527226/"}>LinkedIn</Link>
                         <Link className="olink font-unbounded " href={"https://github.com/sam-mahonri"}>GitHub</Link>
                     </div>
