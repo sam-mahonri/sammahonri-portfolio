@@ -26,12 +26,12 @@ export default function StandaloneBackground({ defaultImg = false }: { defaultIm
                 "/backgrounds/5am.png",
                 "/backgrounds/4immortals.png",
                 "/backgrounds/twoyears.png",
-                "/backgrounds/rainymissionary.png",
+                "/artistic/arts/rainymissionary.png",
                 "/backgrounds/sundays.png",
                 "/backgrounds/veilsoflives.png",
                 "/backgrounds/2027tt.png",
                 "/backgrounds/balloonsfinal.png",
-                "/backgrounds/paintingfinal.png",
+                "/artistic/arts/twodragons.png",
             ];
 
             const badBackgrounds = [
