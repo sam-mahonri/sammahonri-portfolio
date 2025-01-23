@@ -277,10 +277,6 @@
         "category": "painting"
     },
     {
-        "imgUrl": "/artistic/arts/rainymissionary.png",
-        "category": "painting"
-    },
-    {
         "imgUrl": "/artistic/arts/railway.png",
         "category": "painting"
     },
@@ -334,6 +330,10 @@
     },
     {
         "imgUrl": "/artistic/arts/balloonsfinal.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/rainymissionary.png",
         "category": "painting"
     },
     {
