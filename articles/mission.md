@@ -2,12 +2,12 @@
 title: "My Mission"
 category: "mormonism"
 date: "15-11-2024"
-banner: "/articles/rainymissionary.png"
+banner: "/articles/mission.png"
 ---
 
 # Sobre A minha missão SUD (Mórmon) nos próximos 2 anos - Agradecimentos E Perspectivas
 
-[Ver arte do banner completa na galeria - Artista: Sam Mahonri](/arts?art=14)
+[Ver arte do banner completa na galeria - Artista: Sam Mahonri](/arts?art=83)
 
 
 ```
@@ -113,7 +113,7 @@ _E vários outros..._
 ## À Comunidade Furry
 
 ![Meu fursona como missionário SUD](/artistic/arts/twoyears.png)
-[Ver arte na galeira - Artista: Sam Mahonri](/arts?art=15)
+[Ver arte na galeira - Artista: Sam Mahonri](/arts?art=68)
 
 Sou grato por todo o apoio e por me permitir ser quem sou, mas também pelos momentos de frustração e dúvida. Em certos momentos, me senti perdido, questionando minha identidade e lugar. No entanto, a aceitação que encontrei aqui me ajudou a superar essas incertezas, e sou eternamente grato por ter uma comunidade que me acolheu, mesmo nas minhas fases mais turbulentas. Aprendi muito sobre aceitação, resiliência e o poder de ser verdadeiro consigo mesmo.
 

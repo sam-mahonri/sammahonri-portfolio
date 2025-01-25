@@ -129,11 +129,11 @@ export function TypingSM() {
     useEffect(() => {
 
         const actionsMap: Partial<Record<string, Function>> = {
-            'sam': () => router.push("/arts?art=73"),
+            'sam': () => router.push("/arts?art=83"),
             'mormon': () => router.push("/blog/mission"),
             'mission': () => router.push("/blog/mission"),
             'lds': () => router.push("/blog/mission"),
-            'mahonri': () => router.push("/arts?art=14"),
+            'mahonri': () => router.push("/arts?art=72"),
             'bluesky': () => window.location.href = 'https://bsky.app/profile/sammahonri.com',
             'twitter': () => window.location.href = 'https://twitter.com/sammahonri',
             'instagram': () => window.location.href = 'https://instagram.com/sammahonri',
@@ -160,7 +160,7 @@ export function TypingSM() {
             'diogo': () => router.push("/arts?art=19"),
             'boluh': () => router.push("/arts?art=36"),
             'kyosa': () => router.push("/arts?art=41"),
-            'kassio': () => router.push("/arts?art=80"),
+            'kassio': () => router.push("/arts?art=79"),
             'morian': () => router.push("https://morian.sammahonri.com"),
             'auzy': () => window.location.href = 'https://auzysunset.com',
             'lobinho': () => router.push("https://morian.sammahonri.com/kassio"),

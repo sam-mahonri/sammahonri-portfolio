@@ -114,7 +114,7 @@ _O primeiro sonho dos véus._
 
 ---
 
-Repare que os indicadores de saúde não são físicos, mas sim emocionais, você morre apenas espiritualmente, mas não fisicamente
+Repare que os indicadores de saúde não são físicos, mas sim emocionais, você morre apenas emocionalmente, mas não fisicamente
 
 ---
 

@@ -6,12 +6,11 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import Navbar from "@/components/all/Navbar";
 import { Footer } from "@/components/all/Footer";
-import Splash from "@/components/all/Splash";
+import Shards from "@/components/all/Shards";
 import GoUp from "@/components/all/GoUp";
 import StandaloneBackground from "@/components/all/StandaloneBackground";
 import { TypingSM } from "@/components/ui/symbols/SM";
 import { BadHourProvider } from "@/providers/BadHourProvider";
-import { NewMusic } from "@/components/ui/alerts/MusicAlerts";
 import { BackgroundProvider } from "@/providers/BackgroundProvider";
 
 export const metadata: Metadata = {
@@ -54,6 +53,7 @@ export default async function LocaleLayout({
                 <main className=" min-h-screen">
                   {children}
                 </main>
+                <Shards />
                 <TypingSM />
                 <GoUp />
                 <Footer />
