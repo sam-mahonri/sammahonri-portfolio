@@ -90,7 +90,7 @@ export default async function Index() {
 					</div>
 				</Reveal>
 				<JumpingArrow className=' h-5 mt-2' />
-				{(new Date().getDate() === 18 && new Date().getMonth() + 1 === 3) && <p>I still love you my little wolf 💜🖤 - Happy Birthday!</p> }
+				{(new Date().getDate() === 18 && new Date().getMonth() + 1 === 3) && <p className=' text-center'>I still love you my little wolf... <br/>💜🤍🦆🖤💜<br/><strong>Happy Birthday!</strong></p> }
 			</section>
 		</main>
 	</>;
