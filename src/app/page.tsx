@@ -13,6 +13,8 @@ export default async function Index() {
 	const tc = await getTranslations('Common');
 	const ta = await getTranslations('Arts');
 
+
+
 	return <>
 		<main className="main-section">
 			<section className="main-subsection subsection-center-all">
@@ -88,6 +90,7 @@ export default async function Index() {
 					</div>
 				</Reveal>
 				<JumpingArrow className=' h-5 mt-2' />
+				{(new Date().getDate() === 18 && new Date().getMonth() + 1 === 3) && <p>I still love you my little wolf 💜🖤 - Happy Birthday!</p> }
 			</section>
 		</main>
 	</>;
