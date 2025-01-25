@@ -1,7 +1,7 @@
 ---
 title: "1º Game Devlog - The Nightmare Fable: Veils Of Lives"
 category: "nightmarefable"
-date: "07-01-2025"
+date: "19-12-2024"
 banner: "/articles/tnf-vol-banner.png"
 ---
 
