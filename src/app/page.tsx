@@ -79,16 +79,7 @@ export default async function Index() {
 						<FaGithub className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Twitter @SamMahonri' />
 					</Link>
 				</div>
-				<Reveal delay={2} showSlider={0}>
-					<div className="mt-2 bg-primary/10 backdrop-blur-sm flex flex-wrap md:flex-row flex-row">
-						<Link href={"/blog/mission"}>
-							<div className=' p-4 px-5 w-full h-full hover:bg-background hover:text-foreground  flex flex-row items-center justify-center gap-2'>
-								<span className=' font-unbounded uppercase text-xs font-light text-center'>{tc("learnmore_sud")}</span>
-								<ArrowRightIcon className=' min-h-5 min-w-5 max-h-5 max-w-5' />
-							</div>
-						</Link>
-					</div>
-				</Reveal>
+				
 				<JumpingArrow className=' h-5 mt-2' />
 				{(new Date().getDate() === 18 && new Date().getMonth() + 1 === 3) && <p className=' text-center'>I still love you my little wolf... <br/>💜🤍🦆🖤💜<br/><strong>Happy Birthday!</strong></p> }
 			</section>
