@@ -67,7 +67,7 @@ export default async function Index() {
 					<Link href={"https://instagram.com/sammahonri"}>
 						<FaInstagram className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Instagram @sammahonri' />
 					</Link>
-					<Link href={"https://bsky.app/profile/sammahonri.com"}>
+					<Link href={"https://bsky.app/profile/zhyrel.com"}>
 						<FaBluesky className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Bluesky @sammahonri.com' />
 					</Link>
 					<Link href={"https://x.com/ZhyrelDragon"} className=' relative'>
