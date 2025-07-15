@@ -339,5 +339,13 @@
     {
         "imgUrl": "/artistic/arts/until2027.png",
         "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/Sentinel.png",
+        "category": "painting"
+    },
+    {
+        "imgUrl": "/artistic/arts/SingleArt.png",
+        "category": "painting"
     }
 ]
