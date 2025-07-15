@@ -2,11 +2,11 @@ import { getTranslations } from 'next-intl/server';
 
 import { Reveal } from '@/components/fx/Motion';
 import Link from 'next/link';
-import { ArrowRightIcon, BookOpenIcon, ExclamationTriangleIcon, MusicalNoteIcon} from '@heroicons/react/24/solid';
+import { ArrowRightIcon, BookOpenIcon, ExclamationTriangleIcon, MusicalNoteIcon } from '@heroicons/react/24/solid';
 import { JumpingArrow } from '@/components/fx/JumpingArrow';
 import { FaBluesky, FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaTwitter } from "react-icons/fa6";
 import { DynamicInlineLogo, DynamicLogo } from '@/components/ui/SamLogos';
-
+import Image from 'next/image';
 
 export default async function Index() {
 	const t = await getTranslations('Index');
@@ -26,9 +26,9 @@ export default async function Index() {
 						<span className=' bg-gradient-to-r from-transparent to-secondary pt-0.5 flex-grow' />
 						<Reveal delay={0.6} showSlider={0}>
 							<DynamicInlineLogo className='md:block hidden md:h-44 w-full md:w-fit -translate-x-1' />
-							<DynamicLogo className='md:hidden block max-h-44 -translate-x-1'/>
+							<DynamicLogo className='md:hidden block max-h-44 -translate-x-1' />
 						</Reveal>
-						
+
 						<span className=' bg-gradient-to-l from-transparent to-secondary pt-0.5 flex-grow' />
 					</div>
 					<h1 className=' md:hidden block'>Sam Mahonri</h1>
@@ -37,6 +37,7 @@ export default async function Index() {
 					</Reveal>
 
 				</div>
+
 				<div className='flex flex-wrap gap-3 items-center justify-center'>
 					<Reveal delay={0.8} sliderColor='rgb(var(--sam-primary-color))'>
 						<Link href={"/arts"}>
@@ -69,19 +70,30 @@ export default async function Index() {
 					<Link href={"https://bsky.app/profile/sammahonri.com"}>
 						<FaBluesky className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Bluesky @sammahonri.com' />
 					</Link>
-					<Link href={"https://x.com/sammahonri"} className=' relative'>
+					<Link href={"https://x.com/ZhyrelDragon"} className=' relative'>
 						<FaTwitter className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Twitter @SamMahonri' />
 					</Link>
 					<Link href={"https://open.spotify.com/intl-pt/artist/2E51QaIVG0zooDl9u1EN0B?si=g8Mk2_htQKqjIMvx9UzhKg"}>
 						<FaSpotify className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Spotify Sam Mahonri' />
 					</Link>
 					<Link href={"https://github.com/sam-mahonri"} className=' relative'>
-						<FaGithub className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Twitter @SamMahonri' />
+						<FaGithub className='h-10 w-10 text-secondary hover:text-primary transition-all hover:scale-110' title='Github @SamMahonri' />
 					</Link>
 				</div>
-				
+
 				<JumpingArrow className=' h-5 mt-2' />
-				{(new Date().getDate() === 18 && new Date().getMonth() + 1 === 3) && <p className=' text-center'>I still love you my little wolf... <br/>💜🤍🦆🖤💜<br/><strong>Happy Birthday!</strong></p> }
+				<div className='relative w-full h-48'>
+					<Image
+						src={"/warning.png"}
+						alt="Warning"
+						fill
+						loading='lazy'
+						className=' w-full h-full object-contain'
+					/>
+				</div>
+
+
+				{(new Date().getDate() === 18 && new Date().getMonth() + 1 === 3) && <p className=' text-center'>I still love you my little wolf... <br />💜🤍🦆🖤💜<br /><strong>Happy Birthday!</strong></p>}
 			</section>
 		</main>
 	</>;

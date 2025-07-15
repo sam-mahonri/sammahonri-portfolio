@@ -12,6 +12,7 @@ import StandaloneBackground from "@/components/all/StandaloneBackground";
 import { TypingSM } from "@/components/ui/symbols/SM";
 import { BadHourProvider } from "@/providers/BadHourProvider";
 import { BackgroundProvider } from "@/providers/BackgroundProvider";
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sammahonri.com'),
